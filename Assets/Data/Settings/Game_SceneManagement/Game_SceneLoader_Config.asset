@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38173f043fc9b014f8ee4c30c6ae5973, type: 3}
   m_Name: Game_SceneLoader_Config
   m_EditorClassIdentifier: 
-  _description: 
+  _description: Default configuration for Game Scene Loader
   _loadingScreenAssetRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d9520fb4637b5341be2aa3beab0ab92
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
