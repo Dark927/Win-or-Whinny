@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 6f11cfe51b9f9b441a51a024d21eb80c
+timeCreated: 1519938201
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112452
+  packageName: POLYGON Horse - Low Poly 3D Art by Synty
+  packageVersion: 2.3.0
+  assetPath: Assets/PolygonHorse/Material/PolygonHorse_04.mat
+  uploadId: 710003

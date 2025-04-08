@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _description: 
   _horsePrefabReference:
-    m_AssetGUID: 
+    m_AssetGUID: 38ac7b218eed1da4eb6a51f307e7b98b
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0

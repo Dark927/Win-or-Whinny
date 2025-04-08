@@ -31,7 +31,11 @@ namespace Game.Gameplay.UI
         [SerializeField] private ScrollRect _scroll;
 
         private HorizontalLayoutGroup _horizontalLayout;
+        private RectTransform _contentRectTransform;
+        private float _elementWidth;
+
         private Dictionary<int, HorseInfo> _horseInfoDict;
+
         private HorseInfoCardUI _selectedHorseInfoCard;
         private int _selectedHorseID;
 
@@ -44,6 +48,11 @@ namespace Game.Gameplay.UI
         {
             _horizontalLayout = GetComponentInChildren<HorizontalLayoutGroup>();
             _scroll.horizontalNormalizedPosition = 0;
+
+            RectTransform elementRectTransform = _horseInfoCardPrefab.GetComponent<RectTransform>();
+            _contentRectTransform = _horizontalLayout.GetComponent<RectTransform>();
+            _elementWidth = elementRectTransform.sizeDelta.x;
+
             _confirmationButton.onClick.AddListener(OnConfirmationButtonClicked);
         }
 
@@ -54,8 +63,8 @@ namespace Game.Gameplay.UI
                 return;
             }
 
-            ResizeContentForHorizontalScroll(_horizontalLayout, _horseInfoDict.Count());
-            GenerateHorseInfoGrid();
+            ResizeContentForHorizontalScroll(_horizontalLayout, _contentRectTransform, _horseInfoDict.Count(), _elementWidth);
+            GenerateHorseInfoGrid(_horseInfoDict);
         }
 
         public void ReceiveHorseInfoToSelect(Dictionary<int, HorseInfo> horseInfoDict, bool clearPreviousInfo = true)
@@ -70,13 +79,9 @@ namespace Game.Gameplay.UI
             }
         }
 
-        private void ResizeContentForHorizontalScroll(HorizontalLayoutGroup layoutGroup, int cellsCount)
+        private void ResizeContentForHorizontalScroll(HorizontalLayoutGroup layoutGroup, RectTransform layoutTransform, int cellsCount, float elementWidth)
         {
-            RectTransform contentRectTransform = layoutGroup.GetComponent<RectTransform>();
             int totalHorses = cellsCount;
-
-            RectTransform elementRectTransform = _horseInfoCardPrefab.GetComponent<RectTransform>();
-            float elementWidth = elementRectTransform.sizeDelta.x;
 
             float spacing = layoutGroup != null ? layoutGroup.spacing : 0f;
             float paddingLeft = layoutGroup != null ? layoutGroup.padding.left : 0f;
@@ -84,16 +89,17 @@ namespace Game.Gameplay.UI
 
             float totalWidth = (elementWidth * totalHorses) + (spacing * (totalHorses - 1)) + paddingLeft + paddingRight;
 
-            Vector2 newSize = contentRectTransform.sizeDelta;
+            Vector2 newSize = layoutTransform.sizeDelta;
             newSize.x = totalWidth;
-            contentRectTransform.sizeDelta = newSize;
+            layoutTransform.sizeDelta = newSize;
         }
 
-        private void GenerateHorseInfoGrid()
+        private void GenerateHorseInfoGrid(Dictionary<int, HorseInfo> horseInfoDict)
         {
             HorseInfo currentHorseInfo;
+            Dictionary<int, float> relativeWinChances = CalculateRelativeWinChances(horseInfoDict);
 
-            foreach (var infoPair in _horseInfoDict)
+            foreach (var infoPair in horseInfoDict)
             {
                 currentHorseInfo = infoPair.Value;
                 GameObject infoCardObject = Instantiate(_horseInfoCardPrefab, _horizontalLayout.transform);
@@ -103,10 +109,30 @@ namespace Game.Gameplay.UI
                 infoCard.ReplaceImage(currentHorseInfo.Icon);
                 infoCard.ReplaceText($"{currentHorseInfo.Name}" +
                     $"\nWins: {currentHorseInfo.WinsCount}" +
-                    $"\nChance: {(currentHorseInfo.WinChance * 100).ToString("00")}%");
+                    $"\nChance: {(relativeWinChances[infoPair.Key]).ToString("00")}%");
 
                 infoCard.SubscribeOnClick(() => OnHorseInfoCardClicked(infoCard, infoPair.Key));
             }
+        }
+
+        private Dictionary<int, float> CalculateRelativeWinChances(Dictionary<int, HorseInfo> horseInfoDict)
+        {
+            float totalChance = 0f;
+            Dictionary<int, float> calculatedWinChances = new Dictionary<int, float>();
+
+            foreach (var infoPair in horseInfoDict)
+            {
+                totalChance += infoPair.Value.WinChance;
+            }
+
+            foreach (var infoPair in horseInfoDict)
+            {
+                // Calculate normalized chance (relative to other horses)
+                float normalizedChance = (infoPair.Value.WinChance / totalChance) * 100f;
+                calculatedWinChances[infoPair.Key] = normalizedChance;
+            }
+
+            return calculatedWinChances;
         }
 
         private void OnHorseInfoCardClicked(HorseInfoCardUI infoCard, int selectedHorseID)
@@ -135,9 +161,7 @@ namespace Game.Gameplay.UI
 
                 if (_horseInfoDict.ContainsKey(_selectedHorseID))
                 {
-                    CustomLogger.Log("selected horse ID -> " + _selectedHorseID);
                     OnHorseSelected?.Invoke(this, _selectedHorseID);
-                    //gameManager.StartGame(selectedHorseInfo.id);
                 }
             }
             else

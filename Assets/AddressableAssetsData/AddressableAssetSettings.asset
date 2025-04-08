@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: fe25b87d6e1472840ab240d3e359b1ba
   m_currentHash:
     serializedVersion: 2
-    Hash: 14c1440fe2053133f6ff4ef2043992e6
+    Hash: f91d137273a06800b58e0229bb7ca439
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_BundleLocalCatalog: 0
@@ -47,6 +47,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: de72a3ac17d27d54f90f042f33e7fa23, type: 2}
   - {fileID: 11400000, guid: a47fdea0efd1ec2418f8b24f8e04e9a0, type: 2}
   - {fileID: 11400000, guid: ea7c6dad29a73ca449158f7baee3827d, type: 2}
+  - {fileID: 11400000, guid: 95816975a8de0b4499f3d48f294dc26a, type: 2}
   - {fileID: 11400000, guid: 2b7bf8aa035a53142b233190a92cd346, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
@@ -91,6 +92,7 @@ MonoBehaviour:
     - default
     - scene
     - UI
+    - entity
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 53bf3b530f1781148acb966a89747b15, type: 2}

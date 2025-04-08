@@ -15,7 +15,7 @@ namespace Game.Gameplay.Entities
         {
             _info = info;
 
-            // ToDo : implement better ID generation approach in the future.
+            // Future ToDo : implement better ID generation approach.
             _id = _info.GetHashCode();
         }
     }
