@@ -16,7 +16,18 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 3a2857042bf01344ab9751d379b35466
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 1bd2a4eafa09f804c9ecc31cb90466c6
+    m_Address: Assets/Scenes/Main/Levels/DefaultArena_VolumeProfile.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 88937f8c6acf88e4cb53f2bc52095e8b
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - level
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: c2d9052f0ff5ff74fb6562d952659bc5, type: 2}
   m_SchemaSet:
