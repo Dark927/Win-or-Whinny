@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 21dd6eb180628814ea00d9690d234eb9
+timeCreated: 1508574838
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 201717
+  packageName: Modern UI Pack
+  packageVersion: 5.5.25
+  assetPath: Assets/Modern UI Pack/Animations/Progress Bar/Radial FB Filled.anim
+  uploadId: 733452

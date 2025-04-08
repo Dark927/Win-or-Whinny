@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8ba75ce7454aace438ddb66b8f8c9953
+timeCreated: 1493663134
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 201717
+  packageName: Modern UI Pack
+  packageVersion: 5.5.25
+  assetPath: Assets/Modern UI Pack/Animations/Progress Bar/Standard Run.controller
+  uploadId: 733452

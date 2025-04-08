@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0c9db12da1c7fd04a920ca83c9e0044d
+timeCreated: 1494520698
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 201717
+  packageName: Modern UI Pack
+  packageVersion: 5.5.25
+  assetPath: Assets/Modern UI Pack/Animations/Notifications/Fading Loop.anim
+  uploadId: 733452

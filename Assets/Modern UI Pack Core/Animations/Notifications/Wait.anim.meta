@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e6f95ed20d7d0454587557ad08f762c5
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 201717
+  packageName: Modern UI Pack
+  packageVersion: 5.5.25
+  assetPath: Assets/Modern UI Pack/Animations/Notifications/Wait.anim
+  uploadId: 733452

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 55d9e85aba652ad4186ad3fe0190ccfa
+timeCreated: 1494520699
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 201717
+  packageName: Modern UI Pack
+  packageVersion: 5.5.25
+  assetPath: Assets/Modern UI Pack/Animations/Notifications/Fading.controller
+  uploadId: 733452

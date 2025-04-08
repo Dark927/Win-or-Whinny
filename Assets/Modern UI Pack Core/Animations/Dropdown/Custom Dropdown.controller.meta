@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 93fbe37370f09fe4a934819f103333ea
+timeCreated: 1521297741
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 201717
+  packageName: Modern UI Pack
+  packageVersion: 5.5.25
+  assetPath: Assets/Modern UI Pack/Animations/Dropdown/Custom Dropdown.controller
+  uploadId: 733452

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 965ecbf64c7985f4693acaa918fb9b20
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 201717
+  packageName: Modern UI Pack
+  packageVersion: 5.5.25
+  assetPath: Assets/Modern UI Pack/Animations/Slider/Radial Slider.controller
+  uploadId: 733452

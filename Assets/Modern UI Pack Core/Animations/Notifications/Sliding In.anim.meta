@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: eaf853a0c9875f24c9280aec215add4b
+timeCreated: 1494522004
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 201717
+  packageName: Modern UI Pack
+  packageVersion: 5.5.25
+  assetPath: Assets/Modern UI Pack/Animations/Notifications/Sliding In.anim
+  uploadId: 733452

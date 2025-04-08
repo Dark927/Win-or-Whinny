@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 671d36c09c7e9d043bf995530c38c3c8
+timeCreated: 1493659604
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 201717
+  packageName: Modern UI Pack
+  packageVersion: 5.5.25
+  assetPath: Assets/Modern UI Pack/Animations/Progress Bar/Circle Pie.controller
+  uploadId: 733452

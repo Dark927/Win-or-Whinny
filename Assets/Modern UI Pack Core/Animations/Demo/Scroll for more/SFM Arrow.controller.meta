@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 43ea75621568f284296cde399560364d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 201717
+  packageName: Modern UI Pack
+  packageVersion: 5.5.25
+  assetPath: Assets/Modern UI Pack/Animations/Demo/Scroll for more/SFM Arrow.controller
+  uploadId: 733452

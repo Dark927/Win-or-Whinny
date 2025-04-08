@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: efd5d29bd2f3d5c429f6eef252e5c57a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 201717
+  packageName: Modern UI Pack
+  packageVersion: 5.5.25
+  assetPath: Assets/Modern UI Pack/Animations/Window Manager/WM Start.anim
+  uploadId: 733452

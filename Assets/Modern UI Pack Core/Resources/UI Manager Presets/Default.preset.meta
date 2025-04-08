@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f4aef7328af695b499c3c4e07387404e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2655988077585873504
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 201717
+  packageName: Modern UI Pack
+  packageVersion: 5.5.25
+  assetPath: Assets/Modern UI Pack/Resources/UI Manager Presets/Default.preset
+  uploadId: 733452

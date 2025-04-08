@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1cf5bd35a07ff304ab394537db0f615d
+timeCreated: 1494522004
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 201717
+  packageName: Modern UI Pack
+  packageVersion: 5.5.25
+  assetPath: Assets/Modern UI Pack/Animations/Notifications/Sliding Out.anim
+  uploadId: 733452

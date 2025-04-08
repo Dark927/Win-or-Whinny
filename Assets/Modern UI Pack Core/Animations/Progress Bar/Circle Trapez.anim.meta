@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5ee31532d79dcb746afd4e577003e54a
+timeCreated: 1493660095
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 201717
+  packageName: Modern UI Pack
+  packageVersion: 5.5.25
+  assetPath: Assets/Modern UI Pack/Animations/Progress Bar/Circle Trapez.anim
+  uploadId: 733452

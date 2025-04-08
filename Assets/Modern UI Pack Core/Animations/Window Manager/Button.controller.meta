@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 98ad0e65c5b140d4aad191ac131b9ca4
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 201717
+  packageName: Modern UI Pack
+  packageVersion: 5.5.25
+  assetPath: Assets/Modern UI Pack/Animations/Window Manager/Button.controller
+  uploadId: 733452
