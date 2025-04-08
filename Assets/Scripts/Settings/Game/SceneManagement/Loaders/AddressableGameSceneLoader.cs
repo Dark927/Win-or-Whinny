@@ -145,7 +145,7 @@ namespace Game.Settings.SceneManagement
             }
 
             loadingScreen.SetFullProgress();
-            await UniTask.WaitUntil(() => loadingScreen.IsFullProgress);
+            await UniTask.WaitUntil(() => loadingScreen.IsFullProgress && !loadingScreen.IsUpdating);
 
             await loadingScreen.PrepareForDeactivation();
             RemoveLoadingScreen();
