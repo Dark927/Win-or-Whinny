@@ -15,7 +15,7 @@ MonoBehaviour:
   _description: Game main menu.
   _sceneType: 1
   _sceneReference:
-    m_AssetGUID: c79d67317c2fdf949a766151c79a838a
+    m_AssetGUID: adff5b3f0c89d9744a5c58d36a7fc594
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0

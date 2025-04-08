@@ -16,7 +16,12 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: fe25b87d6e1472840ab240d3e359b1ba
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: adff5b3f0c89d9744a5c58d36a7fc594
+    m_Address: Assets/Temp/Content/Scene/Race_Ascot.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: c2d9052f0ff5ff74fb6562d952659bc5, type: 2}
   m_SchemaSet:

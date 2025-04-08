@@ -16,13 +16,7 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 3a2857042bf01344ab9751d379b35466
-  m_SerializeEntries:
-  - m_GUID: c79d67317c2fdf949a766151c79a838a
-    m_Address: Assets/Scenes/Main/Levels/Level_DefaultArena_Scene.unity
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - scene
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: c2d9052f0ff5ff74fb6562d952659bc5, type: 2}
   m_SchemaSet:

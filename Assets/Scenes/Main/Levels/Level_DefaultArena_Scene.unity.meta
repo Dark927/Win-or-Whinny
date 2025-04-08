@@ -1,7 +1,14 @@
 fileFormatVersion: 2
-guid: c79d67317c2fdf949a766151c79a838a
+guid: adff5b3f0c89d9744a5c58d36a7fc594
 DefaultImporter:
   externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203263
+  packageName: Horse Star Stadium !!!
+  packageVersion: 1.0
+  assetPath: Assets/Content/Scene/Race_Ascot.unity
+  uploadId: 465431
