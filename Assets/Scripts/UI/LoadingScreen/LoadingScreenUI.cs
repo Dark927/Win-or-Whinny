@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Game.Settings.GameInitialization;
 
-namespace UI.Screens
+namespace Game.UI.Screens
 {
     public sealed class LoadingScreenUI : MonoBehaviour, IInitializable
     {

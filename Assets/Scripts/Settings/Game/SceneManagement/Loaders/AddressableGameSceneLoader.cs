@@ -4,7 +4,7 @@ using Cysharp.Threading.Tasks;
 using Game.Settings.AssetsManagement;
 using Game.Settings.Common.Events;
 using Game.Utilities.Logging;
-using UI.Screens;
+using Game.UI.Screens;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;

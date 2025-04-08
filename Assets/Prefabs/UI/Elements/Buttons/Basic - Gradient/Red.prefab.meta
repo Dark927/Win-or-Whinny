@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b2a7c376ecaa0374ba8b5a0143a9178e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 201717
+  packageName: Modern UI Pack
+  packageVersion: 5.5.25
+  assetPath: Assets/Modern UI Pack/Prefabs/Button/Basic - Gradient/Red.prefab
+  uploadId: 733452
