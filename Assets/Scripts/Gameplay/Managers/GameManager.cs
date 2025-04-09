@@ -16,8 +16,9 @@ namespace Game.Gameplay
         private const float DefaultFollowPlayerDelay = 3f;  // ToDo : move this to the config later 
 
         private IGameplayCameraController _cameraController;
-        private IRaceStartPanelUI _raceStartPanel;
+        private IRacePanelManagerUI _racePanelManagerUI;
         private IHorseRaceManager _raceManager;
+        private bool _isGameFinished = false;
 
         private CancellationTokenSource _cts;
 
@@ -36,12 +37,12 @@ namespace Game.Gameplay
         [Inject]
         public void Construct(
             IGameplayCameraController cameraController,
-            IRaceStartPanelUI raceStartPanel,
+            IRacePanelManagerUI racePanelManagerUI,
             IHorseRaceManager raceManager
             )
         {
             _cameraController = cameraController;
-            _raceStartPanel = raceStartPanel;
+            _racePanelManagerUI = racePanelManagerUI;
             _raceManager = raceManager;
         }
 
@@ -55,7 +56,7 @@ namespace Game.Gameplay
         {
             _cameraController.Initialize();
             _raceManager.Initialize();
-            _raceStartPanel.Initialize();
+            _racePanelManagerUI.Initialize();
 
             _cameraController.ActivateBackgroundCameraAnimations();
             await _raceManager.WaitForParticipantsPreparation(token);
@@ -67,9 +68,11 @@ namespace Game.Gameplay
 
             var horsesInfo = _raceManager.GetAllParticipantsInfo();
 
-            _raceStartPanel.Activate();
-            _raceStartPanel.DisplayAvailableHorsesToSelect(horsesInfo);
-            _raceStartPanel.SubscribeOnHorseSelection(HorseSelectedListener);
+            _racePanelManagerUI.StartPanelUI.Activate();
+            _racePanelManagerUI.StartPanelUI.DisplayAvailableHorsesToSelect(horsesInfo);
+
+            _raceManager.OnAnyHorseFinished += AnyHorseFinishedListener;
+            _racePanelManagerUI.StartPanelUI.SubscribeOnHorseSelection(HorseSelectedListener);
         }
 
         public void Dispose()
@@ -81,9 +84,9 @@ namespace Game.Gameplay
                 _cts = null;
             }
 
-            if (_raceStartPanel != null)
+            if (_racePanelManagerUI != null)
             {
-                _raceStartPanel.UnsubscribeFromHorseSelection(HorseSelectedListener);
+                _racePanelManagerUI.StartPanelUI.UnsubscribeFromHorseSelection(HorseSelectedListener);
             }
         }
 
@@ -99,16 +102,38 @@ namespace Game.Gameplay
             StartRace(ID);
         }
 
-        private void RaceFinishedListener(object sender)
+        private void AnyHorseFinishedListener(object sender, ParticipantFinishedArgs participantFinishArgs)
         {
+            _racePanelManagerUI.EndPanelUI.AddLeaderBoardParticipantInfo(participantFinishArgs.ID, participantFinishArgs.ParticipantInfo);
 
+            if (_isGameFinished)
+            {
+                _racePanelManagerUI.EndPanelUI.UpdateLeaderBoard();
+            }
+            else
+            {
+                if (participantFinishArgs.ID == _raceManager.PlayerHorseID)
+                {
+                    DisplayGameEndPanel(participantFinishArgs.ParticipantInfo);
+                    _isGameFinished = true;
+                }
+            }
+        }
+
+        // ToDo : move this to another components in the future (UI management).
+        private void DisplayGameEndPanel(RaceFinishedParticipantInfo participantFinishInfo)
+        {
+            _racePanelManagerUI.EndPanelUI.Activate();
+            _racePanelManagerUI.EndPanelUI.UpdateLeaderBoard();
+            _racePanelManagerUI.EndPanelUI.SetPlayerParticipantResultInfo(participantFinishInfo.ParticipantRacePlace);
+            _racePanelManagerUI.EndPanelUI.HighlightLeaderBoardParticipantInfo(_raceManager.PlayerHorseID);
         }
 
         private void StartRace(int selectedHorseID)
         {
             _raceManager.StartRace(selectedHorseID);
             _cameraController.ActivateRaceCamera(true);
-            _raceStartPanel.Deactivate();
+            _racePanelManagerUI.StartPanelUI.Deactivate();
 
             FollowPlayerHorseWithDelay();
         }

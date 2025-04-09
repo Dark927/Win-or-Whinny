@@ -9,7 +9,9 @@ namespace Game.Gameplay.Race
 {
     public interface IHorseRaceManager : IInitializable
     {
-        public event EventHandler<int> OnPlayerHorseFinished;
+        public event EventHandler<ParticipantFinishedArgs> OnAnyHorseFinished;
+
+        public int PlayerHorseID { get; }
 
         public UniTask WaitForParticipantsPreparation(CancellationToken token = default);
 

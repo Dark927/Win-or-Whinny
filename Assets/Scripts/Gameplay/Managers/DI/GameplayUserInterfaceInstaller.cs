@@ -9,14 +9,14 @@ namespace Game.Gameplay.Settings
     {
         public override void InstallBindings()
         {
-            BindRaceStartPanel();
+            BindRacePanelManager();
         }
 
-        private void BindRaceStartPanel()
+        private void BindRacePanelManager()
         {
             Container
-                .Bind<IRaceStartPanelUI>()
-                .To<DefaultRaceStartPanelUI>()
+                .Bind<IRacePanelManagerUI>()
+                .To<DefaultRacePanelManagerUI>()
                 .FromComponentInHierarchy()
                 .AsSingle()
                 .NonLazy();

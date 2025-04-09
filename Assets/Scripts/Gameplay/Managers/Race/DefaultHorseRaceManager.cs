@@ -1,6 +1,7 @@
 
 using Cysharp.Threading.Tasks;
 using Game.Gameplay.Entities;
+using Game.Gameplay.UI;
 using System;
 using System.Collections.Generic;
 using System.Threading;
@@ -13,7 +14,7 @@ namespace Game.Gameplay.Race
     {
         #region Events 
 
-        public event EventHandler<int> OnPlayerHorseFinished;
+        public event EventHandler<ParticipantFinishedArgs> OnAnyHorseFinished;
 
         #endregion
 
@@ -28,10 +29,14 @@ namespace Game.Gameplay.Race
         private int _selectedParticipantID;
         private Queue<int> _finishedHorsesQueue;
 
+        private int _nextFinishPlace = 1;
+
         #endregion
 
 
         #region Properties
+
+        public int PlayerHorseID => _selectedParticipantID;
 
         #endregion
 
@@ -104,13 +109,13 @@ namespace Game.Gameplay.Race
             {
                 _finishedHorsesQueue.Enqueue(horseID);
 
-                if(horseID == _selectedParticipantID)
-                {
-                    OnPlayerHorseFinished?.Invoke(this, horseID);
-                }
-
-                var finishedHorse =_horsesProvider.GetHorseByID(horseID);
+                var finishedHorse = _horsesProvider.GetHorseByID(horseID);
                 finishedHorse.Stop();
+
+                RaceFinishedParticipantInfo participantInfo = new RaceFinishedParticipantInfo(_nextFinishPlace, finishedHorse.Info.Name);
+                _nextFinishPlace += 1;
+                ParticipantFinishedArgs participantFinishArgs = new ParticipantFinishedArgs(horseID, participantInfo);
+                OnAnyHorseFinished?.Invoke(this, participantFinishArgs);
             }
         }
 
