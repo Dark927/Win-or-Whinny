@@ -1,6 +1,7 @@
 
 using Cysharp.Threading.Tasks;
 using Game.Gameplay.Entities;
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
@@ -10,13 +11,22 @@ namespace Game.Gameplay.Race
 {
     public class DefaultHorseRaceManager : MonoBehaviour, IHorseRaceManager
     {
+        #region Events 
+
+        public event EventHandler<int> OnPlayerHorseFinished;
+
+        #endregion
+
+
         #region Fields 
 
+        private const float DefaultRaceDelayAfterGatesOpen = 1f;   // ToDo : move this to the config later
         private const int UndefinedParticipantID = -999;
 
         private IHorsesProvider _horsesProvider;
         private TrackStartGatesController _startGatesController;
         private int _selectedParticipantID;
+        private Queue<int> _finishedHorsesQueue;
 
         #endregion
 
@@ -40,6 +50,7 @@ namespace Game.Gameplay.Race
         {
             _selectedParticipantID = UndefinedParticipantID;
             _startGatesController = GetComponentInChildren<TrackStartGatesController>();
+            _finishedHorsesQueue = new Queue<int>();
 
             _startGatesController.Initialize();
             _horsesProvider.Initialize();
@@ -49,6 +60,8 @@ namespace Game.Gameplay.Race
 
         public void StartRace(int selectedParticipantID)
         {
+            _finishedHorsesQueue.Clear();
+
             _selectedParticipantID = selectedParticipantID;
             var participantsCollection = _horsesProvider.GetAllHorses();
             ConfigureHorsesStartingPositions(participantsCollection);
@@ -85,6 +98,22 @@ namespace Game.Gameplay.Race
             return participants;
         }
 
+        public void NotifyHorseFinished(int horseID)
+        {
+            if (!_finishedHorsesQueue.Contains(horseID))
+            {
+                _finishedHorsesQueue.Enqueue(horseID);
+
+                if(horseID == _selectedParticipantID)
+                {
+                    OnPlayerHorseFinished?.Invoke(this, horseID);
+                }
+
+                var finishedHorse =_horsesProvider.GetHorseByID(horseID);
+                finishedHorse.Stop();
+            }
+        }
+
         private void ConfigureHorsesStartingPositions(IEnumerable<HorseLogic> participantsCollection)
         {
             foreach (var participant in participantsCollection)
@@ -96,8 +125,7 @@ namespace Game.Gameplay.Race
         private async UniTask StartRaceAsync(IEnumerable<HorseLogic> participantsCollection)
         {
             _startGatesController.Open();
-
-            await UniTask.WaitForSeconds(2);
+            await UniTask.WaitForSeconds(DefaultRaceDelayAfterGatesOpen);
 
             foreach (var participant in participantsCollection)
             {

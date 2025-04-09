@@ -1,9 +1,7 @@
 using Cysharp.Threading.Tasks;
 using Game.Gameplay.Cameras;
-using Game.Gameplay.Entities;
 using Game.Gameplay.Race;
 using Game.Gameplay.UI;
-using Game.Utilities.Logging;
 using System;
 using System.Threading;
 using UnityEngine;
@@ -14,6 +12,8 @@ namespace Game.Gameplay
     public class GameManager : MonoBehaviour, IDisposable
     {
         #region Fields 
+
+        private const float DefaultFollowPlayerDelay = 3f;  // ToDo : move this to the config later 
 
         private IGameplayCameraController _cameraController;
         private IRaceStartPanelUI _raceStartPanel;
@@ -72,31 +72,6 @@ namespace Game.Gameplay
             _raceStartPanel.SubscribeOnHorseSelection(HorseSelectedListener);
         }
 
-        private void HorseSelectedListener(object sender, int ID)
-        {
-            CustomLogger.Log("selected horse ID -> " + ID);
-            _raceManager.StartRace(ID);
-            _cameraController.ActivateRaceCamera(true);
-            _raceStartPanel.Deactivate();
-
-
-
-            // ToDo : move this to another place
-            if ((_cts == null) || _cts.IsCancellationRequested)
-            {
-                _cts = new CancellationTokenSource();
-            }
-
-            var playerParticipant = _raceManager.GetPlayerParticipant();
-            FollowPlayerParticipantWithDelay(playerParticipant, 3f, _cts.Token).Forget();
-        }
-
-        private async UniTaskVoid FollowPlayerParticipantWithDelay(HorseLogic participant, float delay, CancellationToken token = default)
-        {
-            await UniTask.WaitForSeconds(delay, cancellationToken: token);
-            _cameraController.RaceCameraController.LookAtParticipant(participant.transform);
-        }
-
         public void Dispose()
         {
             if (_cts != null)
@@ -106,7 +81,10 @@ namespace Game.Gameplay
                 _cts = null;
             }
 
-            _raceStartPanel.UnsubscribeFromHorseSelection(HorseSelectedListener);
+            if (_raceStartPanel != null)
+            {
+                _raceStartPanel.UnsubscribeFromHorseSelection(HorseSelectedListener);
+            }
         }
 
         private void OnDestroy()
@@ -116,6 +94,35 @@ namespace Game.Gameplay
 
         #endregion
 
+        private void HorseSelectedListener(object sender, int ID)
+        {
+            StartRace(ID);
+        }
+
+        private void RaceFinishedListener(object sender)
+        {
+
+        }
+
+        private void StartRace(int selectedHorseID)
+        {
+            _raceManager.StartRace(selectedHorseID);
+            _cameraController.ActivateRaceCamera(true);
+            _raceStartPanel.Deactivate();
+
+            FollowPlayerHorseWithDelay();
+        }
+
+        private void FollowPlayerHorseWithDelay(float delay = DefaultFollowPlayerDelay)
+        {
+            if ((_cts == null) || _cts.IsCancellationRequested)
+            {
+                _cts = new CancellationTokenSource();
+            }
+
+            var playerParticipant = _raceManager.GetPlayerParticipant();
+            _cameraController.RaceCameraController.LookAtParticipantWithDelay(playerParticipant.transform, delay, _cts.Token);
+        }
 
         #endregion
     }

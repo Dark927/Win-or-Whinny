@@ -1,4 +1,7 @@
 
+using Cysharp.Threading.Tasks;
+using System.Threading;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 
 namespace Game.Gameplay.Cameras
@@ -35,6 +38,12 @@ namespace Game.Gameplay.Cameras
         public void LookAtParticipant(Transform target)
         {
             _raceCamera.LookAtPlayerParticipant(target);
+        }
+
+        public async UniTask LookAtParticipantWithDelay(Transform participantTransform, float delay, CancellationToken token = default)
+        {
+            await UniTask.WaitForSeconds(delay, cancellationToken: token);
+            LookAtParticipant(participantTransform);
         }
 
         private void OnDestroy()

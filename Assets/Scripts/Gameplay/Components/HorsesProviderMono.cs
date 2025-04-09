@@ -74,12 +74,21 @@ namespace Game.Gameplay
 
         public void Dispose()
         {
+            if (_horsesDict != null)
+            {
+                foreach (var horse in _horsesDict.Values)
+                {
+                    horse.Dispose();
+                }
+            }
+
             if (_horseCreationCts != null)
             {
                 _horseCreationCts.Cancel();
                 _horseCreationCts.Dispose();
                 _horseCreationCts = null;
             }
+
         }
 
         private void OnDestroy()
@@ -113,6 +122,7 @@ namespace Game.Gameplay
             {
                 createdHorseLogic.gameObject.name = DefaultHorseNamePrefix + horseData.HorseInfo.Name;
                 createdHorseLogic.Initialize(horseData.HorseInfo);
+                createdHorseLogic.SetStats(horseData.HorseStats);
                 _horsesDict.Add(createdHorseLogic.ID, createdHorseLogic);
             }
             else

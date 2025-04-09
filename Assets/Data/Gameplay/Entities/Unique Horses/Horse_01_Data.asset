@@ -23,3 +23,10 @@ MonoBehaviour:
     _icon: {fileID: 21300000, guid: c373601c9c4b1614f9c9884b5f9b161a, type: 3}
     _winsCount: 24
     _loseCount: 0
+  _horseStats:
+    _defaultSpeed: 6
+    _accelerationChance: 0
+    _accelerationSpeedMultiplier: 3
+    _accelerationRampUpDuration: 1
+    _accelerationEffectDuration: 3
+    _accelerationRechargeTime: 3

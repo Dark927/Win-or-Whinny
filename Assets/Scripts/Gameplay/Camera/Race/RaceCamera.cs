@@ -12,8 +12,9 @@ namespace Game.Gameplay.Cameras
     {
         #region Fields 
 
-        [SerializeField] private List<RaceCameraPoint> _viewPoints;
+        [SerializeField] private Vector2 _followParticipantOffset;
 
+        [SerializeField] private List<RaceCameraPoint> _viewPoints;
         private Camera _camera;
         private Dictionary<ViewType, RaceCameraPoint> _viewPointsDict;
         private CancellationTokenSource _cts;
@@ -65,7 +66,6 @@ namespace Game.Gameplay.Cameras
             Vector3 targetPosition = _camera.transform.position;
 
             // Offset to maintain camera's initial height and forward position (optional)
-            Vector3 initialCameraOffset = targetPosition - target.position;
             Vector3 horseForwardPosition; 
 
             while (!token.IsCancellationRequested)
@@ -78,9 +78,10 @@ namespace Game.Gameplay.Cameras
                 }
 
                 // Calculate the forward position of the horse
-                horseForwardPosition = target.position + target.forward * 10f;
+                horseForwardPosition = target.position + target.forward;
 
-                targetPosition.x = horseForwardPosition.x - initialCameraOffset.x;
+                targetPosition.x = horseForwardPosition.x + _followParticipantOffset.x;
+                targetPosition.y = horseForwardPosition.y + _followParticipantOffset.y;
 
                 // You can also add some smoothing if needed
                 _camera.transform.position = targetPosition;
