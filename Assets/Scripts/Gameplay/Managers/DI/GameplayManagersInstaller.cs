@@ -1,3 +1,4 @@
+using Game.Gameplay.Race;
 using Game.Gameplay.UI;
 using Zenject;
 
@@ -8,15 +9,15 @@ namespace Game.Gameplay.Settings
     {
         public override void InstallBindings()
         {
-            BindHorseInfoUIManager();
+            BindRaceManager();
         }
 
-        private void BindHorseInfoUIManager()
+        private void BindRaceManager()
         {
             Container
-                .Bind<IHorseInfoManagerUI>()
-                .To<HorseInfoListManagerUI>()
-                .FromComponentInHierarchy()
+                .Bind<IHorseRaceManager>()
+                .To<DefaultHorseRaceManager>()
+                .FromComponentInHierarchy(true)
                 .AsSingle()
                 .NonLazy();
         }

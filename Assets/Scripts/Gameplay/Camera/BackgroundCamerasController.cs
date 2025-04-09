@@ -1,20 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
-public class BackgroundCamerasController : MonoBehaviour
+namespace Game.Gameplay.Cameras
 {
-    #region Methods
-
-    public void Activate()
+    public class BackgroundCamerasController : DefaultCameraController
     {
-        gameObject.SetActive(true);
-    }
 
-    public void Deactivate()
-    {
-        gameObject.SetActive(false);
     }
-
-    #endregion
 }

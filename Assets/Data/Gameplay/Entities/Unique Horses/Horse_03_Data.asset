@@ -20,6 +20,6 @@ MonoBehaviour:
     m_EditorAssetChanged: 0
   _horseInfo:
     _name: White Dragon
-    _icon: {fileID: 21300000, guid: 98c2954aeef16da43a5acdda694615b0, type: 3}
+    _icon: {fileID: 21300000, guid: 0ebd8e1538371d24c93c4d2bf6e40eb9, type: 3}
     _winsCount: 76
     _loseCount: 3

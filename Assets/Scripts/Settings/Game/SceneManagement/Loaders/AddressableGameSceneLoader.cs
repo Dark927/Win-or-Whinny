@@ -46,7 +46,7 @@ namespace Game.Settings.SceneManagement
 
         public AddressableGameSceneLoader(GameSceneLoaderConfig config)
         {
-            if(config == null)
+            if (config == null)
             {
                 CustomLogger.LogError($" # {nameof(GameSceneLoaderConfig)} is null! | Can not initialize {nameof(AddressableGameSceneLoader)} | {this.ToString()}");
                 return;
@@ -100,24 +100,20 @@ namespace Game.Settings.SceneManagement
                 return;
             }
 
-            var sceneLoadHandle = await sceneLoadingLogic.Invoke();
-
             LoadingScreenUI loadingScreen = null;
 
             if (useLoadingScreen)
             {
                 loadingScreen = await CreateLoadingScreen(_loadingScreenAssetRef);
+                loadingScreen.Initialize();
             }
 
             var loadHandles = sceneLoadingLogic.Invoke();
 
-            if (loadingScreen == null)
+            if (loadingScreen != null)
             {
-                return;
+                await ExecuteLoadingScreen(loadingScreen, loadHandles);
             }
-
-            loadingScreen.Initialize();
-            await ExecuteLoadingScreen(loadingScreen, loadHandles);
         }
 
         #region Loading Screen

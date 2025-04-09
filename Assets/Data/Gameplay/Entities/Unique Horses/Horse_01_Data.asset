@@ -20,6 +20,6 @@ MonoBehaviour:
     m_EditorAssetChanged: 0
   _horseInfo:
     _name: Lucky Briyan
-    _icon: {fileID: 21300000, guid: 21b64335db12190479894eb88ed5e9f6, type: 3}
+    _icon: {fileID: 21300000, guid: c373601c9c4b1614f9c9884b5f9b161a, type: 3}
     _winsCount: 24
     _loseCount: 0

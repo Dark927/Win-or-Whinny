@@ -1,4 +1,5 @@
 
+using Game.Gameplay.Cameras;
 using Zenject;
 
 namespace Game.Gameplay.Settings
@@ -8,7 +9,8 @@ namespace Game.Gameplay.Settings
         public override void InstallBindings()
         {
             Container
-                .Bind<BackgroundCamerasController>()
+                .Bind<IGameplayCameraController>()
+                .To<GameplayCameraController>()
                 .FromComponentInHierarchy()
                 .AsSingle();
         }

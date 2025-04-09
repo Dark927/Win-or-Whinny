@@ -20,6 +20,6 @@ MonoBehaviour:
     m_EditorAssetChanged: 0
   _horseInfo:
     _name: Strong Sem
-    _icon: {fileID: 21300000, guid: d4856a986af1a6442bc0ae7c0348f2f7, type: 3}
+    _icon: {fileID: 21300000, guid: 89f73ff925039fc48b20bb9daf847209, type: 3}
     _winsCount: 29
     _loseCount: 5

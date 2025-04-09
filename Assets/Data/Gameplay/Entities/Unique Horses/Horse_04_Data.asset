@@ -20,6 +20,6 @@ MonoBehaviour:
     m_EditorAssetChanged: 0
   _horseInfo:
     _name: Nansy
-    _icon: {fileID: 21300000, guid: a40e131b61d22ba42b2955962e636ca4, type: 3}
+    _icon: {fileID: 21300000, guid: a13980ce742050e419640db1468f9fbb, type: 3}
     _winsCount: 6
     _loseCount: 7
