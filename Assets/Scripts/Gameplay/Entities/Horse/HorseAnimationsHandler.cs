@@ -21,7 +21,7 @@ namespace Game.Gameplay.Entities
         public event Action OnFootStep;
 
         private Animator _animator;
-        
+
 
         /// <summary>
         /// Event from the mesh Run animation
@@ -35,7 +35,7 @@ namespace Game.Gameplay.Entities
         {
             _animator = GetComponent<Animator>();
         }
-        
+
 
         public void ActivateIdleAnimation()
         {

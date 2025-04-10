@@ -129,16 +129,19 @@ namespace Game.Gameplay
             _activeLoadingsCount += 1;
             var createdHorseLogic = await CreateHorseAsync(horseData.HorsePrefabReference, _container, _cts.Token);
 
-            if (createdHorseLogic != null)
+            if (!_cts.IsCancellationRequested)
             {
-                createdHorseLogic.gameObject.name = DefaultHorseNamePrefix + horseData.HorseInfo.Name;
-                createdHorseLogic.Initialize(horseData.HorseInfo);
-                createdHorseLogic.SetStats(horseData.HorseStats);
-                _horsesDict.Add(createdHorseLogic.ID, createdHorseLogic);
-            }
-            else
-            {
-                CustomLogger.LogWarning($" # Can not add a new horse : {nameof(HorseLogic)} is null! | {gameObject.name}");
+                if (createdHorseLogic != null)
+                {
+                    createdHorseLogic.gameObject.name = DefaultHorseNamePrefix + horseData.HorseInfo.Name;
+                    createdHorseLogic.Initialize(horseData.HorseInfo);
+                    createdHorseLogic.SetStats(horseData.HorseStats);
+                    _horsesDict.Add(createdHorseLogic.ID, createdHorseLogic);
+                }
+                else
+                {
+                    CustomLogger.LogWarning($" # Can not add a new horse : {nameof(HorseLogic)} is null! | {gameObject.name}");
+                }
             }
 
             _activeLoadingsCount -= 1;
@@ -150,6 +153,11 @@ namespace Game.Gameplay
 
             foreach (var horse in horsesDataCollection)
             {
+                if(token.IsCancellationRequested)
+                {
+                    return tasks;
+                }
+
                 tasks.Add(AddHorseAsync(horse, token));
             }
 
