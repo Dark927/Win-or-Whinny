@@ -1,5 +1,6 @@
 ﻿
 using Game.Settings.GameInitialization;
+using System;
 using UnityEngine;
 
 namespace Game.Gameplay.Entities
@@ -17,8 +18,18 @@ namespace Game.Gameplay.Entities
         private readonly int RunTriggerID = Animator.StringToHash(RunTriggerName);
         // ----------------------------------------------------------------
 
+        public event Action OnFootStep;
+
         private Animator _animator;
         
+
+        /// <summary>
+        /// Event from the mesh Run animation
+        /// </summary>
+        public void FootStep()
+        {
+            OnFootStep?.Invoke();
+        }
 
         public void Initialize()
         {

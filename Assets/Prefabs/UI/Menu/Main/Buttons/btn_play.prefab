@@ -111,57 +111,92 @@ PrefabInstance:
     - target: {fileID: 2921284869244059403, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: _effectGradient.key0.b
-      value: 0.14413491
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2921284869244059403, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: _effectGradient.key0.g
-      value: 0.745283
+      value: 0.7264151
       objectReference: {fileID: 0}
     - target: {fileID: 2921284869244059403, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: _effectGradient.key0.r
-      value: 0.594996
+      value: 0.8301887
       objectReference: {fileID: 0}
     - target: {fileID: 2921284869244059403, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: _effectGradient.key1.b
-      value: 0.27450982
+      value: 0.6509434
       objectReference: {fileID: 0}
     - target: {fileID: 2921284869244059403, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: _effectGradient.key1.g
-      value: 0.54901963
+      value: 0.64222777
       objectReference: {fileID: 0}
     - target: {fileID: 2921284869244059403, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: _effectGradient.key1.r
-      value: 1
+      value: 0.22414559
       objectReference: {fileID: 0}
     - target: {fileID: 2921284869244059403, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: _effectGradient.m_ColorSpace
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3956258226947523279, guid: e32955c22c978e245946a88af323814f,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3956258226947523279, guid: e32955c22c978e245946a88af323814f,
+        type: 3}
+      propertyPath: m_characterSpacing
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4329238265899248702, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: _effectGradient.key0.b
-      value: 0.14413491
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4329238265899248702, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: _effectGradient.key0.g
-      value: 0.745283
+      value: 0.7264151
       objectReference: {fileID: 0}
     - target: {fileID: 4329238265899248702, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: _effectGradient.key0.r
-      value: 0.594996
+      value: 0.8301887
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329238265899248702, guid: e32955c22c978e245946a88af323814f,
+        type: 3}
+      propertyPath: _effectGradient.key1.b
+      value: 0.6509434
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329238265899248702, guid: e32955c22c978e245946a88af323814f,
+        type: 3}
+      propertyPath: _effectGradient.key1.g
+      value: 0.64222777
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329238265899248702, guid: e32955c22c978e245946a88af323814f,
+        type: 3}
+      propertyPath: _effectGradient.key1.r
+      value: 0.22414559
       objectReference: {fileID: 0}
     - target: {fileID: 4329238265899248702, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: _effectGradient.m_ColorSpace
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7499108446312015367, guid: e32955c22c978e245946a88af323814f,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7499108446312015367, guid: e32955c22c978e245946a88af323814f,
+        type: 3}
+      propertyPath: m_characterSpacing
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8389810419749409886, guid: e32955c22c978e245946a88af323814f,
         type: 3}

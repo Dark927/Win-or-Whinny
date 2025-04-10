@@ -1,7 +1,9 @@
 ﻿using Cysharp.Threading.Tasks;
 using Game.Gameplay.Entities;
+using Game.Settings.Common;
 using System;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 namespace Game.Gameplay
@@ -10,9 +12,10 @@ namespace Game.Gameplay
     {
         public bool HasActiveLoadings { get; }
         public void Initialize(Transform horsesContainer = null);
+        public void ResetAllHorses();
         public IEnumerable<HorseLogic> GetAllHorses();
         public HorseLogic GetHorseByID(int ID);
-        public IEnumerable<UniTask> AddMultipleHorsesAsync(IEnumerable<MainHorseData> horsesDataCollection);
-        public UniTask AddHorseAsync(MainHorseData horseData);
+        public IEnumerable<UniTask> AddMultipleHorsesAsync(IEnumerable<MainHorseData> horsesDataCollection, CancellationToken token = default);
+        public UniTask AddHorseAsync(MainHorseData horseData, CancellationToken token = default);
     }
 }

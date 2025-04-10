@@ -1,5 +1,6 @@
 
 using Cysharp.Threading.Tasks;
+using Game.Gameplay.Audio;
 using Game.Gameplay.Entities;
 using Game.Gameplay.UI;
 using System;
@@ -25,6 +26,8 @@ namespace Game.Gameplay.Race
         private const int UndefinedParticipantID = -999;
 
         private IHorsesProvider _horsesProvider;
+        private IGameplayAudioManager _audioManager;
+
         private TrackStartGatesController _startGatesController;
         private int _selectedParticipantID;
         private Queue<int> _finishedHorsesQueue;
@@ -46,9 +49,10 @@ namespace Game.Gameplay.Race
         #region Init
 
         [Inject]
-        public void Construct(IHorsesProvider horsesProvider)
+        public void Construct(IHorsesProvider horsesProvider, IGameplayAudioManager audioManager)
         {
             _horsesProvider = horsesProvider;
+            _audioManager = audioManager;
         }
 
         public void Initialize()
@@ -67,6 +71,7 @@ namespace Game.Gameplay.Race
             _selectedParticipantID = UndefinedParticipantID;
             _finishedHorsesQueue.Clear();
             _startGatesController.ResetState();
+            _horsesProvider.ResetAllHorses();
         }
 
         #endregion
@@ -137,9 +142,11 @@ namespace Game.Gameplay.Race
 
         private async UniTask StartRaceAsync(IEnumerable<HorseLogic> participantsCollection)
         {
+            _audioManager.PlayRaceStartSFX();
             _startGatesController.Open();
             await UniTask.WaitForSeconds(DefaultRaceDelayAfterGatesOpen);
 
+            _audioManager.PlayRaceOST();
             foreach (var participant in participantsCollection)
             {
                 participant.Run();

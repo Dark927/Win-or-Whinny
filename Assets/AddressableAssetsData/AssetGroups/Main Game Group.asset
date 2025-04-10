@@ -22,6 +22,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 27664bb4bed32c64db3a7aa0b8fc68ad
+    m_Address: Assets/Audio/OST/OST_MainMenu.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - audio
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5d9520fb4637b5341be2aa3beab0ab92
     m_Address: Assets/Prefabs/UI/LoadingScreen/UI_LoadingScreen_canvas.prefab
     m_ReadOnly: 0
@@ -38,6 +44,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - scene
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ee6b9e3d12304c14ab663d8d227f5e55
+    m_Address: Assets/Audio/SFX/SFX_RaceStart.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: c2d9052f0ff5ff74fb6562d952659bc5, type: 2}

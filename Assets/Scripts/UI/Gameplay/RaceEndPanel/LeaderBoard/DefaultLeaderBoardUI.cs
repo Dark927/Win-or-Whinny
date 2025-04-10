@@ -52,6 +52,14 @@ namespace Game.Gameplay.UI
             _elementSize.y = elementRectTransform.sizeDelta.y;
         }
 
+
+        /*
+         * Note : 
+         * Dictionary<TKey, TValue> class does not guarantee any specific order of elements. 
+         * The order in which elements are stored in the dictionary is not necessarily the order in which they were added.
+         * 
+         * But so far there have been no errors in work, if there will be, replace with OrderedDictionary
+         */
         public void Clear()
         {
             foreach (var boardItemInfo in _participantInfoItems)
@@ -128,6 +136,8 @@ namespace Game.Gameplay.UI
                 else
                 {
                     GameObject leaderBoardItemObject = Instantiate(_boardItemPrefab, _verticalLayout.transform);
+                    leaderBoardItemObject.name = $"{_boardItemPrefab.name}_{_participantInfoItems.Count() + 1}";
+
                     leaderBoardItem = leaderBoardItemObject.GetComponent<LeaderBoardItemUI>();
                 }
 

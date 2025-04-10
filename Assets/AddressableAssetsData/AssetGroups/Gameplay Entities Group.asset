@@ -75,6 +75,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9ce3bb559a5156a4a98aa52f8aeb87d1
+    m_Address: Assets/Audio/SFX/Entity/SFX_HorseStep.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - entity
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a13980ce742050e419640db1468f9fbb
     m_Address: Assets/Sprites/UI/Icons/UI_HorseIcon_04.png
     m_ReadOnly: 0

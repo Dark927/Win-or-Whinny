@@ -27,6 +27,7 @@ namespace Game.Settings.SceneManagement
         private AssetReference _loadingScreenAssetRef;
 
         private (GameObject instance, AsyncOperationHandle handle) _loadingScreenLoadInfo;
+        private bool _isLoading;
 
         #endregion
 
@@ -35,7 +36,7 @@ namespace Game.Settings.SceneManagement
 
         public IConcreteSceneLoader<AssetReference, AsyncOperationHandle<SceneInstance>> SceneLoader => _sceneLoader;
         public ICustomEvent<IEventListener, EventArgs> SwitchEvent => _sceneSwitchEvent;
-
+        public bool IsLoading => _isLoading; 
 
         #endregion
 
@@ -114,6 +115,8 @@ namespace Game.Settings.SceneManagement
 
         private async UniTask LoadSceneAsync(Func<AsyncOperationHandle<SceneInstance>> sceneLoadingLogic, bool useLoadingScreen = true)
         {
+            _isLoading = true;
+
             if (sceneLoadingLogic == null)
             {
                 return;
@@ -133,6 +136,8 @@ namespace Game.Settings.SceneManagement
             {
                 await ExecuteLoadingScreen(loadingScreen, loadHandles);
             }
+
+            _isLoading = false;
         }
 
         #region Loading Screen

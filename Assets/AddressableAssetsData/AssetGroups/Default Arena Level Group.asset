@@ -22,6 +22,18 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 57cc3fb7be1e18649b548e86c3f9b1b0
+    m_Address: Assets/Audio/OST/OST_Race_01.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - audio
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5c2bd0bbf0484104193146aba70f9a62
+    m_Address: Assets/Audio/OST/OST_GameplayMenu.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - audio
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 88937f8c6acf88e4cb53f2bc52095e8b
     m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments
     m_ReadOnly: 0

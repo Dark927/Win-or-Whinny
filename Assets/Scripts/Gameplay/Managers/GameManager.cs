@@ -1,24 +1,33 @@
 using Cysharp.Threading.Tasks;
+using Game.Gameplay.Audio;
 using Game.Gameplay.Cameras;
 using Game.Gameplay.Race;
 using Game.Gameplay.UI;
+using Game.Settings.SceneManagement;
 using System;
 using System.Threading;
-using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using Zenject;
 
 namespace Game.Gameplay
 {
-    public class GameManager : MonoBehaviour, IDisposable
+    // Future ToDo : 
+
+    /// <summary>
+    /// Is used to centralize gameplay level control so as not to complicate the architecture. 
+    /// When the project is expanded, it must be removed
+    /// </summary>
+    public class GameManager : MonoBehaviour, IDisposable, IInitializable
     {
         #region Fields 
 
-        private const float CameraStartFollowPlayerDelay = 3f;  // ToDo : move this to the config later 
+        private const float CameraStartFollowPlayerDelay = 1.5f;  // ToDo : move this to the config later 
 
         private IGameplayCameraController _cameraController;
         private IRacePanelManagerUI _racePanelManagerUI;
         private IHorseRaceManager _raceManager;
+        private IGameplayAudioManager _audioManager;
+
         private bool _isGameFinished = false;
 
         private CancellationTokenSource _cts;
@@ -39,21 +48,24 @@ namespace Game.Gameplay
         public void Construct(
             IGameplayCameraController cameraController,
             IRacePanelManagerUI racePanelManagerUI,
-            IHorseRaceManager raceManager
+            IHorseRaceManager raceManager,
+            IGameplayAudioManager audioManager
             )
         {
             _cameraController = cameraController;
             _racePanelManagerUI = racePanelManagerUI;
             _raceManager = raceManager;
+            _audioManager = audioManager;
         }
 
-        private void Awake()
+        public void Initialize()
         {
             _cts ??= new CancellationTokenSource();
 
             _cameraController.Initialize();
             _raceManager.Initialize();
             _racePanelManagerUI.Initialize();
+            _audioManager.Initialize();
 
             _raceManager.OnAnyHorseFinished += AnyHorseFinishedListener;
             _racePanelManagerUI.StartPanelUI.SubscribeOnHorseSelection(HorseSelectedListener);
@@ -65,6 +77,7 @@ namespace Game.Gameplay
         {
             DisposeAllAsyncTasks();
 
+            _audioManager.Dispose();
             _raceManager.OnAnyHorseFinished -= AnyHorseFinishedListener;
 
             if (_racePanelManagerUI != null)
@@ -99,6 +112,9 @@ namespace Game.Gameplay
 
         private async UniTask StartGameAsync(CancellationToken token = default)
         {
+            _audioManager.FadeOutSFX();
+            _audioManager.PlayMenuOST();
+
             _cameraController.ActivateBackgroundCameraAnimations();
             await _raceManager.WaitForParticipantsPreparation(token);
 
@@ -122,11 +138,7 @@ namespace Game.Gameplay
         {
             _racePanelManagerUI.EndPanelUI.AddLeaderBoardParticipantInfo(participantFinishArgs.ID, participantFinishArgs.ParticipantInfo);
 
-            if (_isGameFinished)
-            {
-                _racePanelManagerUI.EndPanelUI.UpdateLeaderBoard();
-            }
-            else
+            if (!_isGameFinished)
             {
                 if (participantFinishArgs.ID == _raceManager.PlayerHorseID)
                 {
@@ -134,6 +146,10 @@ namespace Game.Gameplay
                     DisplayGameEndPanel(participantFinishArgs.ParticipantInfo);
                     _isGameFinished = true;
                 }
+            }
+            else
+            {
+                _racePanelManagerUI.EndPanelUI.UpdateLeaderBoard();
             }
         }
 

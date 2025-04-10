@@ -1,3 +1,4 @@
+using Game.Gameplay.Audio;
 using Game.Gameplay.Race;
 using Game.Gameplay.UI;
 using Zenject;
@@ -10,6 +11,7 @@ namespace Game.Gameplay.Settings
         public override void InstallBindings()
         {
             BindGameManager();
+            BindAudioManager();
             BindRaceManager();
         }
 
@@ -17,6 +19,16 @@ namespace Game.Gameplay.Settings
         {
             Container
                 .Bind<GameManager>()
+                .FromComponentInHierarchy(true)
+                .AsSingle()
+                .NonLazy();
+        }
+
+        private void BindAudioManager()
+        {
+            Container
+                .Bind<IGameplayAudioManager>()
+                .To<GameplayAudioManager>()
                 .FromComponentInHierarchy(true)
                 .AsSingle()
                 .NonLazy();

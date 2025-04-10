@@ -19,13 +19,15 @@ namespace Game.Gameplay
     {
         #region Fields 
 
+        private const float DefaultPositionOffsetY = -15f;
+
         private string DefaultContainerName = "Horses_Container";
         private string DefaultHorseNamePrefix = "Horse_";
 
         private Dictionary<int, HorseLogic> _horsesDict;
         private Transform _container;
 
-        private CancellationTokenSource _horseCreationCts;
+        private CancellationTokenSource _cts;
         private HorsesSetData _initialHorsesData;
 
         private int _activeLoadingsCount = 0;
@@ -52,9 +54,14 @@ namespace Game.Gameplay
             _activeLoadingsCount = 0;
             InitHorsesContainer(container);
 
+            if (_cts == null || _cts.IsCancellationRequested)
+            {
+                _cts = new CancellationTokenSource();
+            }
+
             if (_initialHorsesData != null)
             {
-                AddMultipleHorsesAsync(_initialHorsesData.HorsesDataList);
+                AddMultipleHorsesAsync(_initialHorsesData.HorsesDataList, _cts.Token);
             }
         }
 
@@ -72,6 +79,15 @@ namespace Game.Gameplay
             }
         }
 
+        public void ResetAllHorses()
+        {
+            foreach (var horse in _horsesDict.Values)
+            {
+                horse.ResetState();
+                horse.transform.position = transform.position + (Vector3.up * DefaultPositionOffsetY);
+            }
+        }
+
         public void Dispose()
         {
             if (_horsesDict != null)
@@ -82,11 +98,11 @@ namespace Game.Gameplay
                 }
             }
 
-            if (_horseCreationCts != null)
+            if (_cts != null)
             {
-                _horseCreationCts.Cancel();
-                _horseCreationCts.Dispose();
-                _horseCreationCts = null;
+                _cts.Cancel();
+                _cts.Dispose();
+                _cts = null;
             }
 
         }
@@ -108,15 +124,10 @@ namespace Game.Gameplay
             return _horsesDict.Values;
         }
 
-        public async UniTask AddHorseAsync(MainHorseData horseData)
+        public async UniTask AddHorseAsync(MainHorseData horseData, CancellationToken token = default)
         {
-            if (_horseCreationCts == null || _horseCreationCts.IsCancellationRequested)
-            {
-                _horseCreationCts = new CancellationTokenSource();
-            }
-
             _activeLoadingsCount += 1;
-            var createdHorseLogic = await CreateHorseAsync(horseData.HorsePrefabReference, _container, _horseCreationCts.Token);
+            var createdHorseLogic = await CreateHorseAsync(horseData.HorsePrefabReference, _container, _cts.Token);
 
             if (createdHorseLogic != null)
             {
@@ -133,13 +144,13 @@ namespace Game.Gameplay
             _activeLoadingsCount -= 1;
         }
 
-        public IEnumerable<UniTask> AddMultipleHorsesAsync(IEnumerable<MainHorseData> horsesDataCollection)
+        public IEnumerable<UniTask> AddMultipleHorsesAsync(IEnumerable<MainHorseData> horsesDataCollection, CancellationToken token = default)
         {
             List<UniTask> tasks = new List<UniTask>();
 
             foreach (var horse in horsesDataCollection)
             {
-                tasks.Add(AddHorseAsync(horse));
+                tasks.Add(AddHorseAsync(horse, token));
             }
 
             return tasks;
@@ -153,7 +164,7 @@ namespace Game.Gameplay
 
             if (loadHandle.Task.IsCompletedSuccessfully && !token.IsCancellationRequested)
             {
-                GameObject horseObject = GameObject.Instantiate(loadHandle.Result, Vector3.zero, Quaternion.identity, container);
+                GameObject horseObject = GameObject.Instantiate(loadHandle.Result, (Vector3.up * DefaultPositionOffsetY), Quaternion.identity, container);
                 return horseObject.GetComponent<HorseLogic>();
             }
 

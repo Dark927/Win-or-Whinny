@@ -61,7 +61,7 @@ namespace Game.Gameplay.Entities
 
         public void Dispose()
         {
-            Stop();
+            StopWithDrag();
         }
 
 
@@ -87,9 +87,20 @@ namespace Game.Gameplay.Entities
             MoveWithAccelerationAsync(direction, _cts.Token).Forget();
         }
 
-        public void Stop()
+        public void StopWithDrag()
         {
             _rigidbody.drag = HorseStats.DefaultStoppingBodyDrag;
+            StopMovement();
+        }
+
+        public void StopImmediately()
+        {
+            _rigidbody.velocity = Vector3.zero;
+            StopMovement();
+        }
+
+        private void StopMovement()
+        {
             _stopped = true;
 
             if (_cts != null)
