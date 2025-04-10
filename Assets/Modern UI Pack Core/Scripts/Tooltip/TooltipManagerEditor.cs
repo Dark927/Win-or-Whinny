@@ -1,7 +1,7 @@
 ﻿#if UNITY_EDITOR
-using UnityEngine;
 using UnityEditor;
 using UnityEditor.SceneManagement;
+using UnityEngine;
 
 namespace Michsky.MUIP
 {
@@ -130,7 +130,7 @@ namespace Michsky.MUIP
 
                     else if (tempUIM == null) { MUIPEditorHandler.DrawUIManagerDisconnectedHeader(); }
 
-                    break;            
+                    break;
             }
 
             if (Application.isPlaying == false) { this.Repaint(); }

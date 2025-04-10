@@ -1,9 +1,9 @@
 ﻿using System.Collections;
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
-using TMPro;
+using UnityEngine.UI;
 
 namespace Michsky.MUIP
 {
@@ -74,9 +74,9 @@ namespace Michsky.MUIP
             notificationAnimator.Play("In");
             onOpen.Invoke();
 
-            if (enableTimer) 
-            { 
-                StartCoroutine("StartTimer"); 
+            if (enableTimer)
+            {
+                StartCoroutine("StartTimer");
             }
         }
 

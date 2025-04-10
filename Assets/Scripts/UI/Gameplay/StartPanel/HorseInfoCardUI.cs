@@ -47,10 +47,7 @@ namespace Game.Gameplay.UI
 
         public void UnsubscribeFromClick(Action listener)
         {
-            Debug.Log("count before remove : " + ClickSubscribers.Count);
             ClickSubscribers.Remove(listener);
-
-            Debug.Log("count after remove : " + ClickSubscribers.Count);
         }
 
         public void TintImage(UnityEngine.Color color)

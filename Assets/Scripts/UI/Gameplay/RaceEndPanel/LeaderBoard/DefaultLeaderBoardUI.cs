@@ -1,8 +1,8 @@
+using Game.Gameplay.Race;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Linq;
-using Game.Gameplay.Race;
 
 namespace Game.Gameplay.UI
 {

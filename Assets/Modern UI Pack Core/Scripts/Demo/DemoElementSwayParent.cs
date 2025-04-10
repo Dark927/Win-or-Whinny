@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 namespace Michsky.MUIP
 {
@@ -58,7 +58,7 @@ namespace Michsky.MUIP
                 else
                 {
                     if (elements[i].wmSelected == false) { continue; }
-                    elements[i].WindowManagerDeselect(); 
+                    elements[i].WindowManagerDeselect();
                 }
             }
 

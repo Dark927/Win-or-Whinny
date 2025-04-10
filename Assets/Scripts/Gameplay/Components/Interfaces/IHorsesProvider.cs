@@ -1,6 +1,5 @@
 ﻿using Cysharp.Threading.Tasks;
 using Game.Gameplay.Entities;
-using Game.Settings.Common;
 using System;
 using System.Collections.Generic;
 using System.Threading;

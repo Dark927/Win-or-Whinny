@@ -1,6 +1,5 @@
 
 using DG.Tweening;
-using UnityEngine;
 
 namespace Game.UI.Buttons
 {
@@ -10,13 +9,13 @@ namespace Game.UI.Buttons
 
         public override void ClickEventListener()
         {
-            DOTween.KillAll(false);
+//            DOTween.KillAll(false);
 
-#if UNITY_EDITOR
-            UnityEditor.EditorApplication.ExitPlaymode();
-#else
-            Application.Quit();
-#endif
+//#if UNITY_EDITOR
+//            UnityEditor.EditorApplication.ExitPlaymode();
+//#else
+//#endif
+//            Application.Quit();
         }
 
         #endregion

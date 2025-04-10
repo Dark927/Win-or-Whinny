@@ -66,13 +66,13 @@ namespace Game.Gameplay.Cameras
             Vector3 targetPosition = _camera.transform.position;
 
             // Offset to maintain camera's initial height and forward position (optional)
-            Vector3 horseForwardPosition; 
+            Vector3 horseForwardPosition;
 
             while (!token.IsCancellationRequested)
             {
                 await UniTask.Yield(PlayerLoopTiming.PostLateUpdate);
 
-                if(token.IsCancellationRequested)
+                if (token.IsCancellationRequested)
                 {
                     break;
                 }

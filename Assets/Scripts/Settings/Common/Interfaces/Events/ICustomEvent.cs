@@ -1,7 +1,4 @@
-﻿
-
-using Game.Settings.Common.Events;
-using System;
+﻿using System;
 
 namespace Game.Settings.Common.Events
 {

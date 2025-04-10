@@ -1,9 +1,9 @@
 using Cysharp.Threading.Tasks;
-using Michsky.MUIP;
 using DG.Tweening;
+using Game.Settings.GameInitialization;
+using Michsky.MUIP;
 using System.Collections.Generic;
 using UnityEngine;
-using Game.Settings.GameInitialization;
 
 namespace Game.UI.Screens
 {
@@ -11,8 +11,8 @@ namespace Game.UI.Screens
     {
         #region Fields 
 
-        private const float MinProgressUpdateDiff = 0.01f; 
-        
+        private const float MinProgressUpdateDiff = 0.01f;
+
         [SerializeField] private float _deactivationDelay = 3f;
         [SerializeField] private float _maxProgressUpdateDuration = 1f;  // Maximum duration for the progress update
         [SerializeField] private float _minProgressUpdateDuration = 0.1f; // Minimum duration for the progress update
@@ -22,7 +22,7 @@ namespace Game.UI.Screens
         private Queue<(float targetPercent, float duration)> _progressQueue;
         private Tweener _currentTweener;
         private bool _isUpdatingProgress = false;
-        
+
         #endregion
 
         #region Properties

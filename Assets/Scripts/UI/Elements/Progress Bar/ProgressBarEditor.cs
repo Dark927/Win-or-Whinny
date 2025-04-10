@@ -1,6 +1,6 @@
 ﻿#if UNITY_EDITOR
-using UnityEngine;
 using UnityEditor;
+using UnityEngine;
 
 namespace Michsky.MUIP
 {
@@ -75,7 +75,7 @@ namespace Michsky.MUIP
                     EditorGUILayout.LabelField(new GUIContent("Current Percent"), customSkin.FindStyle("Text"), GUILayout.Width(100));
                     pbTarget.currentPercent = EditorGUILayout.Slider(pbTarget.currentPercent, minValue.floatValue, maxValue.floatValue);
                     currentPercent.floatValue = pbTarget.currentPercent;
-                 
+
                     GUILayout.EndHorizontal();
 
                     if (pbTarget.loadingBar != null && pbTarget.textPercent != null) { pbTarget.UpdateUI(); }
@@ -140,7 +140,7 @@ namespace Michsky.MUIP
 
                     EditorGUILayout.LabelField(new GUIContent("Value Limit"), customSkin.FindStyle("Text"), GUILayout.Width(80));
                     EditorGUILayout.PropertyField(valueLimit, new GUIContent(""));
-                   
+
                     if (valueLimit.floatValue <= minValue.floatValue) { valueLimit.floatValue = minValue.floatValue + 1; }
 
                     GUILayout.EndHorizontal();

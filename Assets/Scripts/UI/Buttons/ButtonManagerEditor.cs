@@ -1,6 +1,6 @@
 ﻿#if UNITY_EDITOR
-using UnityEngine;
 using UnityEditor;
+using UnityEngine;
 
 namespace Michsky.MUIP
 {
@@ -231,21 +231,21 @@ namespace Michsky.MUIP
                         GUILayout.BeginVertical(EditorStyles.helpBox);
                         MUIPEditorHandler.DrawPropertyPlain(navigationMode, customSkin, "Navigation Mode");
 
-                        if (buttonTarget.navigationMode == UnityEngine.UI.Navigation.Mode.Horizontal) 
+                        if (buttonTarget.navigationMode == UnityEngine.UI.Navigation.Mode.Horizontal)
                         {
                             EditorGUI.indentLevel = 1;
-                         //   GUILayout.Space(-3);
+                            //   GUILayout.Space(-3);
                             wrapAround.boolValue = MUIPEditorHandler.DrawToggle(wrapAround.boolValue, customSkin, "Wrap Around");
-                          //  GUILayout.Space(4);
+                            //  GUILayout.Space(4);
                             EditorGUI.indentLevel = 0;
                         }
 
-                        else if (buttonTarget.navigationMode == UnityEngine.UI.Navigation.Mode.Vertical) 
-                        { 
+                        else if (buttonTarget.navigationMode == UnityEngine.UI.Navigation.Mode.Vertical)
+                        {
                             wrapAround.boolValue = MUIPEditorHandler.DrawTogglePlain(wrapAround.boolValue, customSkin, "Wrap Around");
                         }
 
-                        else if (buttonTarget.navigationMode == UnityEngine.UI.Navigation.Mode.Explicit) 
+                        else if (buttonTarget.navigationMode == UnityEngine.UI.Navigation.Mode.Explicit)
                         {
                             EditorGUI.indentLevel = 1;
                             MUIPEditorHandler.DrawPropertyPlain(selectOnUp, customSkin, "Select On Up");

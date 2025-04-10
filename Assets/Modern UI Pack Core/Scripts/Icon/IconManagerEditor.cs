@@ -1,8 +1,8 @@
 ﻿#if UNITY_EDITOR
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEditor;
 using UnityEditor.SceneManagement;
+using UnityEngine;
 
 namespace Michsky.MUIP
 {
@@ -121,7 +121,7 @@ namespace Michsky.MUIP
 
                     if (selectedIconID.stringValue == "")
                         EditorGUILayout.HelpBox("No icon selected.", MessageType.Info);
-                  
+
                     else
                     {
                         GUILayout.BeginVertical(EditorStyles.helpBox);

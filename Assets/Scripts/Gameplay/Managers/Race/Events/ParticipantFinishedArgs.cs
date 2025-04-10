@@ -1,7 +1,4 @@
-﻿
-
-using Game.Gameplay.UI;
-using System;
+﻿using System;
 
 namespace Game.Gameplay.Race
 {

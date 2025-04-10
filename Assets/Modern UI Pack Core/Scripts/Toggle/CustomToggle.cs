@@ -36,10 +36,10 @@ namespace Michsky.MUIP
 
         public void UpdateState()
         {
-            if (gameObject.activeInHierarchy == true) 
-            { 
-                StopCoroutine("DisableAnimator"); 
-                StartCoroutine("DisableAnimator"); 
+            if (gameObject.activeInHierarchy == true)
+            {
+                StopCoroutine("DisableAnimator");
+                StartCoroutine("DisableAnimator");
             }
 
             else { return; }

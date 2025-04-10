@@ -1,6 +1,6 @@
 ﻿#if UNITY_EDITOR
-using UnityEngine;
 using UnityEditor;
+using UnityEngine;
 
 namespace Michsky.MUIP
 {
@@ -66,7 +66,7 @@ namespace Michsky.MUIP
                         {
                             for (int i = 0; i < wmTarget.windows.Count; i++)
                             {
-                                if (i == currentWindowIndex.intValue) 
+                                if (i == currentWindowIndex.intValue)
                                 {
                                     var tempCG = wmTarget.windows[currentWindowIndex.intValue].windowObject.GetComponent<CanvasGroup>();
                                     if (tempCG != null) { tempCG.alpha = 1; }

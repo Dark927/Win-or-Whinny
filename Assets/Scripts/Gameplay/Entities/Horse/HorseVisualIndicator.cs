@@ -34,7 +34,7 @@ namespace Game.Gameplay.Entities
         {
             _indicatorTextMesh.color = highlightColor;
         }
-        
+
         public void ResetIndicatorColor()
         {
             _indicatorTextMesh.color = Color.white;

@@ -153,7 +153,7 @@ namespace Game.Gameplay
 
             foreach (var horse in horsesDataCollection)
             {
-                if(token.IsCancellationRequested)
+                if (token.IsCancellationRequested)
                 {
                     return tasks;
                 }

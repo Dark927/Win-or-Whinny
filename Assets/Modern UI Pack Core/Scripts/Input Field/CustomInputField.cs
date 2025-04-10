@@ -1,8 +1,8 @@
 ﻿using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
-using TMPro;
 #if !ENABLE_LEGACY_INPUT_MANAGER
 using UnityEngine.InputSystem;
 #endif
@@ -58,15 +58,15 @@ namespace Michsky.MUIP
                 return;
 
 #if ENABLE_LEGACY_INPUT_MANAGER
-            if (Input.GetKeyDown(KeyCode.Return)) 
-            { 
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
                 onSubmit.Invoke();
 
-                if (clearOnSubmit) 
+                if (clearOnSubmit)
                 {
-                    inputText.text = ""; 
+                    inputText.text = "";
                     UpdateState();
-                } 
+                }
             }
 #elif ENABLE_INPUT_SYSTEM
             if (Keyboard.current.enterKey.wasPressedThisFrame) 
@@ -88,9 +88,9 @@ namespace Michsky.MUIP
             if (inputFieldAnimator == null) { inputFieldAnimator = gameObject.GetComponent<Animator>(); }
         }
 
-        public void AnimateIn() 
+        public void AnimateIn()
         {
-            if (inputFieldAnimator.gameObject.activeInHierarchy && !isActive) 
+            if (inputFieldAnimator.gameObject.activeInHierarchy && !isActive)
             {
                 StopCoroutine("DisableAnimator");
                 StartCoroutine("DisableAnimator");
@@ -127,7 +127,7 @@ namespace Michsky.MUIP
             StopCoroutine("DisableAnimator");
             StartCoroutine("DisableAnimator");
 
-            if (inputText.text.Length == 0) { isActive = false; inputFieldAnimator.Play(instaOutAnim);  }
+            if (inputText.text.Length == 0) { isActive = false; inputFieldAnimator.Play(instaOutAnim); }
             else { isActive = true; inputFieldAnimator.Play(instaInAnim); }
         }
 

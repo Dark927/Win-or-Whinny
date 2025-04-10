@@ -1,6 +1,6 @@
 ﻿#if UNITY_EDITOR
-using UnityEngine;
 using UnityEditor;
+using UnityEngine;
 
 namespace Michsky.MUIP
 {
@@ -76,7 +76,7 @@ namespace Michsky.MUIP
                     GUILayout.BeginVertical();
                     EditorGUI.indentLevel = 1;
 
-                    EditorGUILayout.PropertyField(items, new GUIContent("Dropdown Items"), true); 
+                    EditorGUILayout.PropertyField(items, new GUIContent("Dropdown Items"), true);
 
                     EditorGUI.indentLevel = 0;
                     GUILayout.EndVertical();
@@ -142,7 +142,7 @@ namespace Michsky.MUIP
 
                     setHighPriority.boolValue = MUIPEditorHandler.DrawToggle(setHighPriority.boolValue, customSkin, "Set High Priority");
                     outOnPointerExit.boolValue = MUIPEditorHandler.DrawToggle(outOnPointerExit.boolValue, customSkin, "Out On Pointer Exit");
-                   
+
                     GUILayout.BeginVertical(EditorStyles.helpBox);
                     GUILayout.Space(-3);
 

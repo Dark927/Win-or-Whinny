@@ -1,7 +1,7 @@
 ﻿#if UNITY_EDITOR
-using UnityEngine;
 using UnityEditor;
 using UnityEditor.SceneManagement;
+using UnityEngine;
 
 namespace Michsky.MUIP
 {
@@ -58,7 +58,7 @@ namespace Michsky.MUIP
             var confirmButton = serializedObject.FindProperty("confirmButton");
             var cancelButton = serializedObject.FindProperty("cancelButton");
             var mwAnimator = serializedObject.FindProperty("mwAnimator");
-            
+
             var useCustomContent = serializedObject.FindProperty("useCustomContent");
             var closeBehaviour = serializedObject.FindProperty("closeBehaviour");
             var startBehaviour = serializedObject.FindProperty("startBehaviour");

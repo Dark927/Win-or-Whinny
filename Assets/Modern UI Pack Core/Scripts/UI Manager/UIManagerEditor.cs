@@ -1,7 +1,7 @@
 ﻿#if UNITY_EDITOR
-using UnityEngine;
 using UnityEditor;
 using UnityEditor.Presets;
+using UnityEngine;
 
 namespace Michsky.MUIP
 {
@@ -31,7 +31,7 @@ namespace Michsky.MUIP
         protected static bool showTooltip = false;
         protected static bool showCustomObjects = false;
 
-        private void OnEnable() 
+        private void OnEnable()
         {
             if (EditorGUIUtility.isProSkin == true) { customSkin = MUIPEditorHandler.GetDarkEditor(customSkin); }
             else { customSkin = MUIPEditorHandler.GetLightEditor(customSkin); }
@@ -44,7 +44,7 @@ namespace Michsky.MUIP
                 EditorGUILayout.HelpBox("Editor variables are missing. You can manually fix this by deleting " +
                     "Modern UI Pack > Resources folder and then re-import the package. \n\nIf you're still seeing this " +
                     "dialog even after the re-import, contact me with this ID: " + buildID, MessageType.Error);
-              
+
                 if (GUILayout.Button("Contact")) { Email(); }
                 return;
             }
@@ -58,7 +58,7 @@ namespace Michsky.MUIP
 
             // Animated Icon
             var animatedIconColor = serializedObject.FindProperty("animatedIconColor");
-          
+
             GUILayout.Space(foldoutTopSpace);
             GUILayout.BeginHorizontal();
             showAnimatedIcon = EditorGUILayout.Foldout(showAnimatedIcon, "Animated Icon", true, foldoutStyle);
@@ -519,7 +519,7 @@ namespace Michsky.MUIP
             {
                 EditorGUILayout.HelpBox("These values are universal and affect all objects containing 'UI Manager' component.", MessageType.Info);
                 EditorGUILayout.HelpBox("If want to assign unique values, remove 'UI Manager' component from the object ", MessageType.Info);
-				EditorGUILayout.HelpBox("You can press 'Control/Command + Shift + M' to open the manager quickly.", MessageType.Info);
+                EditorGUILayout.HelpBox("You can press 'Control/Command + Shift + M' to open the manager quickly.", MessageType.Info);
             }
 
             GUILayout.EndVertical();
@@ -571,7 +571,7 @@ namespace Michsky.MUIP
                 }
 
                 catch { Debug.LogWarning("<b>[UI Manager]</b> Resetting failed. Default preset seems to be missing"); }
-            }    
+            }
         }
     }
 }

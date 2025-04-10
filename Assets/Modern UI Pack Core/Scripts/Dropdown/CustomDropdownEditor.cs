@@ -1,6 +1,6 @@
 ﻿#if UNITY_EDITOR
-using UnityEngine;
 using UnityEditor;
+using UnityEngine;
 
 namespace Michsky.MUIP
 {
@@ -134,7 +134,7 @@ namespace Michsky.MUIP
 
                     GUILayout.BeginVertical();
                     EditorGUI.indentLevel = 1;
-                    EditorGUILayout.PropertyField(items, new GUIContent("Dropdown Items"), true);          
+                    EditorGUILayout.PropertyField(items, new GUIContent("Dropdown Items"), true);
                     EditorGUI.indentLevel = 0;
                     GUILayout.EndVertical();
 
@@ -181,7 +181,7 @@ namespace Michsky.MUIP
                     EditorGUILayout.PropertyField(itemPaddingBottom, new GUIContent("Bottom"));
                     EditorGUILayout.PropertyField(itemPaddingLeft, new GUIContent("Left"));
                     EditorGUILayout.PropertyField(itemPaddingRight, new GUIContent("Right"));
-                    
+
                     EditorGUI.indentLevel = 0;
                     GUILayout.EndVertical();
 
@@ -213,7 +213,7 @@ namespace Michsky.MUIP
                             GUILayout.BeginHorizontal();
                             EditorGUILayout.HelpBox("'Selected Image' is not assigned. Go to Resources tab and assign the correct variable.", MessageType.Error);
                             GUILayout.EndHorizontal();
-                        }                       
+                        }
                     }
 
                     enableTrigger.boolValue = MUIPEditorHandler.DrawToggle(enableTrigger.boolValue, customSkin, "Enable Trigger");
@@ -223,12 +223,12 @@ namespace Michsky.MUIP
                     if (setHighPriority.boolValue == true) { EditorGUILayout.HelpBox("Set High Priority; renders the content above all objects when the dropdown is open.", MessageType.Info); }
 
                     outOnPointerExit.boolValue = MUIPEditorHandler.DrawToggle(outOnPointerExit.boolValue, customSkin, "Out On Pointer Exit");
-                   
+
                     GUILayout.BeginVertical(EditorStyles.helpBox);
                     GUILayout.Space(-3);
-                   
+
                     enableDropdownSounds.boolValue = MUIPEditorHandler.DrawTogglePlain(enableDropdownSounds.boolValue, customSkin, "Enable Dropdown Sounds");
-                   
+
                     GUILayout.Space(3);
 
                     if (enableDropdownSounds.boolValue == true)
@@ -237,7 +237,7 @@ namespace Michsky.MUIP
                         GUILayout.Space(-3);
 
                         useHoverSound.boolValue = MUIPEditorHandler.DrawTogglePlain(useHoverSound.boolValue, customSkin, "Enable Hover Sound");
-                     
+
                         GUILayout.Space(3);
 
                         if (useHoverSound.boolValue == true)
@@ -246,9 +246,9 @@ namespace Michsky.MUIP
                         GUILayout.EndVertical();
                         GUILayout.BeginVertical(EditorStyles.helpBox);
                         GUILayout.Space(-3);
-                        
+
                         useClickSound.boolValue = MUIPEditorHandler.DrawTogglePlain(useClickSound.boolValue, customSkin, "Enable Click Sound");
-                       
+
                         GUILayout.Space(3);
 
                         if (useClickSound.boolValue == true)
@@ -275,7 +275,7 @@ namespace Michsky.MUIP
                     GUILayout.Space(-3);
 
                     saveSelected.boolValue = MUIPEditorHandler.DrawTogglePlain(saveSelected.boolValue, customSkin, "Save Selected");
-                  
+
                     GUILayout.Space(3);
 
                     if (saveSelected.boolValue == true)
@@ -309,7 +309,7 @@ namespace Michsky.MUIP
                     }
 
                     else if (tempUIM == null) { MUIPEditorHandler.DrawUIManagerDisconnectedHeader(); }
-                    
+
                     break;
             }
 

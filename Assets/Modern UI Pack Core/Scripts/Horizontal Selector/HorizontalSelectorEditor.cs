@@ -1,6 +1,6 @@
 ﻿#if UNITY_EDITOR
-using UnityEngine;
 using UnityEditor;
+using UnityEngine;
 
 namespace Michsky.MUIP
 {
@@ -115,7 +115,7 @@ namespace Michsky.MUIP
                     GUILayout.BeginVertical();
                     EditorGUI.indentLevel = 1;
                     EditorGUILayout.PropertyField(items, new GUIContent("Selector Items"), true);
-                    EditorGUI.indentLevel = 1;               
+                    EditorGUI.indentLevel = 1;
                     GUILayout.EndVertical();
 
                     MUIPEditorHandler.DrawHeader(customSkin, "Events Header", 10);
@@ -138,8 +138,8 @@ namespace Michsky.MUIP
                 case 2:
                     MUIPEditorHandler.DrawHeader(customSkin, "Customization Header", 6);
                     GUILayout.BeginVertical(EditorStyles.helpBox);
-                    GUILayout.Space(-3);       
-                    enableIcon.boolValue = MUIPEditorHandler.DrawTogglePlain(enableIcon.boolValue, customSkin, "Enable Icon");            
+                    GUILayout.Space(-3);
+                    enableIcon.boolValue = MUIPEditorHandler.DrawTogglePlain(enableIcon.boolValue, customSkin, "Enable Icon");
                     GUILayout.Space(3);
 
                     if (enableIcon.boolValue == true && hsTarget.labelIcon == null) { EditorGUILayout.HelpBox("'Enable Icon' is enabled but 'Label Icon' is not assigned. Go to Resources tab and assign the correct variable.", MessageType.Error); }
@@ -172,7 +172,7 @@ namespace Michsky.MUIP
                     invertAnimation.boolValue = MUIPEditorHandler.DrawToggle(invertAnimation.boolValue, customSkin, "Invert Animation");
                     loopSelection.boolValue = MUIPEditorHandler.DrawToggle(loopSelection.boolValue, customSkin, "Loop Selection");
                     GUI.enabled = true;
-                    
+
                     GUILayout.BeginVertical(EditorStyles.helpBox);
                     GUILayout.Space(-3);
                     saveSelected.boolValue = MUIPEditorHandler.DrawTogglePlain(saveSelected.boolValue, customSkin, "Save Selected");

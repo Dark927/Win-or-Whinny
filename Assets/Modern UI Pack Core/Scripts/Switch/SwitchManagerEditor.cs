@@ -1,6 +1,6 @@
 ﻿#if UNITY_EDITOR
-using UnityEngine;
 using UnityEditor;
+using UnityEngine;
 
 namespace Michsky.MUIP
 {
@@ -30,7 +30,7 @@ namespace Michsky.MUIP
             GUIContent[] toolbarTabs = new GUIContent[2];
             toolbarTabs[0] = new GUIContent("Content");
             toolbarTabs[1] = new GUIContent("Settings");
-    
+
             currentTab = MUIPEditorHandler.DrawTabs(currentTab, toolbarTabs, customSkin);
 
             if (GUILayout.Button(new GUIContent("Content", "Content"), customSkin.FindStyle("Tab Content")))

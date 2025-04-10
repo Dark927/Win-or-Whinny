@@ -23,18 +23,18 @@ namespace Michsky.MUIP
 
             // Row 1
             if (row0Ref.rowType == ListView.RowType.Icon)
-            { 
-                row0.iconImage.sprite = row0Ref.rowIcon; 
-                row0.iconImage.gameObject.SetActive(true); 
+            {
+                row0.iconImage.sprite = row0Ref.rowIcon;
+                row0.iconImage.gameObject.SetActive(true);
                 row0.textObject.gameObject.SetActive(false);
                 row0.iconImage.transform.localScale = new Vector3(row0Ref.iconScale, row0Ref.iconScale, row0Ref.iconScale);
             }
 
-            else if (row0Ref.rowType == ListView.RowType.Text) 
+            else if (row0Ref.rowType == ListView.RowType.Text)
             {
                 row0.textObject.text = row0Ref.rowText;
-                row0.iconImage.gameObject.SetActive(false); 
-                row0.textObject.gameObject.SetActive(true); 
+                row0.iconImage.gameObject.SetActive(false);
+                row0.textObject.gameObject.SetActive(true);
             }
 
             if (row0Ref.usePreferredWidth == true) { row0.layoutElement.preferredWidth = row0Ref.preferredWidth; }
@@ -44,18 +44,18 @@ namespace Michsky.MUIP
             if (row1Ref == null)
                 return;
 
-            if (row1Ref.rowType == ListView.RowType.Icon) 
+            if (row1Ref.rowType == ListView.RowType.Icon)
             {
-                row1.iconImage.sprite = row1Ref.rowIcon; 
+                row1.iconImage.sprite = row1Ref.rowIcon;
                 row1.iconImage.gameObject.SetActive(true);
                 row1.textObject.gameObject.SetActive(false);
                 row1.iconImage.transform.localScale = new Vector3(row1Ref.iconScale, row1Ref.iconScale, row1Ref.iconScale);
             }
 
-            else if (row1Ref.rowType == ListView.RowType.Text) 
+            else if (row1Ref.rowType == ListView.RowType.Text)
             {
-                row1.textObject.text = row1Ref.rowText; 
-                row1.iconImage.gameObject.SetActive(false); 
+                row1.textObject.text = row1Ref.rowText;
+                row1.iconImage.gameObject.SetActive(false);
                 row1.textObject.gameObject.SetActive(true);
             }
 
@@ -66,19 +66,19 @@ namespace Michsky.MUIP
             if (row2Ref == null)
                 return;
 
-            if (row2Ref.rowType == ListView.RowType.Icon) 
-            { 
-                row2.iconImage.sprite = row2Ref.rowIcon; 
+            if (row2Ref.rowType == ListView.RowType.Icon)
+            {
+                row2.iconImage.sprite = row2Ref.rowIcon;
                 row2.iconImage.gameObject.SetActive(true);
                 row2.textObject.gameObject.SetActive(false);
                 row2.iconImage.transform.localScale = new Vector3(row2Ref.iconScale, row2Ref.iconScale, row2Ref.iconScale);
             }
 
             else if (row2Ref.rowType == ListView.RowType.Text)
-            { 
-                row2.textObject.text = row2Ref.rowText; 
-                row2.iconImage.gameObject.SetActive(false); 
-                row2.textObject.gameObject.SetActive(true); 
+            {
+                row2.textObject.text = row2Ref.rowText;
+                row2.iconImage.gameObject.SetActive(false);
+                row2.textObject.gameObject.SetActive(true);
             }
 
             if (row2Ref.usePreferredWidth == true) { row2.layoutElement.preferredWidth = row2Ref.preferredWidth; }

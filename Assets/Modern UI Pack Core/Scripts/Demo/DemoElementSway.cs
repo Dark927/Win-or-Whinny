@@ -21,7 +21,7 @@ namespace Michsky.MUIP
         [Header("Settings")]
         [SerializeField] private float smoothness = 10;
         [SerializeField] private float transitionSpeed = 8;
-        [SerializeField] [Range(0, 1)] private float dissolveAlpha = 0.5f;
+        [SerializeField][Range(0, 1)] private float dissolveAlpha = 0.5f;
 
         [Header("Events")]
         [SerializeField] private UnityEvent onClick;
@@ -73,7 +73,7 @@ namespace Michsky.MUIP
 
         void ProcessWorldSpace()
         {
-            if (allowSway == true) 
+            if (allowSway == true)
             {
                 Vector3 clampedPos = new Vector3(cursorPos.x, cursorPos.y, (mainCanvas.transform.position.z / 6f));
                 swayObject.position = Vector3.Lerp(swayObject.position, Camera.main.ScreenToWorldPoint(clampedPos), Time.deltaTime * smoothness);

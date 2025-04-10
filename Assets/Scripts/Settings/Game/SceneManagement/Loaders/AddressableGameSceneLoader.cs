@@ -1,10 +1,10 @@
 
-using System;
 using Cysharp.Threading.Tasks;
 using Game.Settings.AssetsManagement;
 using Game.Settings.Common.Events;
-using Game.Utilities.Logging;
 using Game.UI.Screens;
+using Game.Utilities.Logging;
+using System;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
@@ -36,7 +36,7 @@ namespace Game.Settings.SceneManagement
 
         public IConcreteSceneLoader<AssetReference, AsyncOperationHandle<SceneInstance>> SceneLoader => _sceneLoader;
         public ICustomEvent<IEventListener, EventArgs> SwitchEvent => _sceneSwitchEvent;
-        public bool IsLoading => _isLoading; 
+        public bool IsLoading => _isLoading;
 
         #endregion
 

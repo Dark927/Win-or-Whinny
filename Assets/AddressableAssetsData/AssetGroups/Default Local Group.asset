@@ -16,32 +16,7 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: fe25b87d6e1472840ab240d3e359b1ba
-  m_SerializeEntries:
-  - m_GUID: 07ecd3948e1d320438fd6ba9459ca6cb
-    m_Address: Assets/Prefabs/Gameplay/Horses/Prefab_Horse_03.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 5d396d1bea7592740b4f00bc3d864957
-    m_Address: Assets/Prefabs/Gameplay/Horses/Prefab_Horse_04.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6e7b4222409b9104aa4823bca5dddc66
-    m_Address: Assets/Prefabs/Gameplay/Horses/Prefab_Horse_01.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 8608b6e236c67a14a864c4b702f58b68
-    m_Address: Assets/Prefabs/Gameplay/Horses/Prefab_Horse_02.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: adff5b3f0c89d9744a5c58d36a7fc594
-    m_Address: Assets/Temp/Content/Scene/Race_Ascot.unity
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: c2d9052f0ff5ff74fb6562d952659bc5, type: 2}
   m_SchemaSet:

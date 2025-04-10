@@ -1,6 +1,5 @@
 using Game.Settings.SceneManagement;
 using Game.UI.Buttons;
-using UnityEngine.SceneManagement;
 using UnityEngine;
 using Zenject;
 

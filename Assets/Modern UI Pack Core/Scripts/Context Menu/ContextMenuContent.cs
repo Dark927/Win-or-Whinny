@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
-using TMPro;
+using UnityEngine.UI;
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
 #endif
@@ -17,7 +17,7 @@ namespace Michsky.MUIP
         // Resources
         public ContextMenuManager contextManager;
         public Transform itemParent;
-      
+
         // Settings
         public bool useIn3D = false;
 

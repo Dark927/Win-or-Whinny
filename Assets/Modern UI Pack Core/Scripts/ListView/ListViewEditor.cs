@@ -1,9 +1,6 @@
 ﻿#if UNITY_EDITOR
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using UnityEditor;
-using UnityEditor.SceneManagement;
+using UnityEngine;
 
 namespace Michsky.MUIP
 {
@@ -205,7 +202,7 @@ namespace Michsky.MUIP
                                     EditorGUI.indentLevel--;
                                     GUILayout.EndVertical();
                                 }
-                            }       
+                            }
 
                             // End item
                             GUILayout.EndVertical();

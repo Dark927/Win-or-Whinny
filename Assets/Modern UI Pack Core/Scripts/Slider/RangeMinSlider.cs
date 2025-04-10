@@ -1,6 +1,6 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 namespace Michsky.MUIP
 {
@@ -17,7 +17,7 @@ namespace Michsky.MUIP
                 maxSlider = transform.parent.Find("Max Slider").GetComponent<RangeMaxSlider>();
 
             float newValue = input;
-            
+
             if (wholeNumbers == true)
                 newValue = Mathf.Round(newValue);
 
@@ -26,7 +26,7 @@ namespace Michsky.MUIP
 
             if (label != null)
                 label.text = newValue.ToString(numberFormat);
-            
+
             base.Set(input, sendCallback);
         }
 

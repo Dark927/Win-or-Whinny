@@ -17,6 +17,11 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: bf38f59326a4f5a49badf800b38e8c04
   m_SerializeEntries:
+  - m_GUID: 1ffbc1fa0f14e584d98c74750820beee
+    m_Address: Assets/Prefabs/UI/Menu/Main/Buttons/btn_play.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 241ef9eec973e0a40bd6735364e0a30f
     m_Address: Assets/Sprites/UI/Menu/Main/UI_MainMenu_Background.JPG
     m_ReadOnly: 0
@@ -28,25 +33,82 @@ MonoBehaviour:
     m_SerializedLabels:
     - audio
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 56daefa399c64654480ea7bff7eca8a5
+    m_Address: Assets/Data/Settings/Game_SceneManagement/Game_SceneLoader_Config.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - data
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5d9520fb4637b5341be2aa3beab0ab92
     m_Address: Assets/Prefabs/UI/LoadingScreen/UI_LoadingScreen_canvas.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c21167b79a62ecd4cbba74e1f5121b83
-    m_Address: Assets/Scenes/Main/Global_Scene.unity
+  - m_GUID: 5fbd051df6959954dbc014cb6fde525b
+    m_Address: Assets/Prefabs/UI/Gameplay/Panels
     m_ReadOnly: 0
-    m_SerializedLabels:
-    - scene
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d5bb8d862a305644dab6e4a135a57e72
-    m_Address: Assets/Scenes/Main/MainMenu_Scene.unity
+  - m_GUID: 606489c79ea42bd40bde8482b559769b
+    m_Address: Assets/Data/Settings/Game_SceneManagement/Scene/Game_MenuScene_Data.asset
     m_ReadOnly: 0
     m_SerializedLabels:
-    - scene
+    - data
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6817aaa4ddadbc546b90584d45091afe
+    m_Address: Assets/Prefabs/UI/Menu
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6f318476b2e1c714e91f1138fc979339
+    m_Address: Assets/Data/Settings/Game_SceneManagement/Scene/Game_GlobalScene_Data.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - data
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 701f4227a6907a844854cd5d6ed94bb9
+    m_Address: Assets/Modern UI Pack Core
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bfb8a53a76d5eab448d761ed9890ae53
+    m_Address: Assets/Materials/Material_FinishLine.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - materials
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c2e40f2f4de72a24fb650a350a30a7fd
+    m_Address: Assets/Data/Gameplay/Entities/Horses_InitialLevelSet_DefaultArena_Data.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d1bb4d2797987e546b8c711e03402ab4
+    m_Address: Assets/Sprites/UI/UI_Square_1x1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d81a28fb414f3384889f0856dd3d40c7
+    m_Address: Assets/Prefabs/UI/Menu/Main/Buttons/btn_settings.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dd9be7fccfd14de47821824203386b88
+    m_Address: Assets/Prefabs/UI/Gameplay/Buttons/btn_bet.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e32955c22c978e245946a88af323814f
+    m_Address: Assets/Prefabs/UI/Menu/Main/Buttons/btn_base.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ee6b9e3d12304c14ab663d8d227f5e55
     m_Address: Assets/Audio/SFX/SFX_RaceStart.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fc6df489a3506b44b8669d073daa671a
+    m_Address: Assets/Prefabs/UI/Gameplay/Gameplay_Canvas.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

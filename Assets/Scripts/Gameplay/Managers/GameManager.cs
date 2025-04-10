@@ -3,7 +3,6 @@ using Game.Gameplay.Audio;
 using Game.Gameplay.Cameras;
 using Game.Gameplay.Race;
 using Game.Gameplay.UI;
-using Game.Settings.SceneManagement;
 using System;
 using System.Threading;
 using UnityEngine;

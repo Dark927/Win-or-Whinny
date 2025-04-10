@@ -1,6 +1,6 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 namespace Michsky.MUIP
 {
@@ -41,7 +41,7 @@ namespace Michsky.MUIP
             border.color = UIManagerAsset.toggleBorderColor;
             background.color = UIManagerAsset.toggleBackgroundColor;
             check.color = UIManagerAsset.toggleCheckColor;
-          
+
             if (onLabel != null)
             {
                 onLabel.color = new Color(UIManagerAsset.toggleTextColor.r, UIManagerAsset.toggleTextColor.g, UIManagerAsset.toggleTextColor.b, onLabel.color.a);

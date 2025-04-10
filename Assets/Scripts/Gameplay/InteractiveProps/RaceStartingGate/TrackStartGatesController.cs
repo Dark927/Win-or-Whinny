@@ -49,7 +49,7 @@ public class TrackStartGatesController : MonoBehaviour, IInitializable, IResetab
 
     public void SetHorseOnStartingPoint(Transform horseTransform)
     {
-        if((_availableStartingPoints != null) && (_availableStartingPoints.Count() > 0))
+        if ((_availableStartingPoints != null) && (_availableStartingPoints.Count() > 0))
         {
             var point = _availableStartingPoints.First();
             horseTransform.SetPositionAndRotation(point.position, point.rotation);

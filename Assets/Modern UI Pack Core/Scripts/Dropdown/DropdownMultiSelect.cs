@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
-using TMPro;
+using UnityEngine.UI;
 
 namespace Michsky.MUIP
 {
@@ -272,7 +272,7 @@ namespace Michsky.MUIP
             item.itemName = title;
             item.isOn = value;
             items.Add(item);
-            SetupDropdown();     
+            SetupDropdown();
         }
 
         public void CreateNewItem(string title)

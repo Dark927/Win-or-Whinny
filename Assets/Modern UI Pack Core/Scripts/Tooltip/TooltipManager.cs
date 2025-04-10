@@ -44,7 +44,7 @@ namespace Michsky.MUIP
         Vector3 tooltipVelocity = Vector3.zero;
 
         RectTransform contentRect;
-        RectTransform tooltipRect;  
+        RectTransform tooltipRect;
 
         public enum CameraSource { Main, Custom }
         public enum TransitionMode { Damp, Snap }

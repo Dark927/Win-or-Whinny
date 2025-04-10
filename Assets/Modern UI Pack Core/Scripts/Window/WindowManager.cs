@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
@@ -128,7 +127,7 @@ namespace Michsky.MUIP
 
                 currentWindowIndex = 0;
                 currentButtonIndex = 0;
-               
+
                 currentWindow = windows[currentWindowIndex].windowObject;
                 currentWindowAnimator = currentWindow.GetComponent<Animator>();
                 currentWindowAnimator.Play(windowFadeIn);
@@ -236,7 +235,7 @@ namespace Michsky.MUIP
             {
                 if (cullWindows == true)
                     StopCoroutine("DisablePreviousWindow");
-               
+
                 currentWindow = windows[currentWindowIndex].windowObject;
                 currentWindow.gameObject.SetActive(true);
 
@@ -244,20 +243,20 @@ namespace Michsky.MUIP
                 {
                     currentButton = windows[currentButtonIndex].buttonObject;
                     nextButton = windows[currentButtonIndex + 1].buttonObject;
-                   
+
                     currentButtonAnimator = currentButton.GetComponent<Animator>();
                     currentButtonAnimator.Play(buttonFadeOut);
                 }
 
                 currentWindowAnimator = currentWindow.GetComponent<Animator>();
                 currentWindowAnimator.Play(windowFadeOut);
-               
+
                 currentWindowIndex += 1;
                 currentButtonIndex += 1;
-               
+
                 nextWindow = windows[currentWindowIndex].windowObject;
                 nextWindow.gameObject.SetActive(true);
-                
+
                 nextWindowAnimator = nextWindow.GetComponent<Animator>();
                 nextWindowAnimator.Play(windowFadeIn);
 
@@ -287,20 +286,20 @@ namespace Michsky.MUIP
                 {
                     currentButton = windows[currentButtonIndex].buttonObject;
                     nextButton = windows[currentButtonIndex - 1].buttonObject;
-                   
+
                     currentButtonAnimator = currentButton.GetComponent<Animator>();
                     currentButtonAnimator.Play(buttonFadeOut);
                 }
 
                 currentWindowAnimator = currentWindow.GetComponent<Animator>();
                 currentWindowAnimator.Play(windowFadeOut);
-               
+
                 currentWindowIndex -= 1;
                 currentButtonIndex -= 1;
-               
+
                 nextWindow = windows[currentWindowIndex].windowObject;
                 nextWindow.gameObject.SetActive(true);
-                
+
                 nextWindowAnimator = nextWindow.GetComponent<Animator>();
                 nextWindowAnimator.Play(windowFadeIn);
 
@@ -347,13 +346,13 @@ namespace Michsky.MUIP
             if (windows.Count != 0 && windows[windows.Count - 1].windowObject != null)
             {
                 int tempIndex = windows.Count - 1;
-               
+
                 GameObject tempWindow = windows[tempIndex].windowObject.transform.parent.GetChild(tempIndex).gameObject;
                 GameObject newWindow = Instantiate(tempWindow, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-               
+
                 newWindow.transform.SetParent(windows[tempIndex].windowObject.transform.parent, false);
                 newWindow.gameObject.name = "New Window " + tempIndex.ToString();
-               
+
                 window.windowName = "New Window " + tempIndex.ToString();
                 window.windowObject = newWindow;
 

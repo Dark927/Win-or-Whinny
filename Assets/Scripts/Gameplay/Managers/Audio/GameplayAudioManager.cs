@@ -90,7 +90,7 @@ namespace Game.Gameplay.Audio
 
         public void FadeOutSFX()
         {
-            if(_stopDurationSFX > 0f)
+            if (_stopDurationSFX > 0f)
             {
                 _secondaryMusicSource
                     .DOFade(0, _stopDurationSFX)

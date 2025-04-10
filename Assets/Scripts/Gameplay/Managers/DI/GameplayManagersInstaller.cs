@@ -1,6 +1,5 @@
 using Game.Gameplay.Audio;
 using Game.Gameplay.Race;
-using Game.Gameplay.UI;
 using Zenject;
 
 namespace Game.Gameplay.Settings

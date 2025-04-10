@@ -90,28 +90,29 @@ namespace Michsky.MUIP
         Button targetButton;
         bool isPointerOn;
         bool waitingForDoubleClickInput;
-        const int navHelper = 1; 
+        const int navHelper = 1;
 
 #if UNITY_EDITOR
         public bool isPreset;
         public int latestTabIndex = 0;
 #endif
 
-        public enum AnimationSolution 
-        { 
-            Custom, 
-            ScriptBased 
+        public enum AnimationSolution
+        {
+            Custom,
+            ScriptBased
         }
 
-        public enum RippleUpdateMode 
-        { 
-            Normal, 
+        public enum RippleUpdateMode
+        {
+            Normal,
             UnscaledTime
         }
 
-        [System.Serializable] public class Padding 
+        [System.Serializable]
+        public class Padding
         {
-            public int left = 20; 
+            public int left = 20;
             public int right = 20;
             public int top = 5;
             public int bottom = 5;
@@ -173,12 +174,12 @@ namespace Michsky.MUIP
 
         public void UpdateUI()
         {
-            if (autoFitContent == false) 
+            if (autoFitContent == false)
             {
                 if (mainFitter != null) { mainFitter.enabled = false; }
                 if (mainLayout != null) { mainLayout.enabled = false; }
-                if (targetFitter != null) 
-                { 
+                if (targetFitter != null)
+                {
                     targetFitter.enabled = false;
 
                     if (targetRect != null)
@@ -275,9 +276,9 @@ namespace Michsky.MUIP
 
         public void SetText(string text) { buttonText = text; UpdateUI(); }
         public void SetIcon(Sprite icon) { buttonIcon = icon; UpdateUI(); }
-        
-        public void Interactable(bool value) 
-        { 
+
+        public void Interactable(bool value)
+        {
             isInteractable = value;
 
             if (!gameObject.activeInHierarchy) { return; }
@@ -389,7 +390,7 @@ namespace Michsky.MUIP
             if (!isInteractable) { return; }
             if (enableButtonSounds && useHoverSound && soundSource != null) { soundSource.PlayOneShot(hoverSound); }
             if (animationSolution == AnimationSolution.ScriptBased) { StartCoroutine(nameof(SetHighlight)); }
-         
+
             isPointerOn = true;
             onHover.Invoke();
         }
@@ -504,7 +505,7 @@ namespace Michsky.MUIP
             if (selectOnDown != null) { nav.selectOnDown = selectOnDown.GetComponent<Selectable>(); }
             if (selectOnLeft != null) { nav.selectOnLeft = selectOnLeft.GetComponent<Selectable>(); }
             if (selectOnRight != null) { nav.selectOnRight = selectOnRight.GetComponent<Selectable>(); }
-            
+
             targetButton.navigation = nav;
         }
     }

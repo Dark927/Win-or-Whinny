@@ -17,8 +17,251 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 3a2857042bf01344ab9751d379b35466
   m_SerializeEntries:
-  - m_GUID: 1bd2a4eafa09f804c9ecc31cb90466c6
-    m_Address: Assets/Scenes/Main/Levels/DefaultArena_VolumeProfile.asset
+  - m_GUID: 025de5374bfcd714f92ff9aec301a3af
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Materials/Bricks/Brick_Albedo.tga
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 044f59e90e0e08240bab479812073f06
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Stiar/PRF_Crowd_Stair01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 06a3aa23ffbfc3344a3caa6c5d9f2c75
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Display/Textures/Display_03_D.tga
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 06f88e54cd5dc6f44acf2d1f5d650306
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Display/Materials/PM_Display_03.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - materials
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 07c333d401c369942a96ad6fd6b21875
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Fence/Materials/PM_Fence_Line.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - materials
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0d7b23719e9dd6a4183af08800af3016
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Prasol/Parsol_01.FBX
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1271515ae599a0d45a8b2fe30b3915de
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Display/Textures/Display_01_D.tga
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 12b24485deaeecc4b805b0278f55918b
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Crowds/FBX/Crowd_02.FBX
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 16cf40ebdef088946b8a97348bb1e7dc
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Start/StartFream/Ani/AMT_StartFrame.controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1801c2e799d0f3f4098b6b75a44ff860
+    m_Address: Assets/Prefabs/Gameplay/Environment/CustomTrack_01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1896bdce857c7dc4685daff6a49af93e
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Materials/Concrete/Concrete_01_N.tga
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1b5dd95ade7d2724ab059ba3b177844e
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Display/Materials/PM_Display_02.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - materials
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1c0090b961859b645a8bdd0b76b260d3
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Materials/PM_Plastic_DeepGreen_01.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 227974fd24deee641a58c7308543776a
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Billboard/Materials/PM_PPL02.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - materials
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 22f3e9f0a5a24e2468b95fbee1a9dfc8
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Light/Materials/PM_LampGrass.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - materials
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 25cf37f029625cf4c97f14b156366148
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Billboard/FBX/Billboard_02.FBX
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 25e2af20bd6dfa543ad29d82851bf6bf
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Stadium/Textures/Grandstand_AO.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2611c7aa3f8652a4aa9826bd360de3f5
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Foliage/Materials/maze_base.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - materials
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 27ecb5d4626c7ae4f9a0c83bc24c7de0
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Shade/Textures/PM_Shade_side.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - materials
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 293945adc92680748929a72cdecfd369
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Textures/T_Cloth01_N.tga
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2b192d96ef4a13447934c0905c7b2662
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Materials/PM_Plastic_Yellow.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2c7d298cfade3394bbcf2e14611c300c
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Flag/FBX/Flag_01.FBX
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2e035629eff3c1f4585c3bbb5004f01f
+    m_Address: Assets/Prefabs/Gameplay/InteractiveProps/TrackFinishLine/FinishLine.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2f1ea85c7a3f37948b1715d0b2973c62
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Materials/Bricks/Brick_Normal.tga
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 311b6c8336aaec94bb716dc2c6804e58
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/TrashCan/PRF_trashcan.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 336268ad33acbae479b9777f0fb06060
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Shade/Textures/Shade_side_N.tga
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 341df238f8b354a45928f144ac9d2315
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Start/StartFream/Materials/PM_StartFrame_Door.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - materials
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 39eb07e243d445b409eeb0ee4ce62654
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Foliage/Prefabs/Maze_02.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 39ed4575b7d604840b6316793283665d
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Bird/bird_vfx.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3cdbb709f14cc8040a5b2380b0b5e36c
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Foliage/Textures/T_Leaf_p_N.tga
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3ec26c365c9c50d428686b50512f7ecf
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Textures/T_Noise02_N.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 40455c256cf0a204d8694769e787eab9
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Stadium/Textures/Bleachers.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 493cd49bb4a70d343963383e07d477a8
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Crowds/TEXTURES/crowds_512_02.tga
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4a344d2926143074b80867aee8e88e5e
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Crowds/Materials/Crowds_02.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - materials
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4a5ef77e44c46284ab8cc71f2b079c23
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Start/StartFream/Materials/PM_StartFrame_Body.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - materials
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4b8239fdcdfed4d4d80e646678371525
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Materials/Bricks/Brick_AO.tga
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4cc16eda44dfefa468a46fa408161048
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Crowds/FBX/Crowd_07.FBX
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4cc86982782ede44e9ec3dbda60c77e7
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Fence/Textures/T_Fence_line_D.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4dd35b36db62d4f4ead269bff86e7109
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Shade/FBX/Shade_02.FBX
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4f1ebce196bd19841b0dcaeaca5a43a7
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Materials/PM_Steel_Gray.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4f2a889e44f219346bd8d0262e81d10a
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Crowds/FBX/Crowd_06.FBX
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 53f9e197fde756649af15eee1444c7cb
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Display/PRF_Display_01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5630fdcd75545064e8e681a7199ec7dd
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Textures/T_Noise_03.tif
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 56ccc49feeb69834a9abd00293bd4c67
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Materials/PM_Plastic_DeepGreen_02.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5716058fe37f64041bc61a00e5564926
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Light/Prefabs/PRF_StaduimLamp_01.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -28,17 +271,675 @@ MonoBehaviour:
     m_SerializedLabels:
     - audio
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 588e4f225ce533748a087b0060d0afb5
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Display/FBX/display01.FBX
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 58ec55385c721704abf41ad11a556445
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Landscape/Textures/T_Landscape_01_D.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5963245e70523764f85d0977b2657fcf
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Landscape/Materials/PM_Landscape_02.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5b523ed0b6214424882b03d0095c7174
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Materials/Grass/T_Grass01_D.tga
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5c2bd0bbf0484104193146aba70f9a62
     m_Address: Assets/Audio/OST/OST_GameplayMenu.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - audio
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5c6a938fc791029499c55070d4ad82b6
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Start/StartFream/Ani/AMC_Door_Open.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5e09984dc9f47f8458cf79d15f6ec313
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Fence/FBX/Length_Fence_03.FBX
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5e2510b82d6f73248ba7009e9fc03998
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Materials/Concrete/PM_Concrete_01.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - materials
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5e4d391ba05a3d14d83e380579efc7ff
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Light/FBX/StaduimLamp_01.FBX
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5f3f04fa0645c4d4cab758dded12c96b
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Shade/Prefabs/PRF_Shade_02.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5f5b51666d810ea4f974d61dbbdaa759
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Textures/T_Noise01_N.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5fe34f5b263136548ba204106c3a21ea
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Start/StartFream/Textures/StartFrame_Door_D.tga
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6121c4bd270927d4287c452c529041dc
+    m_Address: Assets/Data/Gameplay/Levels/DefaultArenaLevel/GameplayLevel_DefaultArena_AudioData.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - data
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6204fb66a367fea4d9f9f28feb055ef2
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Materials/Grass/T_TrackgGrass_AO.tif
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 633df57cd1987014986daa1528e1d7af
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Landscape/Materials/T_Landscape_04_D.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 652cc101429fefb4990f7af01eda5bfe
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/balloon/Airballoon.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 66a60b29e3c99e44cb99d6cc61a20fd4
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/balloon/Airballoon.FBX
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6732c5facd744d14ca65ff386b81bfa5
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Bird/bird_flying.tga
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 67d069a6a099a19439f7d5393d86f311
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Fence/FBX/Length_Fence_01.FBX
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6b0e60f3d623fe94a92d3fd2f3c88bbd
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Flag/Prefabs/PRF_FLAG.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6b32e9571b90f9a44b57051ef44741fb
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Materials/PM_Plastic_White_02.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6d844ef9c847e954c8d990c9e6d4126a
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Shade/Prefabs/PRF_Shade_01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6e7f882b739d765488b8b29c8366d824
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Materials/Concrete/Concrete_01_D.tga
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 74aa49ed2df8bc54c86ad9b5416024cb
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Materials/PM_Plastic_White_03.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 766b2635ff279ae4a8c656b34ea7d1c4
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Tracks/Textures/T_grass_AO.tga
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 77e1d8849d5e1f445b5b3c53026f47da
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Billboard/Materials/M_Flag_01.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - materials
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 79133cc10b0c5b243b271b19982225c1
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Stiar/FBX/Crowd_Stair01.FBX
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7b475960968c8ec4591fe9a0e702308d
+    m_Address: Assets/Prefabs/Gameplay/InteractiveProps/TrackStartGate/Door.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7bc78cba158ff8c4eb770a54eea794f8
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Start/StartZone/Prefabs/PRF_StartZone.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7ce906c674ae0844fbabe573af6aac84
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Speaker/Textures/T_CirclePattern_Ao.tga
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7d53d4c474e2a844aa2e92940f1be7ac
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Fence/Prefabs/PRF_LengthFence_Red.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 81b613ec98ed49b4cadb96d7fdb6e9e4
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Materials/PM_Metal_Blue.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 820f471b2542cf34e86806041e4eb30a
+    m_Address: Assets/Data/Settings/Game_SceneManagement/Scene/Levels/Game_LevelScene_DefaultArena_Data.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - data
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 84d9ea35a84825e489f4e1cfbb29a300
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Fence/Prefabs/PRF_LengthFence_03_A.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 88937f8c6acf88e4cb53f2bc52095e8b
     m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments
     m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8b106e8af17cde44ab11c2aa00e72d79
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Start/StartZone/Textures/tire_N.tga
+    m_ReadOnly: 0
     m_SerializedLabels:
-    - level
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8cf419c937af4aa45957016db7aef7cc
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Start/StartZone/Materials/Start_zone.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - materials
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8e20a9bf74d840041aaab4461429b8c5
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Flag/Materials/PM_flag_ALL.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 95623996801669d40ac6a188c00d0d54
+    m_Address: Assets/Prefabs/Gameplay/Environment/CustomArenaDesign.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 96e175d13adc5954592e541a596c50b8
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Light/Materials/PM_Lamp01.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - materials
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9720541df42663847a12eeeb8d5ebc4c
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Tracks/Track_01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 992d56c46b0e63b46b65007911105be1
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Materials/PM_Plastic_DeepBlue.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9b5fc0dc1dfca9449bf0262f586fa258
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Materials/PM_Steel_LightGray.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a06e95addc221904a83f9308ddedbb36
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Foliage/Materials/maze_leaf.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - materials
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a12ac7ce18d8c0c43bc1ff18840299d4
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Materials/PM_Cloth_White.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a1d9222c55d12c3468f802748db067bd
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Materials/Bricks/PM_Bricks.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - materials
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a2d16f0cda717a64b9839540a930dc20
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Start/StartZone/Materials/TireWheel.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - materials
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a32f59e38bc1de44e91d82fa82976e7f
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Tracks/Textures/Fence_01_D.tga
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a37892638e5aed448840ccd6640a5636
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Crowds/FBX/Crowd_04.FBX
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a3f04263e46a42d4597f22195bf1c107
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Start/StartFream/Textures/T_StartFrame_side_AO.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a432004a47ec8274497bea7bd81624d0
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Billboard/Textures/ppl_01_N.tga
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a495cc838269a5a41a4c569170c4c399
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Foliage/Textures/ivy_Albedo.tga
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a5402b509a2a98a47a7594245802bc77
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Materials/PM_Plastic_Gray02.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a76193a4987ebd24fac0f183151186b1
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Light/Textures/Lamp01_D.tga
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: abb497a04a5107c40957a3d115cd5a21
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Stadium/Textures/england_D.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ac5d76b8ca4d3994aac33d03e38e43b2
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Start/StartZone/Textures/tire_D.tga
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ac6554a423b43f242af19f1de52fac20
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Billboard/Prefabs/Billboard_02.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ac7919d026ffa6c4cabdcb9b2f74ebcc
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Crowds/FBX/Crowd_05.FBX
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: adf5d8092c0950841b8c03bf4a60d2e3
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Start/StartFream/Textures/StartFream_D.tga
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: af494b34d0a8c444d8418b0b49208750
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Speaker/PRF_Speaker_01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b509dbb14ff14114880727063de66628
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Shade/FBX/Shade_01.FBX
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b64dc00342110694280903f33a840564
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Textures/T_Noise_01.tga
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b65d14719a558c54ca169b621ea985f8
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Landscape/Tree.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b7ebbb3fd187dfb4a87cc710f191aa52
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Foliage/Textures/T_Leaf_p_D.tga
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b8217e3db69cb9748b5c551172f4112e
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Materials/PM_Plastic_Gray.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bb1d1826c3df043489d548dfd872f136
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Materials/PM_Plastic_White_01.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bbc8368a8423a5848933e223ffb0d26b
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Materials/PM_Plastic_Green.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bc39a4cb42161d84ebe5e198aae4b85e
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Materials/PM_Plastic_Black.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bccc0a474ce14874088a1bb9b56c1985
+    m_Address: Assets/Data/Gameplay/Levels/DefaultArenaLevel/GameplayLevel_DefaultArena_DataInstaller.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - data
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bdd034f5a9109e44e91394ce08d19f60
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Materials/Grass/T_TrackgGrass_N.tif
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c39479b3591527e4483a4967653181e6
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Landscape/Textures/T_Landscape_04_D.tga
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c4e3f6e8fc7c28742a7300cd0d5cffb1
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Stadium/FBX/ascot_M.FBX
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c56cc6b697b5a474d96dc622937241ce
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Start/StartZone/Materials/Tire.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - materials
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c631802219a53134cb811ddc35f617dd
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Prasol/Parsol_01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c6b8ef69cad74e84db50f0d12f155074
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Landscape/Materials/PM_Landscape_04.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c7e1cdfcbb22f7242bab950df521778c
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Billboard/Materials/PM_PPL01.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - materials
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c81b9fbf8ca910c4e8146804bbc85e1b
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Tracks/Materials/PM_Fence_02.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - materials
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c8473a223d4e04d4a8827c33ea03d559
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Speaker/Textures/T_CirclePattern_N.tga
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c8eb99e432951c1498b5e2181bb02997
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Materials/PM_Plastic_DeepGray.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c9a85ac9aea9dfa4f95af09e429c9452
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Start/StartFream/Textures/T_StartFrame_Door_AO.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ca909f555602fc64084f881ff8a8edfd
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Start/StartFream/Ani/AMC_Door_Idle.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cb7f9c54bff214e4aa4fcbf7e874b264
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Crowds/TEXTURES/CROWD_NRM.tga
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cc001e5229a078a4e8848a705e2bd805
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Stadium/Textures/RoofTri_AO.tga
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cc3557561e601c542891a80ea5b9ee7b
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Crowds/TEXTURES/crowds_512.tga
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cd585b3a5b1e1e0409a64fe82e98bb52
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Start/StartZone/Textures/tireWheel_N.tga
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ce162837691e2404ab4b63b1d317ca1d
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Bird/bird_vfx.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - materials
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cf476974b99446546a22f8b127e121c5
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Crowds/FBX/Crowd_03.FBX
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cfb33503244944d449f07b4d6159d15e
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Stadium/PRF_ascot_S.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cff8eacc24a5a4045af620a2cb833937
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Start/StartZone/Textures/Startzone_AO.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d44a4e45d6cda234981037111ba77730
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Materials/PM_Metal_Black.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d7f0ac4f135078842b90bdb2f9ece019
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Start/StartFream/Textures/StartFrame_side_D.tga
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d962eb6cecb36f34fae8227b0d76dd0b
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Start/StartFream/Prefabs/PRF_StartGate.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: da9b94aa474a2be48872ffaa1959b371
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Tracks/Textures/TrackgGrass_N.tga
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: db38e40cbfc05e24e9c28f3fb61a276e
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Start/StartFream/Textures/T_StartFream_AO.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dcff35b659aa2694aa41a01ce0b08737
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Start/StartFream/FBX/Start_Fream.FBX
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: de365a4dd8281d948818fb8d436a26db
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Speaker/FBX/Speaker_01.FBX
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: deb7d0afb50bca04589449ca50c76347
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Stadium/Textures/Interior_Lamp.tga
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e0af628da3ffc8145bbfac02903b0074
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Tracks/Materials/M_TrackRoad.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - materials
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e25f21469d698214aa23aa8d8c267b6a
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Billboard/Textures/ppl_01_D.tga
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e2fbbf539b2538e448ff30bb7849b4db
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Textures/T_Noise_02.tif
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e3a56a1eb45e7394eaafce1a49373218
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Materials/PM_Plastic_Red.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e4f3f4e567e6da74583b88a385b15822
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Fence/FBX/Length_Fence_02.FBX
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e64ed80a0a1363d4398e49c2f30c6b18
+    m_Address: Assets/Prefabs/Gameplay/InteractiveProps/TrackStartGate/Track_StartGate.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e65ecd30e0073ac4e87b28edc0199d2f
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Materials/PM_Plasticl_Black.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e69a133f64ea1594db1742deab250b53
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Start/StartZone/Textures/tireWheel_AO.tga
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ea3840b2d1d847b4297afe1292820963
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Fence/Prefabs/PRF_LengthFence_Black.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ea8e2aeae3d2fa041b8c708e9fea0c4b
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Tracks/Textures/Grass_B.tga
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ee2be960389a21945b71d8785109993d
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Start/StartZone/Textures/Startzone_Metalic.tga
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ef0d235e23f1d374b88abd88f8eb38e8
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Fence/Prefabs/PRF_LengthFence_02_A.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ef703246b92e4414f873fc7d8e04ea27
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Crowds/FBX/Crowd_08.FBX
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ef9da9c7c9192194280ee06313a5416b
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Landscape/Materials/PM_Landscape_01.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f088634b853fc8145919bd7312eabd65
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Start/StartFream/Materials/PM_StartFrame_Side.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - materials
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f0d65ee8c204fad4292f8a96cd21ea17
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Flag/Textures/T_Flag_ALL.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f1dd6d1bbb4ada945a3a096f6048ad89
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Materials/Grass/M_Grass02.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - materials
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f27775be46fafe94ba5972825be22d8d
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Start/StartZone/FBX/Start_zone.FBX
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f37d53906e9de7f4ead452df737ed0d5
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Landscape/FBX/tree.FBX
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f837ef5e49ffe374695534f1851d8253
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Start/StartZone/Textures/Startzone_D.tga
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f936413c140b45a42acfd8cffeb03344
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Foliage/Prefabs/Maze_01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fc4027ae47e93414d894bd4766ea1872
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Display/Textures/Display_02_D.tga
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fe1ff9e415ee9494e926ebad8fe692a5
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Crowds/Materials/Crowds.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - materials
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fec4a2c380d814344a3d9836210b2bb3
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Speaker/Materials/PM_CirclePattern.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: feccdadb4d324f74c94533de8dec61eb
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Billboard/Textures/ppl_01_M.tga
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ff8a0e2ddce3ae74fa9269b8df4a8858
+    m_Address: Assets/ExternalAssetsPackages/RaceTrack/Environments/Props/Display/Materials/PM_Display_01.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - materials
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: c2d9052f0ff5ff74fb6562d952659bc5, type: 2}

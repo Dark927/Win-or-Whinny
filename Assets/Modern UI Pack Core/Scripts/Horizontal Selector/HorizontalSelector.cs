@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.Events;
 using TMPro;
+using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
 
 namespace Michsky.MUIP
 {
@@ -135,7 +135,7 @@ namespace Michsky.MUIP
 
                     items[index].onItemSelect.Invoke();
                     onValueChanged.Invoke(index);
-                   
+
                     selectorAnimator.Play(null);
                     selectorAnimator.StopPlayback();
 
@@ -158,7 +158,7 @@ namespace Michsky.MUIP
 
                 items[index].onItemSelect.Invoke();
                 onValueChanged.Invoke(index);
-                
+
                 selectorAnimator.Play(null);
                 selectorAnimator.StopPlayback();
 
@@ -206,7 +206,7 @@ namespace Michsky.MUIP
 
                     items[index].onItemSelect.Invoke();
                     onValueChanged.Invoke(index);
-                   
+
                     selectorAnimator.Play(null);
                     selectorAnimator.StopPlayback();
 
@@ -229,7 +229,7 @@ namespace Michsky.MUIP
 
                 items[index].onItemSelect.Invoke();
                 onValueChanged.Invoke(index);
-               
+
                 selectorAnimator.Play(null);
                 selectorAnimator.StopPlayback();
 
@@ -288,10 +288,10 @@ namespace Michsky.MUIP
 
             label.text = items[index].itemTitle;
             onItemTextChanged?.Invoke(label);
-            
+
             if (labelIcon != null && enableIcon) { labelIcon.sprite = items[index].itemIcon; }
             if (gameObject.activeInHierarchy) { StartCoroutine("DisableAnimator"); }
-          
+
             UpdateContentLayout();
             UpdateIndicators();
         }
@@ -307,7 +307,7 @@ namespace Michsky.MUIP
                 GameObject go = Instantiate(indicatorObject, new Vector3(0, 0, 0), Quaternion.identity);
                 go.transform.SetParent(indicatorParent, false);
                 go.name = items[i].itemTitle;
-                
+
                 Transform onObj = go.transform.Find("On");
                 Transform offObj = go.transform.Find("Off");
 

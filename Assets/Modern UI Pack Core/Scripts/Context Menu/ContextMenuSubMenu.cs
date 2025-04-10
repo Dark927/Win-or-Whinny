@@ -1,8 +1,8 @@
 ﻿using System.Collections;
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.EventSystems;
 using TMPro;
+using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 namespace Michsky.MUIP
 {
@@ -22,7 +22,7 @@ namespace Michsky.MUIP
         string textHelper;
         RectTransform listParent;
 
-       [HideInInspector] public bool enableFadeOut = true;
+        [HideInInspector] public bool enableFadeOut = true;
 
         void OnEnable()
         {
@@ -35,16 +35,16 @@ namespace Michsky.MUIP
         {
             if (cmManager.subMenuBehaviour == ContextMenuManager.SubMenuBehaviour.Click)
             {
-                if (subMenuAnimator.GetCurrentAnimatorStateInfo(0).IsName("Menu In")) 
-                { 
+                if (subMenuAnimator.GetCurrentAnimatorStateInfo(0).IsName("Menu In"))
+                {
                     subMenuAnimator.Play("Menu Out");
                     if (trigger != null) { trigger.SetActive(false); }
                 }
 
-                else 
-                { 
-                    subMenuAnimator.Play("Menu In"); 
-                    if (trigger != null) { trigger.SetActive(true); } 
+                else
+                {
+                    subMenuAnimator.Play("Menu In");
+                    if (trigger != null) { trigger.SetActive(true); }
                 }
             }
         }
@@ -101,7 +101,7 @@ namespace Michsky.MUIP
             {
                 if (cmManager.horizontalBound == ContextMenuManager.CursorBoundHorizontal.Left) { listParent.pivot = new Vector2(0f, listParent.pivot.y); }
                 else if (cmManager.horizontalBound == ContextMenuManager.CursorBoundHorizontal.Right) { listParent.pivot = new Vector2(1f, listParent.pivot.y); }
-               
+
                 if (cmManager.verticalBound == ContextMenuManager.CursorBoundVertical.Top) { listParent.pivot = new Vector2(listParent.pivot.x, 0f); }
                 else if (cmManager.verticalBound == ContextMenuManager.CursorBoundVertical.Bottom) { listParent.pivot = new Vector2(listParent.pivot.x, 1f); }
             }

@@ -41,7 +41,7 @@ namespace Michsky.MUIP
         IEnumerator StartNotification()
         {
             yield return new WaitForSecondsRealtime(notifications[currentNotification].timer + delay);
-           
+
             Destroy(notifications[currentNotification].gameObject);
 
             if (currentNotification == notifications.Count - 1)

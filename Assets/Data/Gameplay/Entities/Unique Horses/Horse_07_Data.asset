@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ddad1fc8f72b144fbdeb43213926028, type: 3}
   m_Name: Horse_07_Data
   m_EditorClassIdentifier: 
-  _description: 
+  _description: Default Village Horse without acceleration (but it have improved
+    basic speed)
   _horsePrefabReference:
     m_AssetGUID: 07ecd3948e1d320438fd6ba9459ca6cb
     m_SubObjectName: 
@@ -24,9 +25,9 @@ MonoBehaviour:
     _winsCount: 6
     _loseCount: 16
   _horseStats:
-    _defaultSpeed: 4
-    _accelerationChance: 85
-    _accelerationSpeedMultiplier: 2
-    _accelerationRampUpDuration: 2
-    _accelerationEffectDuration: 5
-    _accelerationRechargeTime: 7
+    _defaultSpeed: 9.75
+    _accelerationChance: 0
+    _accelerationSpeedMultiplier: 1
+    _accelerationRampUpDuration: 0
+    _accelerationEffectDuration: 0
+    _accelerationRechargeTime: 0

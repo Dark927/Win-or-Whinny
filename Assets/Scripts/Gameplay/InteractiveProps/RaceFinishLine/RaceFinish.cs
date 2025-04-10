@@ -1,7 +1,4 @@
-
-using Game.Gameplay.Cameras;
 using Game.Gameplay.Entities;
-using Game.Gameplay.UI;
 using UnityEngine;
 using Zenject;
 

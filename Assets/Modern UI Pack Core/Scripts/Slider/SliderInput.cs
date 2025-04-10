@@ -1,5 +1,5 @@
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 namespace Michsky.MUIP
 {
@@ -19,11 +19,11 @@ namespace Michsky.MUIP
         {
             muipField = GetComponent<CustomInputField>();
             inputField = muipField.inputText;
-            
-            if (sliderManager == null) 
-            { 
-                Debug.LogWarning("'Slider Manager' is missing!"); 
-                return; 
+
+            if (sliderManager == null)
+            {
+                Debug.LogWarning("'Slider Manager' is missing!");
+                return;
             }
 
             if (sliderManager.mainSlider.wholeNumbers == true) { inputField.contentType = TMP_InputField.ContentType.IntegerNumber; }
@@ -46,7 +46,7 @@ namespace Michsky.MUIP
             else if (decimals == 1) { inputField.text = value.ToString("F1"); }
             else if (decimals == 2) { inputField.text = value.ToString("F2"); }
             else if (decimals == 3) { inputField.text = value.ToString("F3"); }
-            else if(decimals == 4) { inputField.text = value.ToString("F4"); }
+            else if (decimals == 4) { inputField.text = value.ToString("F4"); }
         }
 
         void SetValue()

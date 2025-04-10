@@ -1,8 +1,8 @@
 ﻿using System.Collections;
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.Events;
 using TMPro;
+using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
 
 namespace Michsky.MUIP
 {
@@ -64,10 +64,10 @@ namespace Michsky.MUIP
 
         void OnEnable()
         {
-            if (onEnableBehaviour == OnEnableBehaviour.Restore && isOn) 
+            if (onEnableBehaviour == OnEnableBehaviour.Restore && isOn)
             {
                 isOn = false;
-                Open(); 
+                Open();
             }
         }
 

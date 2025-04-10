@@ -35,10 +35,10 @@ namespace Game.Gameplay.Settings
             _cts = new CancellationTokenSource();
             await WaitUntilSceneLoadingFinished(_cts.Token);
 
-            if(!_cts.IsCancellationRequested)
+            if (!_cts.IsCancellationRequested)
             {
                 _gameManager.Initialize();
-                Destroy(this);
+                Destroy(this.gameObject);
             }
         }
 

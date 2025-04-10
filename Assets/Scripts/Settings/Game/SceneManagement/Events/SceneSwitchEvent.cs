@@ -1,5 +1,5 @@
-﻿using System;
-using Game.Settings.Common.Events;
+﻿using Game.Settings.Common.Events;
+using System;
 
 namespace Game.Settings.SceneManagement
 {

@@ -1,6 +1,6 @@
 ﻿#if UNITY_EDITOR
-using UnityEngine;
 using UnityEditor;
+using UnityEngine;
 
 namespace Michsky.MUIP
 {
@@ -55,7 +55,7 @@ namespace Michsky.MUIP
                     MUIPEditorHandler.DrawHeader(customSkin, "Content Header", 6);
                     GUILayout.BeginVertical(EditorStyles.helpBox);
                     EditorGUI.indentLevel = 1;
-                  
+
                     EditorGUILayout.PropertyField(chartData, new GUIContent("Chart Items"));
                     chartData.isExpanded = true;
 

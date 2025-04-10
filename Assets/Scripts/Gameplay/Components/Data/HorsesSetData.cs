@@ -1,7 +1,7 @@
 ﻿using Game.Abstractions;
-using UnityEngine;
-using System.Collections.Generic;
 using Game.Gameplay.Entities;
+using System.Collections.Generic;
+using UnityEngine;
 
 namespace Game.Gameplay.Settings
 {

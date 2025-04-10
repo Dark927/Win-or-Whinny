@@ -1,12 +1,12 @@
-﻿using UnityEngine;
-using TMPro;
+﻿using TMPro;
+using UnityEngine;
 
 namespace Michsky.MUIP
 {
     public class RangeSlider : MonoBehaviour
     {
         [Header("Settings")]
-        [Range(0,2)] public int decimalPlaces = 0;
+        [Range(0, 2)] public int decimalPlaces = 0;
         public float minValue = 0;
         public float maxValue = 1;
         public bool showLabels = true;

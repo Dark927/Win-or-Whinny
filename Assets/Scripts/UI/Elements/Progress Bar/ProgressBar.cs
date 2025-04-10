@@ -1,7 +1,7 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.Events;
-using TMPro;
+using UnityEngine.UI;
 
 namespace Michsky.MUIP
 {

@@ -1,8 +1,8 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
-using TMPro;
+using UnityEngine.UI;
 
 namespace Michsky.MUIP
 {
@@ -40,7 +40,7 @@ namespace Michsky.MUIP
         [HideInInspector] public float saveValue;
 
         public enum DecimalFormat
-        { 
+        {
             F0, F1, F2, F3, F4, F5
         }
 

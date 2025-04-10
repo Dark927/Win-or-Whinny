@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 namespace Michsky.MUIP
 {
@@ -69,23 +69,23 @@ namespace Michsky.MUIP
                 else { switchAnimator.Play("Off Instant"); }
             }
 
-            if (invokeAtStart && isOn ) { OnEvents.Invoke(); }
+            if (invokeAtStart && isOn) { OnEvents.Invoke(); }
             else if (invokeAtStart && !isOn) { OffEvents.Invoke(); }
 
             isInitialized = true;
         }
 
-        void OnEnable() 
+        void OnEnable()
         {
-            if (isInitialized) 
+            if (isInitialized)
             {
-                UpdateUI(); 
-            } 
+                UpdateUI();
+            }
         }
 
         void GetSavedData()
         {
-            if (gameObject.activeInHierarchy) 
+            if (gameObject.activeInHierarchy)
             {
                 StopCoroutine("DisableAnimator");
                 StartCoroutine("DisableAnimator");

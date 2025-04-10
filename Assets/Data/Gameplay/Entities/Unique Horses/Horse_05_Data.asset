@@ -24,9 +24,9 @@ MonoBehaviour:
     _winsCount: 35
     _loseCount: 4
   _horseStats:
-    _defaultSpeed: 7.5
-    _accelerationChance: 25
+    _defaultSpeed: 9
+    _accelerationChance: 45
     _accelerationSpeedMultiplier: 1.25
-    _accelerationRampUpDuration: 0.5
-    _accelerationEffectDuration: 3
-    _accelerationRechargeTime: 4
+    _accelerationRampUpDuration: 1.1
+    _accelerationEffectDuration: 4
+    _accelerationRechargeTime: 6

@@ -1,8 +1,8 @@
 ﻿using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using TMPro;
 
 namespace Michsky.MUIP
 {
@@ -53,10 +53,10 @@ namespace Michsky.MUIP
                 return;
 
             descriptionText.text = description;
-          
+
             tpManager.allowUpdate = true;
             tpManager.currentTooltip = this;
-         
+
             CheckForContentWidth();
 
             StopCoroutine("DisableAnimator");
@@ -114,7 +114,7 @@ namespace Michsky.MUIP
         {
             yield return new WaitForSecondsRealtime(0.05f);
             float tempWidth = descriptionText.GetComponent<RectTransform>().sizeDelta.x;
-     
+
             if (tempWidth >= tpManager.preferredWidth + 1)
                 tpManager.contentLE.enabled = true;
 

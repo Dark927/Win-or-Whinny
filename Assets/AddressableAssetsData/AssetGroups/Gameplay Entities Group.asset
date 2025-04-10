@@ -17,6 +17,18 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: c3413ac61eb6fb44e8feb8914bbd87e1
   m_SerializeEntries:
+  - m_GUID: 05fc7648a3701b34fae2539618842255
+    m_Address: Assets/ExternalAssetsPackages/PolygonHorse/Material/PolygonHorse_03.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - materials
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 07ecd3948e1d320438fd6ba9459ca6cb
+    m_Address: Assets/Prefabs/Gameplay/Horses/Prefab_Horse_03.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - entity
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0ebd8e1538371d24c93c4d2bf6e40eb9
     m_Address: Assets/Sprites/UI/Icons/UI_HorseIcon_03.png
     m_ReadOnly: 0
@@ -29,6 +41,25 @@ MonoBehaviour:
     - data
     - entity
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 214fe0e1a1d40e3479e0f1a657268ea0
+    m_Address: Assets/ExternalAssetsPackages/PolygonHorse/Textures/Horse_04.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 30fa030a1a61fea4484f6ac6f021557f
+    m_Address: Assets/ExternalAssetsPackages/PolygonHorse/Textures/Horse_07.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 362c72cc0711b5a4ca6ad99c043c4d72
+    m_Address: Assets/Data/Gameplay/Entities/Unique Horses/Horse_09_Data.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - data
+    - entity
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 365b40f05dd44404b9b6dc1a4c0eb056
     m_Address: Assets/Data/Gameplay/Entities/Unique Horses/Horse_01_Data.asset
     m_ReadOnly: 0
@@ -36,10 +67,28 @@ MonoBehaviour:
     - data
     - entity
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3d599f6653c4d8b468506fb28b75c39d
+    m_Address: Assets/ExternalAssetsPackages/PolygonHorse/Material/PolygonHorse_Unicorn_01.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - materials
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3e9d208b871b76a40a4bb2bfc38e793c
+    m_Address: Assets/ExternalAssetsPackages/PolygonHorse/Textures/Horse_Unicorn_01.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 423f60ecc68a15b4898d9aaa2f968055
     m_Address: Assets/Sprites/UI/Icons/UI_HorseIcon_05.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 42f96c86e74944d44a6fc3febb02f7be
+    m_Address: Assets/ExternalAssetsPackages/PolygonHorse/Textures/Horse_10.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4c2829b26936bf740a10a1e38430d3dc
     m_Address: Assets/Data/Gameplay/Entities/Unique Horses/Horse_04_Data.asset
@@ -47,6 +96,31 @@ MonoBehaviour:
     m_SerializedLabels:
     - data
     - entity
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 58751c82fc719d0478548a86c85bca5e
+    m_Address: Assets/ExternalAssetsPackages/PolygonHorse/Model/Horse_Model.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - entity
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5d396d1bea7592740b4f00bc3d864957
+    m_Address: Assets/Prefabs/Gameplay/Horses/Prefab_Horse_04.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - entity
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 61bf85d3a45738f49b560f0a968e95fc
+    m_Address: Assets/Data/Gameplay/Entities/Unique Horses/Horse_07_Data.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - data
+    - entity
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 62e7c512dd985c647b6d419f2faa8696
+    m_Address: Assets/ExternalAssetsPackages/PolygonHorse/Material/PolygonHorse_01.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - materials
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 67e84961da3050a4f96ce948d17b1231
     m_Address: Assets/Data/Gameplay/Entities/Unique Horses/Horse_05_Data.asset
@@ -62,6 +136,36 @@ MonoBehaviour:
     - data
     - entity
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6c3c98f4cbb2afc41b52b40ac4228206
+    m_Address: Assets/ExternalAssetsPackages/PolygonHorse/Textures/Horse_02.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6e7b4222409b9104aa4823bca5dddc66
+    m_Address: Assets/Prefabs/Gameplay/Horses/Prefab_Horse_01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - entity
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6f11cfe51b9f9b441a51a024d21eb80c
+    m_Address: Assets/ExternalAssetsPackages/PolygonHorse/Material/PolygonHorse_04.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - materials
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 717715077f315d145b1fceaea4532c0d
+    m_Address: Assets/ExternalAssetsPackages/PolygonHorse/Textures/Horse_05.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7a02284b6d317c849a662436565657e4
+    m_Address: Assets/ExternalAssetsPackages/PolygonHorse/Material/PolygonHorse_08.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - materials
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7e2b1116e91d37a44a88322af40c70f0
     m_Address: Assets/Data/Gameplay/Entities/Unique Horses/Horse_03_Data.asset
     m_ReadOnly: 0
@@ -69,10 +173,51 @@ MonoBehaviour:
     - data
     - entity
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7f2b90c80224e0b4aafabbac646ae1b1
+    m_Address: Assets/ExternalAssetsPackages/PolygonHorse/Textures/Horse_08.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 83ab3c4f380de2848ae2141d0a9b8ff9
+    m_Address: Assets/ExternalAssetsPackages/PolygonHorse/Animations/AnimationController_Horse_01.controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8608b6e236c67a14a864c4b702f58b68
+    m_Address: Assets/Prefabs/Gameplay/Horses/Prefab_Horse_02.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - entity
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 89f73ff925039fc48b20bb9daf847209
     m_Address: Assets/Sprites/UI/Icons/UI_HorseIcon_02.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8aa7ba5a896d01a4abe5919eeaf77c94
+    m_Address: Assets/ExternalAssetsPackages/PolygonHorse/Textures/Horse_01.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8b63c210beb13ce438751c0451167289
+    m_Address: Assets/ExternalAssetsPackages/PolygonHorse/Textures/Horse_03.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9b15b2e8ff4fad04abc15fb3dbcc9db8
+    m_Address: Assets/ExternalAssetsPackages/PolygonHorse/Material/PolygonHorse_05.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - materials
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9cc872c5354f1c94e86ab167fcab18ac
+    m_Address: Assets/ExternalAssetsPackages/PolygonHorse/Material/PolygonHorse_09.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - materials
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9ce3bb559a5156a4a98aa52f8aeb87d1
     m_Address: Assets/Audio/SFX/Entity/SFX_HorseStep.wav
@@ -85,15 +230,70 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a4ee88343e99c3f42a78a1e72b3d7550
+    m_Address: Assets/Data/Gameplay/Entities/Unique Horses/Horse_08_Data.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - data
+    - entity
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b3efd361431eadc4586736f23f80d37b
+    m_Address: Assets/ExternalAssetsPackages/PolygonHorse/Material/PolygonHorse_10.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - materials
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b8391be8bf6a39b41b7b4d23e9ebfbac
+    m_Address: Assets/Prefabs/Gameplay/Horses/Model/Horse_Model.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - entity
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bc9215fb52cb4a0499c3d6620bdaa4da
+    m_Address: Assets/Prefabs/Gameplay/Horses/Prefab_Horse_Base.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - entity
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c373601c9c4b1614f9c9884b5f9b161a
     m_Address: Assets/Sprites/UI/Icons/UI_HorseIcon_01.png
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e05637fda90240241bb5dc5ae47967bf
+    m_Address: Assets/ExternalAssetsPackages/PolygonHorse/Textures/Horse_09.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e0d386fb2937f5540a9462c3ca62e219
+    m_Address: Assets/ExternalAssetsPackages/PolygonHorse/Textures/Horse_06.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - textures
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e12c5adfe63dfa54d8d0e673e229aa9c
+    m_Address: Assets/ExternalAssetsPackages/PolygonHorse/Material/PolygonHorse_02.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - materials
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f644d370e9a813e4f9e1cc046e6c75ea
     m_Address: Assets/ExternalAssetsPackages/PolygonHorse
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f830288df72ad7a44b004025b05e45ee
+    m_Address: Assets/ExternalAssetsPackages/PolygonHorse/Material/PolygonHorse_06.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - materials
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ff27f49d4d0041346a3db7824f754c1f
+    m_Address: Assets/ExternalAssetsPackages/PolygonHorse/Material/PolygonHorse_07.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - materials
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: c2d9052f0ff5ff74fb6562d952659bc5, type: 2}

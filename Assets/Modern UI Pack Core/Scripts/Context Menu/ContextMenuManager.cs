@@ -63,10 +63,10 @@ namespace Michsky.MUIP
 
         public void CheckForBound()
         {
-            if (uiPos.x <= -100) 
+            if (uiPos.x <= -100)
             {
                 horizontalBound = CursorBoundHorizontal.Left;
-                contentPos = new Vector3(hBorderLeft, contentPos.y, 0); contentRect.pivot = new Vector2(0f, contentRect.pivot.y); 
+                contentPos = new Vector3(hBorderLeft, contentPos.y, 0); contentRect.pivot = new Vector2(0f, contentRect.pivot.y);
             }
 
             else if (uiPos.x >= 100)
@@ -170,16 +170,16 @@ namespace Michsky.MUIP
             Debug.Log("<b>[Context Menu]</b> UI Pos: " + uiPos + ", H: " + horizontalBound + ", V: " + verticalBound, this);
         }
 
-        public void Open() 
-        { 
-            contextAnimator.Play("Menu In"); 
-            isOn = true; 
+        public void Open()
+        {
+            contextAnimator.Play("Menu In");
+            isOn = true;
         }
 
         public void Close()
-        { 
-            contextAnimator.Play("Menu Out"); 
-            isOn = false; 
+        {
+            contextAnimator.Play("Menu Out");
+            isOn = false;
         }
 
         public void OpenInFixedPosition()
@@ -190,7 +190,7 @@ namespace Michsky.MUIP
 
         #region Obsolote
         public void OpenContextMenu() { Open(); }
-        public void CloseOnClick() { Close(); }   
+        public void CloseOnClick() { Close(); }
         #endregion
     }
 }
