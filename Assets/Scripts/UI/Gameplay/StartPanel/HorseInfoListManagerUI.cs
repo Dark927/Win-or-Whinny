@@ -36,6 +36,9 @@ namespace Game.Gameplay.UI
 
         private Dictionary<int, HorseInfo> _horseInfoDict;
 
+        private List<HorseInfoCardUI> _usedCards;
+        private Queue<HorseInfoCardUI> _freeCards;
+
         private HorseInfoCardUI _selectedHorseInfoCard;
         private int _selectedHorseID;
 
@@ -48,12 +51,27 @@ namespace Game.Gameplay.UI
         {
             _horizontalLayout = GetComponentInChildren<HorizontalLayoutGroup>();
             _scroll.horizontalNormalizedPosition = 0;
+            _usedCards = new();
+            _freeCards = new();
 
             RectTransform elementRectTransform = _horseInfoCardPrefab.GetComponent<RectTransform>();
             _contentRectTransform = _horizontalLayout.GetComponent<RectTransform>();
             _elementWidth = elementRectTransform.sizeDelta.x;
 
             _confirmationButton.onClick.AddListener(OnConfirmationButtonClicked);
+        }
+        public void ResetState()
+        {
+            TryUnselectCurrentCard();
+            _horseInfoDict.Clear();
+
+            foreach (var card in _usedCards)
+            {
+                card.ResetState();
+                _freeCards.Enqueue(card);
+            }
+
+            _usedCards.Clear();
         }
 
         public void DisplayAvailableHorsesToSelect()
@@ -101,18 +119,33 @@ namespace Game.Gameplay.UI
 
             foreach (var infoPair in horseInfoDict)
             {
+                HorseInfoCardUI infoCard;
+
                 currentHorseInfo = infoPair.Value;
-                GameObject infoCardObject = Instantiate(_horseInfoCardPrefab, _horizontalLayout.transform);
-                HorseInfoCardUI infoCard = infoCardObject.GetComponent<HorseInfoCardUI>();
 
-                // ToDo : update this info text later
-                infoCard.ReplaceImage(currentHorseInfo.Icon);
-                infoCard.ReplaceText($"{currentHorseInfo.Name}" +
-                    $"\nWins: {currentHorseInfo.WinsCount}" +
-                    $"\nChance: {(relativeWinChances[infoPair.Key]).ToString("00")}%");
+                if (_freeCards.Count() > 0)
+                {
+                    infoCard = _freeCards.Dequeue();
+                }
+                else
+                {
+                    GameObject infoCardObject = Instantiate(_horseInfoCardPrefab, _horizontalLayout.transform);
+                    infoCard = infoCardObject.GetComponent<HorseInfoCardUI>();
+                }
 
+                _usedCards.Add(infoCard);
+                SetInfoCardContent(infoCard, currentHorseInfo, relativeWinChances[infoPair.Key]);
                 infoCard.SubscribeOnClick(() => OnHorseInfoCardClicked(infoCard, infoPair.Key));
             }
+        }
+
+        // ToDo : update this info text later
+        private static void SetInfoCardContent(HorseInfoCardUI infoCard, HorseInfo currentHorseInfo, float relativeWinChance)
+        {
+            infoCard.ReplaceImage(currentHorseInfo.Icon);
+            infoCard.ReplaceText($"{currentHorseInfo.Name}" +
+                $"\nWins: {currentHorseInfo.WinsCount}" +
+                $"\nChance: {relativeWinChance.ToString("00")}%");
         }
 
         private Dictionary<int, float> CalculateRelativeWinChances(Dictionary<int, HorseInfo> horseInfoDict)
@@ -142,15 +175,20 @@ namespace Game.Gameplay.UI
                 return;
             }
 
-            // unselect the previously selected HorseInfo (if any)
-            if (_selectedHorseInfoCard != null)
-            {
-                _selectedHorseInfoCard.ResetImageColor();
-            }
+            TryUnselectCurrentCard();
 
             _selectedHorseInfoCard = infoCard;
             _selectedHorseID = selectedHorseID;
             _selectedHorseInfoCard.TintImage(_horseCardSelectionColor);
+        }
+
+        private void TryUnselectCurrentCard()
+        {
+            if (_selectedHorseInfoCard != null)
+            {
+                _selectedHorseInfoCard.ResetImageColor();
+                _selectedHorseInfoCard = null;
+            }
         }
 
         private void OnConfirmationButtonClicked()

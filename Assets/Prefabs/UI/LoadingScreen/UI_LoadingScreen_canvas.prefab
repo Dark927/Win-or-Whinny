@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a14bb96f0bd26384b8ab3626e347e98f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _deactivationDelay: 2
+  _deactivationDelay: 1
   _maxProgressUpdateDuration: 1
   _minProgressUpdateDuration: 0.1
 --- !u!1001 &2154824730482137648

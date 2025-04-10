@@ -1,5 +1,6 @@
 ﻿using Cysharp.Threading.Tasks;
 using Game.Gameplay.Entities;
+using Game.Settings.Common;
 using Game.Settings.GameInitialization;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Threading;
 
 namespace Game.Gameplay.Race
 {
-    public interface IHorseRaceManager : IInitializable
+    public interface IHorseRaceManager : IInitializable, IResetable
     {
         public event EventHandler<ParticipantFinishedArgs> OnAnyHorseFinished;
 

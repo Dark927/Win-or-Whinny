@@ -1,5 +1,4 @@
 ﻿using Game.Abstractions;
-using Game.Settings.GameInitialization;
 using Game.Settings.SceneManagement;
 using System;
 using UnityEngine;
@@ -18,6 +17,7 @@ namespace Game.Settings.AssetsManagement
         private AddressableAssetsHolder _assetsHolder;
 
         private IGameSceneLoader _gameSceneLoader;
+        private bool _isInitialized = false;
 
         #endregion
 
@@ -33,23 +33,35 @@ namespace Game.Settings.AssetsManagement
         public void Construct(IGameSceneLoader sceneLoader)
         {
             _gameSceneLoader = sceneLoader;
-            _gameSceneLoader.SwitchEvent.Subscribe(_cleaner);
         }
 
 
         #region Methods
 
+        private void Awake()
+        {
+            Initialize();
+        }
+
         public void Initialize()
         {
-            DontDestroyOnLoad(this);
-
-            InitializeCleaner();
-            InitializeHolder();
+            if (!_isInitialized)
+            {
+                DontDestroyOnLoad(this);
+                InitializeCleaner();
+                InitializeHolder();
+                _isInitialized = true;
+            }
         }
 
         private void InitializeCleaner()
         {
             _cleaner = new AddressableAssetsCleaner();
+
+            if (_gameSceneLoader != null)
+            {
+                _gameSceneLoader.SwitchEvent.Subscribe(_cleaner);
+            }
         }
 
         private void InitializeHolder()
@@ -150,6 +162,7 @@ namespace Game.Settings.AssetsManagement
         private void OnDestroy()
         {
             AssetsHolder?.Dispose();
+
         }
 
         #endregion

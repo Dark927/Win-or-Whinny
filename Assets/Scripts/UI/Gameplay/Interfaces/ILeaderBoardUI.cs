@@ -10,5 +10,6 @@ namespace Game.Gameplay.UI
         public void DisplayAvailableInfo();
         public void UpdateLeaderBoard();
         public void HighlightParticipant(int ID);
+        public void Clear();
     }
 }

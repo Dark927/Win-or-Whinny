@@ -12,6 +12,6 @@ namespace Game.Settings.SceneManagement
 
         public UniTask LoadSceneAsync(GameSceneData sceneData, LoadSceneMode loadMode = LoadSceneMode.Single);
         public UniTask LoadMainMenuAsync(bool useLoadingScreen = true);
-
+        public UniTask LoadLevelAsync(GameSceneData levelSceneData);
     }
 }

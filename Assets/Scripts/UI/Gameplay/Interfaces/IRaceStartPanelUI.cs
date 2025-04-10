@@ -4,10 +4,11 @@ using Game.Gameplay.Entities;
 using Game.Settings.GameInitialization;
 using System.Collections.Generic;
 using System;
+using Game.Settings.Common;
 
 namespace Game.Gameplay.UI
 {
-    public interface IRaceStartPanelUI : IInitializable
+    public interface IRaceStartPanelUI : IInitializable, IResetable
     {
         public void Activate();
         public void Deactivate();

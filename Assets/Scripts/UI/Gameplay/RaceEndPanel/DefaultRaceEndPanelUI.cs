@@ -9,6 +9,8 @@ namespace Game.Gameplay.UI
 {
     public class DefaultRaceEndPanelUI : RacePanelBaseUI, IRaceEndPanelUI
     {
+        #region Fields 
+
         [SerializeField] private TextMeshProUGUI _resultText;
         [SerializeField] private TextMeshProUGUI _subtitleText;
 
@@ -17,14 +19,27 @@ namespace Game.Gameplay.UI
         [Header("Custom results - Settings")]
         [SerializeField] private List<RaceResultSubtitleParameters> _subtitlesVariantsCollection;
 
-
         private ILeaderBoardUI _leaderBoard;
+
+        #endregion
+
+
+        #region Methods 
+
+        #region Init 
 
         public void Initialize()
         {
             _leaderBoard = GetComponentInChildren<ILeaderBoardUI>();
             _leaderBoard.Initialize();
         }
+
+        public void ResetState()
+        {
+            _leaderBoard.Clear();
+        }
+
+        #endregion
 
         public override void Activate()
         {
@@ -55,6 +70,8 @@ namespace Game.Gameplay.UI
 
         // Note : Change panel text here or move to the config file if needed (for future updates)
         private string GenerateResultTitle(int playerParticipantPlace) => $"Your horse came in #{playerParticipantPlace}";
+
+        // ToDo : maybe should add ordering by min participant place in the future and remove duplicates
         private void ConfigureResultSubtitle(TextMeshProUGUI subtitle, int participantPlace)
         {
             foreach (var subtitleVariant in _subtitlesVariantsCollection)
@@ -67,5 +84,7 @@ namespace Game.Gameplay.UI
                 }
             }
         }
+
+        #endregion
     }
 }

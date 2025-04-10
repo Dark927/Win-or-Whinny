@@ -1,13 +1,14 @@
 ﻿
 
 using Game.Gameplay.Entities;
+using Game.Settings.Common;
 using Game.Settings.GameInitialization;
 using System;
 using System.Collections.Generic;
 
 namespace Game.Gameplay.UI
 {
-    public interface IHorseInfoManagerUI : IInitializable
+    public interface IHorseInfoManagerUI : IInitializable, IResetable
     {
         /// <summary>
         /// Second argument is horse ID

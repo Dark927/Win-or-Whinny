@@ -9,6 +9,8 @@ namespace Game.Gameplay.Entities
     {
         #region Fields 
 
+        private const float MinLinearSpeedChangeTime = 0.01f;
+
         private HorseStats _stats;
 
         private Rigidbody _rigidbody;
@@ -100,6 +102,7 @@ namespace Game.Gameplay.Entities
 
         private void MoveWithConstantSpeed(float speed, Vector3 direction)
         {
+            _rigidbody.drag = 0f;
             _currentDirection = direction;
             _currentSpeed = speed;
 
@@ -146,7 +149,14 @@ namespace Game.Gameplay.Entities
 
             if (CanAccelerate())
             {
-                await UpdateSpeedDuringTimeAsync(_currentSpeed * _stats.AccelerationSpeedMultiplier, _stats.AccelerationRampUpDuration, token);
+                if (_stats.AccelerationRampUpDuration > MinLinearSpeedChangeTime)
+                {
+                    await UpdateSpeedDuringTimeAsync(_currentSpeed * _stats.AccelerationSpeedMultiplier, _stats.AccelerationRampUpDuration, token);
+                }
+                else
+                {
+                    ApplyImmediateAcceleration(_stats.AccelerationSpeedMultiplier);
+                }
 
                 if (!token.IsCancellationRequested)
                 {
@@ -203,9 +213,7 @@ namespace Game.Gameplay.Entities
         private void ApplyImmediateAcceleration(float accelerationMult)
         {
             _speedBeforeAcceleration = _currentSpeed;
-
-            _currentSpeed *= accelerationMult;
-            UpdateCurrentVelocity();
+            MoveWithConstantSpeed(_currentSpeed * accelerationMult, _currentDirection);
         }
 
         private UniTask DropAccelerationDuringTimeAsync(CancellationToken token = default)

@@ -1,11 +1,12 @@
 ﻿
 
 using Game.Gameplay.Race;
+using Game.Settings.Common;
 using Game.Settings.GameInitialization;
 
 namespace Game.Gameplay.UI
 {
-    public interface IRaceEndPanelUI : IInitializable
+    public interface IRaceEndPanelUI : IInitializable, IResetable
     {
         public void Activate();
         public void Deactivate();

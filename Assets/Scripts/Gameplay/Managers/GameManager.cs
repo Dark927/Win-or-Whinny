@@ -4,6 +4,7 @@ using Game.Gameplay.Race;
 using Game.Gameplay.UI;
 using System;
 using System.Threading;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using Zenject;
 
@@ -13,7 +14,7 @@ namespace Game.Gameplay
     {
         #region Fields 
 
-        private const float DefaultFollowPlayerDelay = 3f;  // ToDo : move this to the config later 
+        private const float CameraStartFollowPlayerDelay = 3f;  // ToDo : move this to the config later 
 
         private IGameplayCameraController _cameraController;
         private IRacePanelManagerUI _racePanelManagerUI;
@@ -49,40 +50,22 @@ namespace Game.Gameplay
         private void Awake()
         {
             _cts ??= new CancellationTokenSource();
-            AwakeAsync(_cts.Token).Forget();
-        }
 
-        private async UniTaskVoid AwakeAsync(CancellationToken token = default)
-        {
             _cameraController.Initialize();
             _raceManager.Initialize();
             _racePanelManagerUI.Initialize();
 
-            _cameraController.ActivateBackgroundCameraAnimations();
-            await _raceManager.WaitForParticipantsPreparation(token);
-
-            if (_cts.Token.IsCancellationRequested)
-            {
-                return;
-            }
-
-            var horsesInfo = _raceManager.GetAllParticipantsInfo();
-
-            _racePanelManagerUI.StartPanelUI.Activate();
-            _racePanelManagerUI.StartPanelUI.DisplayAvailableHorsesToSelect(horsesInfo);
-
             _raceManager.OnAnyHorseFinished += AnyHorseFinishedListener;
             _racePanelManagerUI.StartPanelUI.SubscribeOnHorseSelection(HorseSelectedListener);
+
+            StartGameAsync(_cts.Token).Forget();
         }
 
         public void Dispose()
         {
-            if (_cts != null)
-            {
-                _cts.Cancel();
-                _cts.Dispose();
-                _cts = null;
-            }
+            DisposeAllAsyncTasks();
+
+            _raceManager.OnAnyHorseFinished -= AnyHorseFinishedListener;
 
             if (_racePanelManagerUI != null)
             {
@@ -95,7 +78,40 @@ namespace Game.Gameplay
             Dispose();
         }
 
+        private void ResetAll()
+        {
+            _racePanelManagerUI.ResetState();
+            _raceManager.ResetState();
+            _isGameFinished = false;
+        }
+
         #endregion
+
+        public void RestartGame()
+        {
+            _racePanelManagerUI.EndPanelUI.Deactivate();
+            DisposeAllAsyncTasks();
+            ResetAll();
+
+            ConfigureTokenSource();
+            StartGameAsync(_cts.Token).Forget();
+        }
+
+        private async UniTask StartGameAsync(CancellationToken token = default)
+        {
+            _cameraController.ActivateBackgroundCameraAnimations();
+            await _raceManager.WaitForParticipantsPreparation(token);
+
+            if (_cts.Token.IsCancellationRequested)
+            {
+                return;
+            }
+
+            var horsesInfo = _raceManager.GetAllParticipantsInfo();
+
+            _racePanelManagerUI.StartPanelUI.Activate();
+            _racePanelManagerUI.StartPanelUI.DisplayAvailableHorsesToSelect(horsesInfo);
+        }
 
         private void HorseSelectedListener(object sender, int ID)
         {
@@ -114,6 +130,7 @@ namespace Game.Gameplay
             {
                 if (participantFinishArgs.ID == _raceManager.PlayerHorseID)
                 {
+                    _racePanelManagerUI.EndPanelUI.UpdateLeaderBoard();
                     DisplayGameEndPanel(participantFinishArgs.ParticipantInfo);
                     _isGameFinished = true;
                 }
@@ -138,16 +155,36 @@ namespace Game.Gameplay
             FollowPlayerHorseWithDelay();
         }
 
-        private void FollowPlayerHorseWithDelay(float delay = DefaultFollowPlayerDelay)
+        private void FollowPlayerHorseWithDelay(float delay = CameraStartFollowPlayerDelay)
+        {
+            ConfigureTokenSource();
+
+            var playerParticipant = _raceManager.GetPlayerParticipant();
+            _cameraController.RaceCameraController.LookAtParticipantWithDelay(playerParticipant.transform, delay, _cts.Token);
+        }
+
+
+        #region Async tasks control
+
+        private void ConfigureTokenSource()
         {
             if ((_cts == null) || _cts.IsCancellationRequested)
             {
                 _cts = new CancellationTokenSource();
             }
-
-            var playerParticipant = _raceManager.GetPlayerParticipant();
-            _cameraController.RaceCameraController.LookAtParticipantWithDelay(playerParticipant.transform, delay, _cts.Token);
         }
+
+        private void DisposeAllAsyncTasks()
+        {
+            if (_cts != null)
+            {
+                _cts.Cancel();
+                _cts.Dispose();
+                _cts = null;
+            }
+        }
+
+        #endregion
 
         #endregion
     }

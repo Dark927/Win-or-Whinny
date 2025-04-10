@@ -8,7 +8,7 @@ namespace Game.Settings.AssetsManagement
 {
     public class AddressableAssetsHolder : IDisposable
     {
-        private readonly Dictionary<AssetReference, (AsyncOperationHandle loadHandle, AddressableAssetsCleaner.CleanType cleanType)> _cachedAssets;
+        private readonly Dictionary<string, (AsyncOperationHandle loadHandle, AddressableAssetsCleaner.CleanType cleanType)> _cachedAssets;
         private AddressableAssetsCleaner _cleaner;
 
         public AddressableAssetsHolder(AddressableAssetsCleaner cleaner)
@@ -28,7 +28,7 @@ namespace Game.Settings.AssetsManagement
         {
             handle = default;
 
-            if (_cachedAssets.TryGetValue(assetRef, out var cachedAssetInfo))
+            if (_cachedAssets.TryGetValue(assetRef.AssetGUID, out var cachedAssetInfo))
             {
                 handle = cachedAssetInfo.loadHandle.Convert<TResult>();
                 return true;
@@ -44,13 +44,13 @@ namespace Game.Settings.AssetsManagement
         /// <param name="handle">loading handle</param>
         public void CacheAsset(AssetReference assetRef, AsyncOperationHandle handle, AddressableAssetsCleaner.CleanType cleanType)
         {
-            _cachedAssets.Add(assetRef, (handle, cleanType));
+            _cachedAssets.Add(assetRef.AssetGUID, (handle, cleanType));
             _cleaner.SubscribeOnCleaning(cleanType, handle);
         }
 
         private void ListenAssetsClean(object sender, AddressableAssetsCleaner.CleanType cleanType)
         {
-            bool RemoveCondition(KeyValuePair<AssetReference, (AsyncOperationHandle loadHandle, AddressableAssetsCleaner.CleanType cleanType)> cacheInfo)
+            bool RemoveCondition(KeyValuePair<string, (AsyncOperationHandle loadHandle, AddressableAssetsCleaner.CleanType cleanType)> cacheInfo)
                 => (cacheInfo.Value.cleanType == cleanType) || !cacheInfo.Value.loadHandle.IsValid();
 
             int counter = 0;

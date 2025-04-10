@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &5511811887349724185
+--- !u!1001 &4975615540422275887
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -8,11 +8,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1129043579782168366, guid: e32955c22c978e245946a88af323814f,
-        type: 3}
-      propertyPath: m_PreferredHeight
-      value: 150
-      objectReference: {fileID: 0}
     - target: {fileID: 1488828226524538359, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: m_Pivot.x
@@ -51,7 +46,7 @@ PrefabInstance:
     - target: {fileID: 1488828226524538359, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 1488828226524538359, guid: e32955c22c978e245946a88af323814f,
         type: 3}
@@ -76,17 +71,17 @@ PrefabInstance:
     - target: {fileID: 1488828226524538359, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1488828226524538359, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1488828226524538359, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1488828226524538359, guid: e32955c22c978e245946a88af323814f,
         type: 3}
@@ -115,169 +110,89 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2921284869244059403, guid: e32955c22c978e245946a88af323814f,
         type: 3}
-      propertyPath: _effectGradient.ctime1
-      value: 64957
-      objectReference: {fileID: 0}
-    - target: {fileID: 2921284869244059403, guid: e32955c22c978e245946a88af323814f,
-        type: 3}
-      propertyPath: _effectGradient.ctime2
-      value: 65535
-      objectReference: {fileID: 0}
-    - target: {fileID: 2921284869244059403, guid: e32955c22c978e245946a88af323814f,
-        type: 3}
       propertyPath: _effectGradient.key0.b
-      value: 0.21693665
+      value: 0.14413491
       objectReference: {fileID: 0}
     - target: {fileID: 2921284869244059403, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: _effectGradient.key0.g
-      value: 0.7075472
+      value: 0.745283
       objectReference: {fileID: 0}
     - target: {fileID: 2921284869244059403, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: _effectGradient.key0.r
-      value: 0.7038584
+      value: 0.594996
       objectReference: {fileID: 0}
     - target: {fileID: 2921284869244059403, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: _effectGradient.key1.b
-      value: 0.11764705
+      value: 0.27450982
       objectReference: {fileID: 0}
     - target: {fileID: 2921284869244059403, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: _effectGradient.key1.g
-      value: 0.5882819
+      value: 0.54901963
       objectReference: {fileID: 0}
     - target: {fileID: 2921284869244059403, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: _effectGradient.key1.r
-      value: 0.7647059
-      objectReference: {fileID: 0}
-    - target: {fileID: 2921284869244059403, guid: e32955c22c978e245946a88af323814f,
-        type: 3}
-      propertyPath: _effectGradient.key2.b
-      value: 0.11541404
-      objectReference: {fileID: 0}
-    - target: {fileID: 2921284869244059403, guid: e32955c22c978e245946a88af323814f,
-        type: 3}
-      propertyPath: _effectGradient.key2.g
-      value: 0.7264151
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2921284869244059403, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: _effectGradient.m_ColorSpace
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3956258226947523279, guid: e32955c22c978e245946a88af323814f,
-        type: 3}
-      propertyPath: m_text
-      value: BET AGAIN
-      objectReference: {fileID: 0}
-    - target: {fileID: 3981503158886749119, guid: e32955c22c978e245946a88af323814f,
-        type: 3}
-      propertyPath: m_text
-      value: BET AGAIN
-      objectReference: {fileID: 0}
-    - target: {fileID: 4329238265899248702, guid: e32955c22c978e245946a88af323814f,
-        type: 3}
-      propertyPath: _effectGradient.ctime1
-      value: 64957
-      objectReference: {fileID: 0}
-    - target: {fileID: 4329238265899248702, guid: e32955c22c978e245946a88af323814f,
-        type: 3}
-      propertyPath: _effectGradient.ctime2
-      value: 65535
-      objectReference: {fileID: 0}
     - target: {fileID: 4329238265899248702, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: _effectGradient.key0.b
-      value: 0.21693665
+      value: 0.14413491
       objectReference: {fileID: 0}
     - target: {fileID: 4329238265899248702, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: _effectGradient.key0.g
-      value: 0.7075472
+      value: 0.745283
       objectReference: {fileID: 0}
     - target: {fileID: 4329238265899248702, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: _effectGradient.key0.r
-      value: 0.7038584
-      objectReference: {fileID: 0}
-    - target: {fileID: 4329238265899248702, guid: e32955c22c978e245946a88af323814f,
-        type: 3}
-      propertyPath: _effectGradient.key1.b
-      value: 0.11764705
-      objectReference: {fileID: 0}
-    - target: {fileID: 4329238265899248702, guid: e32955c22c978e245946a88af323814f,
-        type: 3}
-      propertyPath: _effectGradient.key1.g
-      value: 0.5882819
-      objectReference: {fileID: 0}
-    - target: {fileID: 4329238265899248702, guid: e32955c22c978e245946a88af323814f,
-        type: 3}
-      propertyPath: _effectGradient.key1.r
-      value: 0.7647059
-      objectReference: {fileID: 0}
-    - target: {fileID: 4329238265899248702, guid: e32955c22c978e245946a88af323814f,
-        type: 3}
-      propertyPath: _effectGradient.key2.b
-      value: 0.11541404
-      objectReference: {fileID: 0}
-    - target: {fileID: 4329238265899248702, guid: e32955c22c978e245946a88af323814f,
-        type: 3}
-      propertyPath: _effectGradient.key2.g
-      value: 0.7264151
+      value: 0.594996
       objectReference: {fileID: 0}
     - target: {fileID: 4329238265899248702, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: _effectGradient.m_ColorSpace
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5025695017196866608, guid: e32955c22c978e245946a88af323814f,
-        type: 3}
-      propertyPath: buttonText
-      value: BET AGAIN
-      objectReference: {fileID: 0}
-    - target: {fileID: 5025695017196866608, guid: e32955c22c978e245946a88af323814f,
-        type: 3}
-      propertyPath: latestTabIndex
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7499108446312015367, guid: e32955c22c978e245946a88af323814f,
-        type: 3}
-      propertyPath: m_text
-      value: BET AGAIN
       objectReference: {fileID: 0}
     - target: {fileID: 8389810419749409886, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: m_Name
-      value: btn_bet_again
+      value: btn_play
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8540384053544712054, guid: e32955c22c978e245946a88af323814f, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8389810419749409886, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: -2147066054479743387}
+      addedObject: {fileID: 9218276606851184602}
   m_SourcePrefab: {fileID: 100100000, guid: e32955c22c978e245946a88af323814f, type: 3}
---- !u!1 &4040709171707486279 stripped
+--- !u!1 &3558538429262243697 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8389810419749409886, guid: e32955c22c978e245946a88af323814f,
     type: 3}
-  m_PrefabInstance: {fileID: 5511811887349724185}
+  m_PrefabInstance: {fileID: 4975615540422275887}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &-2147066054479743387
+--- !u!114 &9218276606851184602
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4040709171707486279}
+  m_GameObject: {fileID: 3558538429262243697}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbc9a2573681b964b8719a29604743b3, type: 3}
+  m_Script: {fileID: 11500000, guid: f99737452ac5de94da65f923eed2928f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _gameSceneData: {fileID: 11400000, guid: 820f471b2542cf34e86806041e4eb30a, type: 2}

@@ -9,7 +9,17 @@ namespace Game.Gameplay.Settings
     {
         public override void InstallBindings()
         {
+            BindGameManager();
             BindRaceManager();
+        }
+
+        private void BindGameManager()
+        {
+            Container
+                .Bind<GameManager>()
+                .FromComponentInHierarchy(true)
+                .AsSingle()
+                .NonLazy();
         }
 
         private void BindRaceManager()

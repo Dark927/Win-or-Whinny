@@ -17,6 +17,11 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: bf38f59326a4f5a49badf800b38e8c04
   m_SerializeEntries:
+  - m_GUID: 241ef9eec973e0a40bd6735364e0a30f
+    m_Address: Assets/Sprites/UI/Menu/Main/UI_MainMenu_Background.JPG
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5d9520fb4637b5341be2aa3beab0ab92
     m_Address: Assets/Prefabs/UI/LoadingScreen/UI_LoadingScreen_canvas.prefab
     m_ReadOnly: 0

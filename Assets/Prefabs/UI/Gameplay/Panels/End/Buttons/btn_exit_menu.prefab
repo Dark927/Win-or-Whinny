@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &5511811887349724185
+--- !u!1001 &785419873566193586
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -126,17 +126,17 @@ PrefabInstance:
     - target: {fileID: 2921284869244059403, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: _effectGradient.key0.b
-      value: 0.21693665
+      value: 0.14938065
       objectReference: {fileID: 0}
     - target: {fileID: 2921284869244059403, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: _effectGradient.key0.g
-      value: 0.7075472
+      value: 0.075694196
       objectReference: {fileID: 0}
     - target: {fileID: 2921284869244059403, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: _effectGradient.key0.r
-      value: 0.7038584
+      value: 0.764151
       objectReference: {fileID: 0}
     - target: {fileID: 2921284869244059403, guid: e32955c22c978e245946a88af323814f,
         type: 3}
@@ -146,7 +146,7 @@ PrefabInstance:
     - target: {fileID: 2921284869244059403, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: _effectGradient.key1.g
-      value: 0.5882819
+      value: 0.31557643
       objectReference: {fileID: 0}
     - target: {fileID: 2921284869244059403, guid: e32955c22c978e245946a88af323814f,
         type: 3}
@@ -171,12 +171,12 @@ PrefabInstance:
     - target: {fileID: 3956258226947523279, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: m_text
-      value: BET AGAIN
+      value: EXIT MENU
       objectReference: {fileID: 0}
     - target: {fileID: 3981503158886749119, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: m_text
-      value: BET AGAIN
+      value: EXIT MENU
       objectReference: {fileID: 0}
     - target: {fileID: 4329238265899248702, guid: e32955c22c978e245946a88af323814f,
         type: 3}
@@ -191,17 +191,17 @@ PrefabInstance:
     - target: {fileID: 4329238265899248702, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: _effectGradient.key0.b
-      value: 0.21693665
+      value: 0.14938065
       objectReference: {fileID: 0}
     - target: {fileID: 4329238265899248702, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: _effectGradient.key0.g
-      value: 0.7075472
+      value: 0.075694196
       objectReference: {fileID: 0}
     - target: {fileID: 4329238265899248702, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: _effectGradient.key0.r
-      value: 0.7038584
+      value: 0.764151
       objectReference: {fileID: 0}
     - target: {fileID: 4329238265899248702, guid: e32955c22c978e245946a88af323814f,
         type: 3}
@@ -211,7 +211,7 @@ PrefabInstance:
     - target: {fileID: 4329238265899248702, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: _effectGradient.key1.g
-      value: 0.5882819
+      value: 0.31557643
       objectReference: {fileID: 0}
     - target: {fileID: 4329238265899248702, guid: e32955c22c978e245946a88af323814f,
         type: 3}
@@ -236,7 +236,7 @@ PrefabInstance:
     - target: {fileID: 5025695017196866608, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: buttonText
-      value: BET AGAIN
+      value: EXIT MENU
       objectReference: {fileID: 0}
     - target: {fileID: 5025695017196866608, guid: e32955c22c978e245946a88af323814f,
         type: 3}
@@ -246,12 +246,12 @@ PrefabInstance:
     - target: {fileID: 7499108446312015367, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: m_text
-      value: BET AGAIN
+      value: EXIT MENU
       objectReference: {fileID: 0}
     - target: {fileID: 8389810419749409886, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       propertyPath: m_Name
-      value: btn_bet_again
+      value: btn_exit_menu
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8540384053544712054, guid: e32955c22c978e245946a88af323814f, type: 3}
@@ -261,23 +261,23 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8389810419749409886, guid: e32955c22c978e245946a88af323814f,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: -2147066054479743387}
+      addedObject: {fileID: -1669868202247487060}
   m_SourcePrefab: {fileID: 100100000, guid: e32955c22c978e245946a88af323814f, type: 3}
---- !u!1 &4040709171707486279 stripped
+--- !u!1 &9117756345489630188 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8389810419749409886, guid: e32955c22c978e245946a88af323814f,
     type: 3}
-  m_PrefabInstance: {fileID: 5511811887349724185}
+  m_PrefabInstance: {fileID: 785419873566193586}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &-2147066054479743387
+--- !u!114 &-1669868202247487060
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4040709171707486279}
+  m_GameObject: {fileID: 9117756345489630188}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbc9a2573681b964b8719a29604743b3, type: 3}
+  m_Script: {fileID: 11500000, guid: 9accabfc4e535814ab8795d7a069345b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

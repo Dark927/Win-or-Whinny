@@ -1,12 +1,12 @@
 ﻿
-
 using Game.Gameplay.Entities;
+using Game.Settings.Common;
 using System;
 using System.Collections.Generic;
 
 namespace Game.Gameplay.UI
 {
-    public class DefaultRaceStartPanelUI : RacePanelBaseUI, IRaceStartPanelUI
+    public class DefaultRaceStartPanelUI : RacePanelBaseUI, IRaceStartPanelUI, IResetable
     {
         private IHorseInfoManagerUI _horseInfoListManager;
 
@@ -30,6 +30,11 @@ namespace Game.Gameplay.UI
         public void UnsubscribeFromHorseSelection(EventHandler<int> listener)
         {
             _horseInfoListManager.OnHorseSelected -= listener;
+        }
+
+        public void ResetState()
+        {
+            _horseInfoListManager?.ResetState();
         }
     }
 }

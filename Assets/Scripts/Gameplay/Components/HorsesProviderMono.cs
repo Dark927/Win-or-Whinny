@@ -147,19 +147,14 @@ namespace Game.Gameplay
 
         private async UniTask<HorseLogic> CreateHorseAsync(AssetReference horsePrefabReference, Transform container, CancellationToken token = default)
         {
-            var loadHandle = AddressableAssetsHandler.Instance.TryLoadAssetAsync<GameObject>(horsePrefabReference);
+            var loadHandle = AddressableAssetsHandler.Instance.LoadAssetAndCacheAsync<GameObject>(horsePrefabReference, AddressableAssetsCleaner.CleanType.SceneSwitch);
 
             await loadHandle.Task;
 
-            if (loadHandle.Task.IsCompletedSuccessfully)
+            if (loadHandle.Task.IsCompletedSuccessfully && !token.IsCancellationRequested)
             {
-                AddressableAssetsHandler.Instance.Cleaner.SubscribeOnCleaning(AddressableAssetsCleaner.CleanType.SceneSwitch, loadHandle);
-
-                if (!token.IsCancellationRequested)
-                {
-                    GameObject horseObject = GameObject.Instantiate(loadHandle.Result, Vector3.zero, Quaternion.identity, container);
-                    return horseObject.GetComponent<HorseLogic>();
-                }
+                GameObject horseObject = GameObject.Instantiate(loadHandle.Result, Vector3.zero, Quaternion.identity, container);
+                return horseObject.GetComponent<HorseLogic>();
             }
 
             return null;

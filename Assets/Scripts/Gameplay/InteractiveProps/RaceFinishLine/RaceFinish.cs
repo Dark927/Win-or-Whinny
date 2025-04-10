@@ -36,9 +36,7 @@ namespace Game.Gameplay.Race
 
         private void OnTriggerEnter(Collider other)
         {
-            var horseLogic = other.GetComponent<HorseLogic>();
-
-            if (horseLogic != null)
+            if (other.TryGetComponent<HorseLogic>(out var horseLogic))
             {
                 _horseRaceManager.NotifyHorseFinished(horseLogic.ID);
             }

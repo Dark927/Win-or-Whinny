@@ -23,6 +23,7 @@ namespace Game.Gameplay.UI
 
 
         private Dictionary<int, LeaderBoardItemUI> _participantInfoItems;
+        private Queue<LeaderBoardItemUI> _emptyBoardItems;
         private Dictionary<int, RaceFinishedParticipantInfo> _newParticipantsInfo;
 
         private VerticalLayoutGroup _verticalLayout;
@@ -42,12 +43,26 @@ namespace Game.Gameplay.UI
             _scrollRect.verticalNormalizedPosition = 0;
 
             _participantInfoItems = new();
+            _emptyBoardItems = new();
             _newParticipantsInfo = new();
 
             RectTransform elementRectTransform = _boardItemPrefab.GetComponent<RectTransform>();
             _contentRectTransform = _verticalLayout.GetComponent<RectTransform>();
             _elementSize.x = elementRectTransform.sizeDelta.x;
             _elementSize.y = elementRectTransform.sizeDelta.y;
+        }
+
+        public void Clear()
+        {
+            foreach (var boardItemInfo in _participantInfoItems)
+            {
+                boardItemInfo.Value.ResetState();
+                boardItemInfo.Value.Deactivate();
+                _emptyBoardItems.Enqueue(boardItemInfo.Value);
+            }
+
+            _participantInfoItems.Clear();
+            _newParticipantsInfo.Clear();
         }
 
         public void DisplayAvailableInfo()
@@ -102,11 +117,22 @@ namespace Game.Gameplay.UI
 
         private void UpdateLeaderBoard(Dictionary<int, RaceFinishedParticipantInfo> participantsInfo)
         {
+            LeaderBoardItemUI leaderBoardItem;
+
             foreach (var participant in participantsInfo)
             {
-                GameObject leaderBoardItemObject = Instantiate(_boardItemPrefab, _verticalLayout.transform);
-                LeaderBoardItemUI leaderBoardItem = leaderBoardItemObject.GetComponent<LeaderBoardItemUI>();
+                if (_emptyBoardItems.Count() > 0)
+                {
+                    leaderBoardItem = _emptyBoardItems.Dequeue();
+                }
+                else
+                {
+                    GameObject leaderBoardItemObject = Instantiate(_boardItemPrefab, _verticalLayout.transform);
+                    leaderBoardItem = leaderBoardItemObject.GetComponent<LeaderBoardItemUI>();
+                }
+
                 leaderBoardItem.SetParticipantInfo(participant.Value);
+                leaderBoardItem.Activate();
                 _participantInfoItems.Add(participant.Key, leaderBoardItem);
             }
         }

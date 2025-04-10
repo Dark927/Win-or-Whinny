@@ -1,12 +1,13 @@
 using Game.Gameplay.InteractiveProps;
 using Game.Gameplay.Race;
+using Game.Settings.Common;
 using Game.Settings.GameInitialization;
 using Game.Utilities.Logging;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class TrackStartGatesController : MonoBehaviour, IInitializable
+public class TrackStartGatesController : MonoBehaviour, IInitializable, IResetable
 {
     #region Fields 
 
@@ -31,6 +32,12 @@ public class TrackStartGatesController : MonoBehaviour, IInitializable
         _startingPointsHolder.Initialize();
         _availableStartingPoints = _startingPointsHolder.GetStartingPoints().ToList();
         _usedStartingPoints = new();
+    }
+
+    public void ResetState()
+    {
+        _usedStartingPoints.Clear();
+        _availableStartingPoints = _startingPointsHolder.GetStartingPoints().ToList();
     }
 
     #endregion

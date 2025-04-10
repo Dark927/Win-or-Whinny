@@ -80,18 +80,37 @@ namespace Game.Settings.SceneManagement
             return SceneLoader.LoadScene(sceneData.SceneReference, loadMode).ToUniTask();
         }
 
+
         public UniTask LoadMainMenuAsync(bool useLoadingScreen = true)
+        {
+            return LoadAdditiveSceneCleanAsync(_mainMenuScene, useLoadingScreen);
+        }
+
+        public UniTask LoadLevelAsync(GameSceneData levelData)
+        {
+            if (levelData.SceneType == GameSceneData.GameSceneType.GameLevel)
+            {
+                return LoadAdditiveSceneCleanAsync(levelData, true);
+            }
+            else
+            {
+                string errorMsg = $" # Fatal Error : Can not load level! Scene type : {levelData.SceneType} != {GameSceneData.GameSceneType.GameLevel} | {this}";
+                CustomLogger.LogError(errorMsg);
+                throw new ArgumentException(errorMsg);
+            }
+        }
+
+        private UniTask LoadAdditiveSceneCleanAsync(GameSceneData targetSceneData, bool useLoadingScreen = true)
         {
             Func<AsyncOperationHandle<SceneInstance>> sceneLoadingLogic = () =>
             {
                 SwitchEvent?.RaiseEvent(this, EventArgs.Empty);
                 SceneLoader.UnloadAll();
-                return SceneLoader.LoadScene(_mainMenuScene.SceneReference, LoadSceneMode.Additive);
+                return SceneLoader.LoadScene(targetSceneData.SceneReference, LoadSceneMode.Additive);
             };
-
             return LoadSceneAsync(sceneLoadingLogic, useLoadingScreen);
-        }
 
+        }
 
         private async UniTask LoadSceneAsync(Func<AsyncOperationHandle<SceneInstance>> sceneLoadingLogic, bool useLoadingScreen = true)
         {

@@ -20,7 +20,7 @@ public class PlayGameButtonUI : ButtonControllerBaseUI
 
     public override void ClickEventListener()
     {
-        _gameSceneLoader.LoadSceneAsync(_gameSceneData, LoadSceneMode.Single);
+        _gameSceneLoader.LoadLevelAsync(_gameSceneData);
     }
 
     #endregion

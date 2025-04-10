@@ -61,6 +61,14 @@ namespace Game.Gameplay.Race
             _horsesProvider.Initialize();
         }
 
+        public void ResetState()
+        {
+            _nextFinishPlace = 1;
+            _selectedParticipantID = UndefinedParticipantID;
+            _finishedHorsesQueue.Clear();
+            _startGatesController.ResetState();
+        }
+
         #endregion
 
         public void StartRace(int selectedParticipantID)
@@ -71,7 +79,7 @@ namespace Game.Gameplay.Race
             var participantsCollection = _horsesProvider.GetAllHorses();
             ConfigureHorsesStartingPositions(participantsCollection);
 
-            StartRaceAsync(participantsCollection).Forget(); // Todo : continue 
+            StartRaceAsync(participantsCollection).Forget();
         }
 
         public HorseLogic GetPlayerParticipant()

@@ -19,5 +19,11 @@ namespace Game.Gameplay.UI
             _startPanelUI.Initialize();
             _endPanelUI.Initialize();
         }
+
+        public void ResetState()
+        {
+            _startPanelUI.ResetState();
+            _endPanelUI.ResetState();
+        }
     }
 }

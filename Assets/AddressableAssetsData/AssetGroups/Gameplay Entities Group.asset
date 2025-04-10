@@ -17,11 +17,73 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: c3413ac61eb6fb44e8feb8914bbd87e1
   m_SerializeEntries:
+  - m_GUID: 0ebd8e1538371d24c93c4d2bf6e40eb9
+    m_Address: Assets/Sprites/UI/Icons/UI_HorseIcon_03.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 101fab85f0df96043bce311b25eaebe5
+    m_Address: Assets/Data/Gameplay/Entities/Unique Horses/Horse_02_Data.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - data
+    - entity
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 365b40f05dd44404b9b6dc1a4c0eb056
+    m_Address: Assets/Data/Gameplay/Entities/Unique Horses/Horse_01_Data.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - data
+    - entity
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 38ac7b218eed1da4eb6a51f307e7b98b
     m_Address: Assets/Prefabs/Gameplay/Horses/Prefab_Horse_01.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - entity
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4c2829b26936bf740a10a1e38430d3dc
+    m_Address: Assets/Data/Gameplay/Entities/Unique Horses/Horse_04_Data.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - data
+    - entity
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 67e84961da3050a4f96ce948d17b1231
+    m_Address: Assets/Data/Gameplay/Entities/Unique Horses/Horse_05_Data.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - data
+    - entity
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6babd3d403a5e124893e625f3a621774
+    m_Address: Assets/Data/Gameplay/Entities/Unique Horses/Horse_06_Data.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - data
+    - entity
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7e2b1116e91d37a44a88322af40c70f0
+    m_Address: Assets/Data/Gameplay/Entities/Unique Horses/Horse_03_Data.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - data
+    - entity
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 89f73ff925039fc48b20bb9daf847209
+    m_Address: Assets/Sprites/UI/Icons/UI_HorseIcon_02.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a13980ce742050e419640db1468f9fbb
+    m_Address: Assets/Sprites/UI/Icons/UI_HorseIcon_04.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c373601c9c4b1614f9c9884b5f9b161a
+    m_Address: Assets/Sprites/UI/Icons/UI_HorseIcon_01.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f644d370e9a813e4f9e1cc046e6c75ea
     m_Address: Assets/ExternalAssetsPackages/PolygonHorse
