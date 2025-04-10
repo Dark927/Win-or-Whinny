@@ -52,17 +52,14 @@ namespace Game.Gameplay.UI
             _elementSize.y = elementRectTransform.sizeDelta.y;
         }
 
-
-        /*
-         * Note : 
-         * Dictionary<TKey, TValue> class does not guarantee any specific order of elements. 
-         * The order in which elements are stored in the dictionary is not necessarily the order in which they were added.
-         * 
-         * But so far there have been no errors in work, if there will be, replace with OrderedDictionary
-         */
         public void Clear()
         {
-            foreach (var boardItemInfo in _participantInfoItems)
+            // Get all items and sort them by sibling index (hierarchy order)
+            var sortedItems = _participantInfoItems
+                .OrderBy(pair => pair.Value.transform.GetSiblingIndex())
+                .ToList();
+
+            foreach (var boardItemInfo in sortedItems)
             {
                 boardItemInfo.Value.ResetState();
                 boardItemInfo.Value.Deactivate();
@@ -90,7 +87,7 @@ namespace Game.Gameplay.UI
 
         public void UpdateLeaderBoard()
         {
-            ResizeContentForScroll(_verticalLayout, _contentRectTransform, _participantInfoItems.Count(), _elementSize);
+            ResizeContentForScroll(_verticalLayout, _contentRectTransform, _participantInfoItems.Count() + 1, _elementSize);
             UpdateLeaderBoard(_newParticipantsInfo);
             _newParticipantsInfo.Clear();
         }
@@ -144,6 +141,8 @@ namespace Game.Gameplay.UI
                 leaderBoardItem.SetParticipantInfo(participant.Value);
                 leaderBoardItem.Activate();
                 _participantInfoItems.Add(participant.Key, leaderBoardItem);
+
+                ResizeContentForScroll(_verticalLayout, _contentRectTransform, _participantInfoItems.Count() + 1, _elementSize);
             }
         }
 

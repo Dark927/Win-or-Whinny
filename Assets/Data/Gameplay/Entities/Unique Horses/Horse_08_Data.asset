@@ -10,23 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ddad1fc8f72b144fbdeb43213926028, type: 3}
-  m_Name: Horse_03_Data
+  m_Name: Horse_08_Data
   m_EditorClassIdentifier: 
   _description: 
   _horsePrefabReference:
-    m_AssetGUID: 8608b6e236c67a14a864c4b702f58b68
+    m_AssetGUID: 6e7b4222409b9104aa4823bca5dddc66
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
   _horseInfo:
-    _name: Track Thunder
-    _icon: {fileID: 21300000, guid: 0ebd8e1538371d24c93c4d2bf6e40eb9, type: 3}
-    _winsCount: 76
-    _loseCount: 3
+    _name: Iron Storm
+    _icon: {fileID: 21300000, guid: c373601c9c4b1614f9c9884b5f9b161a, type: 3}
+    _winsCount: 12
+    _loseCount: 2
   _horseStats:
-    _defaultSpeed: 6
-    _accelerationChance: 60
-    _accelerationSpeedMultiplier: 1.75
-    _accelerationRampUpDuration: 1
-    _accelerationEffectDuration: 3
-    _accelerationRechargeTime: 2
+    _defaultSpeed: 3
+    _accelerationChance: 90
+    _accelerationSpeedMultiplier: 5
+    _accelerationRampUpDuration: 2
+    _accelerationEffectDuration: 4
+    _accelerationRechargeTime: 8

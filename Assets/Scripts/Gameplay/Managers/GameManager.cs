@@ -15,7 +15,7 @@ namespace Game.Gameplay
 
     /// <summary>
     /// Is used to centralize gameplay level control so as not to complicate the architecture. 
-    /// When the project is expanded, it must be removed
+    /// When the project is expanded, it must be removed (SRP violation)
     /// </summary>
     public class GameManager : MonoBehaviour, IDisposable, IInitializable
     {

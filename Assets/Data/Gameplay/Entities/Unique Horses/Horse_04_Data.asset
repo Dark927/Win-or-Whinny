@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _description: 
   _horsePrefabReference:
-    m_AssetGUID: 38ac7b218eed1da4eb6a51f307e7b98b
+    m_AssetGUID: 8608b6e236c67a14a864c4b702f58b68
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
   _horseInfo:
-    _name: Nansy
+    _name: Bright Splash
     _icon: {fileID: 21300000, guid: a13980ce742050e419640db1468f9fbb, type: 3}
     _winsCount: 6
     _loseCount: 7

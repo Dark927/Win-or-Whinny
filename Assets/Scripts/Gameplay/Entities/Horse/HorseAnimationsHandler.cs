@@ -13,15 +13,17 @@ namespace Game.Gameplay.Entities
         // ----------------------------------------------------------------
         private const string IdleTriggerName = "Idle";
         private const string RunTriggerName = "Run";
+        private const string RunSpeedMultiplierFieldName = "RunSpeedMultiplier";
 
         private readonly int IdleTriggerID = Animator.StringToHash(IdleTriggerName);
         private readonly int RunTriggerID = Animator.StringToHash(RunTriggerName);
+        private readonly int RunSpeedMultiplierFieldID = Animator.StringToHash(RunSpeedMultiplierFieldName);
         // ----------------------------------------------------------------
 
         public event Action OnFootStep;
 
+        private const float DefaultHorseSpeed = 7f;
         private Animator _animator;
-
 
         /// <summary>
         /// Event from the mesh Run animation
@@ -34,6 +36,7 @@ namespace Game.Gameplay.Entities
         public void Initialize()
         {
             _animator = GetComponent<Animator>();
+            _animator.SetFloat(RunSpeedMultiplierFieldID, 1f);
         }
 
 
@@ -45,6 +48,12 @@ namespace Game.Gameplay.Entities
         public void ActivateRunAnimation()
         {
             _animator.SetTrigger(RunTriggerID);
+        }
+
+        public void UpdateRunAnimationSpeed(float currentHorseSpeed)
+        {
+            float speedRatio = currentHorseSpeed / DefaultHorseSpeed;
+            _animator.SetFloat(RunSpeedMultiplierFieldID, speedRatio);
         }
     }
 }

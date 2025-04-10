@@ -2,10 +2,10 @@
 using Cysharp.Threading.Tasks;
 using Game.Gameplay.Audio;
 using Game.Gameplay.Entities;
-using Game.Gameplay.UI;
 using System;
 using System.Collections.Generic;
 using System.Threading;
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 using Zenject;
 
@@ -22,7 +22,9 @@ namespace Game.Gameplay.Race
 
         #region Fields 
 
+        [SerializeField] private Color _playerParticipantIndicatorColor = Color.green;      // ToDo : move this to the config later
         private const float DefaultRaceDelayAfterGatesOpen = 1f;   // ToDo : move this to the config later
+
         private const int UndefinedParticipantID = -999;
 
         private IHorsesProvider _horsesProvider;
@@ -33,6 +35,7 @@ namespace Game.Gameplay.Race
         private Queue<int> _finishedHorsesQueue;
 
         private int _nextFinishPlace = 1;
+        private float _startTime = 0f;
 
         #endregion
 
@@ -68,6 +71,7 @@ namespace Game.Gameplay.Race
         public void ResetState()
         {
             _nextFinishPlace = 1;
+            _startTime = 0f;
             _selectedParticipantID = UndefinedParticipantID;
             _finishedHorsesQueue.Clear();
             _startGatesController.ResetState();
@@ -118,6 +122,8 @@ namespace Game.Gameplay.Race
 
         public void NotifyHorseFinished(int horseID)
         {
+            float raceTime = Mathf.Abs(Time.time - _startTime);
+
             if (!_finishedHorsesQueue.Contains(horseID))
             {
                 _finishedHorsesQueue.Enqueue(horseID);
@@ -125,7 +131,7 @@ namespace Game.Gameplay.Race
                 var finishedHorse = _horsesProvider.GetHorseByID(horseID);
                 finishedHorse.Stop();
 
-                RaceFinishedParticipantInfo participantInfo = new RaceFinishedParticipantInfo(_nextFinishPlace, finishedHorse.Info.Name);
+                RaceFinishedParticipantInfo participantInfo = new RaceFinishedParticipantInfo(_nextFinishPlace, raceTime, finishedHorse.Info.Name);
                 _nextFinishPlace += 1;
                 ParticipantFinishedArgs participantFinishArgs = new ParticipantFinishedArgs(horseID, participantInfo);
                 OnAnyHorseFinished?.Invoke(this, participantFinishArgs);
@@ -147,10 +153,17 @@ namespace Game.Gameplay.Race
             await UniTask.WaitForSeconds(DefaultRaceDelayAfterGatesOpen);
 
             _audioManager.PlayRaceOST();
+
             foreach (var participant in participantsCollection)
             {
+                participant.Indicator.ShowTextIndicator();
                 participant.Run();
             }
+
+            var playerParticipant = _horsesProvider.GetHorseByID(_selectedParticipantID);
+            playerParticipant.Indicator.HighlightIndicator(_playerParticipantIndicatorColor);
+
+            _startTime = Time.time;
         }
 
 

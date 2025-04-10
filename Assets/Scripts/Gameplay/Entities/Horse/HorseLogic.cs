@@ -15,11 +15,13 @@ namespace Game.Gameplay.Entities
         private HorseStats _stats;
 
         private HorseAnimationsHandler _animationsHandler;
+        private HorseVisualIndicator _visualIndicator;
         private HorseAudioHandler _audioHandler;
         private HorseMovement _movement;
-        
+
         #endregion
 
+        public HorseVisualIndicator Indicator => _visualIndicator;
 
         #region Properties
 
@@ -32,7 +34,7 @@ namespace Game.Gameplay.Entities
         #region Methods
 
         #region Init & Dispose
-        
+
         public void Initialize(HorseInfo info)
         {
             _info = info;
@@ -42,10 +44,19 @@ namespace Game.Gameplay.Entities
 
             _animationsHandler = GetComponent<HorseAnimationsHandler>();
             _audioHandler = GetComponentInChildren<HorseAudioHandler>();
+            _visualIndicator = GetComponentInChildren<HorseVisualIndicator>(true);
+
             _movement = new HorseMovement(this);
 
             _audioHandler.Initialize();
             _animationsHandler.Initialize();
+            ConfigureTextIndicator();
+        }
+
+        private void ConfigureTextIndicator()
+        {
+            _visualIndicator.Initialize();
+            _visualIndicator.SetIndicatorText(_info.Name);
         }
 
         public void SetStats(HorseStats stats)
@@ -58,12 +69,16 @@ namespace Game.Gameplay.Entities
         {
             _movement?.Dispose();
             _animationsHandler.OnFootStep -= _audioHandler.PlayFootStepSFX;
+            _movement.OnSpeedUpdate -= _animationsHandler.UpdateRunAnimationSpeed;
         }
 
         public void ResetState()
         {
+            _visualIndicator.ResetIndicatorColor();
+            _visualIndicator.HideTextIndicator();
             _movement.StopImmediately();
             _animationsHandler.ActivateIdleAnimation();
+            _animationsHandler.UpdateRunAnimationSpeed(_stats.DefaultSpeed);
         }
 
         #endregion
@@ -75,16 +90,21 @@ namespace Game.Gameplay.Entities
         */
         public void Run()
         {
-            _animationsHandler.OnFootStep += _audioHandler.PlayFootStepSFX;
             _movement.MoveWithAccelerationChance(transform.forward);
             _animationsHandler.ActivateRunAnimation();
+
+            _animationsHandler.OnFootStep += _audioHandler.PlayFootStepSFX;
+            _movement.OnSpeedUpdate += _animationsHandler.UpdateRunAnimationSpeed;
         }
 
         public void Stop()
         {
-            _animationsHandler.OnFootStep -= _audioHandler.PlayFootStepSFX;
             _movement.StopWithDrag();
             _animationsHandler.ActivateIdleAnimation();
+            _animationsHandler.UpdateRunAnimationSpeed(_stats.DefaultSpeed);
+
+            _animationsHandler.OnFootStep -= _audioHandler.PlayFootStepSFX;
+            _movement.OnSpeedUpdate -= _animationsHandler.UpdateRunAnimationSpeed;
         }
 
         #endregion

@@ -41,6 +41,7 @@ namespace Game.Gameplay.UI
 
         private HorseInfoCardUI _selectedHorseInfoCard;
         private int _selectedHorseID;
+        private Dictionary<HorseInfoCardUI, Action> _cardClickHandlers = new Dictionary<HorseInfoCardUI, Action>();
 
         #endregion
 
@@ -60,10 +61,13 @@ namespace Game.Gameplay.UI
 
             _confirmationButton.onClick.AddListener(OnConfirmationButtonClicked);
         }
+
         public void ResetState()
         {
             TryUnselectCurrentCard();
             _horseInfoDict.Clear();
+
+            UnsubscribeAllCardsFromClicks();
 
             foreach (var card in _usedCards)
             {
@@ -112,6 +116,7 @@ namespace Game.Gameplay.UI
             layoutTransform.sizeDelta = newSize;
         }
 
+
         private void GenerateHorseInfoGrid(Dictionary<int, HorseInfo> horseInfoDict)
         {
             HorseInfo currentHorseInfo;
@@ -120,10 +125,9 @@ namespace Game.Gameplay.UI
             foreach (var infoPair in horseInfoDict)
             {
                 HorseInfoCardUI infoCard;
-
                 currentHorseInfo = infoPair.Value;
 
-                if (_freeCards.Count() > 0)
+                if (_freeCards.Count > 0)
                 {
                     infoCard = _freeCards.Dequeue();
                 }
@@ -135,8 +139,21 @@ namespace Game.Gameplay.UI
 
                 _usedCards.Add(infoCard);
                 SetInfoCardContent(infoCard, currentHorseInfo, relativeWinChances[infoPair.Key]);
-                infoCard.SubscribeOnClick(() => OnHorseInfoCardClicked(infoCard, infoPair.Key));
+
+                void Handler() => OnHorseInfoCardClicked(infoCard, infoPair.Key);
+                _cardClickHandlers[infoCard] = Handler;
+
+                infoCard.SubscribeOnClick(Handler);
             }
+        }
+
+        private void UnsubscribeAllCardsFromClicks()
+        {
+            foreach (var pair in _cardClickHandlers)
+            {
+                pair.Key.UnsubscribeFromClick(pair.Value);
+            }
+            _cardClickHandlers.Clear();
         }
 
         // ToDo : update this info text later

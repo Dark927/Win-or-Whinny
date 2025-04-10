@@ -2,6 +2,7 @@
 
 using Game.Gameplay.Race;
 using Game.Settings.Common;
+using Game.Utilities;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,12 +14,14 @@ namespace Game.Gameplay.UI
         [SerializeField] private Image _tintImage;
         [SerializeField] private TextMeshProUGUI _participantPlaceText;
         [SerializeField] private TextMeshProUGUI _participantNameText;
+        [SerializeField] private TextMeshProUGUI _participantRaceTimeText;
 
 
         public void SetParticipantInfo(RaceFinishedParticipantInfo participantInfo)
         {
             _participantNameText.text = participantInfo.ParticipantName;
             _participantPlaceText.text = participantInfo.ParticipantRacePlace.ToString("00");
+            _participantRaceTimeText.text = TimeConverter.ConvertToHMS(participantInfo.ParticipantRaceTime);
         }
 
         public void Highlight(Color color)

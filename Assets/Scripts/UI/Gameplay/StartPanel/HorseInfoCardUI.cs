@@ -1,6 +1,7 @@
 ﻿
 using Game.Settings.Common;
 using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -23,6 +24,7 @@ namespace Game.Gameplay.UI
             _button = GetComponent<Button>();
             _initialTintColor = _iconImage.color;
             _descriptionText = GetComponentInChildren<TextMeshProUGUI>();
+            _button.onClick.AddListener(ListenButtonClick);
         }
 
         public void ResetState()
@@ -31,7 +33,25 @@ namespace Game.Gameplay.UI
             _descriptionText.text = string.Empty;
         }
 
-        public void SubscribeOnClick(Action listener) => _button.onClick.AddListener(() => listener?.Invoke());
+        private void ListenButtonClick()
+        {
+            ClickSubscribers.ForEach(subscriber => subscriber?.Invoke());
+        }
+
+        private List<Action> ClickSubscribers = new List<Action>();
+
+        public void SubscribeOnClick(Action listener)
+        {
+            ClickSubscribers.Add(listener);
+        }
+
+        public void UnsubscribeFromClick(Action listener)
+        {
+            Debug.Log("count before remove : " + ClickSubscribers.Count);
+            ClickSubscribers.Remove(listener);
+
+            Debug.Log("count after remove : " + ClickSubscribers.Count);
+        }
 
         public void TintImage(UnityEngine.Color color)
         {
@@ -60,6 +80,16 @@ namespace Game.Gameplay.UI
             {
                 _descriptionText.text = text;
             }
+        }
+
+        public void Deactivate()
+        {
+            gameObject.SetActive(false);
+        }
+
+        public void Activate()
+        {
+            gameObject.SetActive(true);
         }
     }
 }

@@ -36,11 +36,10 @@ MonoBehaviour:
     - data
     - entity
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 38ac7b218eed1da4eb6a51f307e7b98b
-    m_Address: Assets/Prefabs/Gameplay/Horses/Prefab_Horse_01.prefab
+  - m_GUID: 423f60ecc68a15b4898d9aaa2f968055
+    m_Address: Assets/Sprites/UI/Icons/UI_HorseIcon_05.png
     m_ReadOnly: 0
-    m_SerializedLabels:
-    - entity
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4c2829b26936bf740a10a1e38430d3dc
     m_Address: Assets/Data/Gameplay/Entities/Unique Horses/Horse_04_Data.asset

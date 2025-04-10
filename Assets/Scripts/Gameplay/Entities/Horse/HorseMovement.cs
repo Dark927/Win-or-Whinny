@@ -5,8 +5,10 @@ using UnityEngine;
 
 namespace Game.Gameplay.Entities
 {
-    internal class HorseMovement : IDisposable
+    public class HorseMovement : IDisposable
     {
+        public event Action<float> OnSpeedUpdate;
+
         #region Fields 
 
         private const float MinLinearSpeedChangeTime = 0.01f;
@@ -52,11 +54,11 @@ namespace Game.Gameplay.Entities
         public void Reset()
         {
             _currentSpeed = _stats.DefaultSpeed;
+            _speedBeforeAcceleration = _currentSpeed;
             _stopped = false;
             _currentDirection = Vector3.zero;
 
             _lastAccelerationFinishTime = 0;
-            _speedBeforeAcceleration = 0;
         }
 
         public void Dispose()
@@ -118,6 +120,7 @@ namespace Game.Gameplay.Entities
             _currentSpeed = speed;
 
             _rigidbody.velocity = direction * speed;
+            OnSpeedUpdate?.Invoke(_currentSpeed);
         }
 
         private async UniTask MoveWithAccelerationAsync(Vector3 direction, CancellationToken token = default)

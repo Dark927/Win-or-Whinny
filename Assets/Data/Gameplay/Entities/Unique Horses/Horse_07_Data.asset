@@ -10,23 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ddad1fc8f72b144fbdeb43213926028, type: 3}
-  m_Name: Horse_03_Data
+  m_Name: Horse_07_Data
   m_EditorClassIdentifier: 
   _description: 
   _horsePrefabReference:
-    m_AssetGUID: 8608b6e236c67a14a864c4b702f58b68
+    m_AssetGUID: 07ecd3948e1d320438fd6ba9459ca6cb
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
   _horseInfo:
-    _name: Track Thunder
-    _icon: {fileID: 21300000, guid: 0ebd8e1538371d24c93c4d2bf6e40eb9, type: 3}
-    _winsCount: 76
-    _loseCount: 3
+    _name: Village Sem
+    _icon: {fileID: 21300000, guid: 423f60ecc68a15b4898d9aaa2f968055, type: 3}
+    _winsCount: 6
+    _loseCount: 16
   _horseStats:
-    _defaultSpeed: 6
-    _accelerationChance: 60
-    _accelerationSpeedMultiplier: 1.75
-    _accelerationRampUpDuration: 1
-    _accelerationEffectDuration: 3
-    _accelerationRechargeTime: 2
+    _defaultSpeed: 4
+    _accelerationChance: 85
+    _accelerationSpeedMultiplier: 2
+    _accelerationRampUpDuration: 2
+    _accelerationEffectDuration: 5
+    _accelerationRechargeTime: 7
